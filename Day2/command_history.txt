@@ -1,0 +1,876 @@
+    1  ls
+    2  yum install epel-release
+    3  tree
+    4  yum install -y tree
+    5  rm -f /var/run/yum.pid 
+    6  yum install -y tree
+    7  yum install java-1.8.0-openjdk-devel
+    8  ls
+    9  exit
+   10  ls
+   11  clear
+   12  mvn --version
+   13  ls
+   14  cd /home/jegan/Downloads/
+   15  ls
+   16  tar xvfz apache-maven-3.6.3-bin.tar.gz 
+   17  ls
+   18  cd apache-maven-3.6.3/
+   19  ls
+   20  pwd
+   21  cd ..
+   22  mvn --version
+   23  vim ~/.bashrc
+   24  javac -version
+   25  which javac
+   26  ls -l /bin/javac
+   27  ls -l /etc/alternatives/javac
+   28  cd /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64
+   29  ls
+   30  cd bin
+   31  ls
+   32  cd ..
+   33  ls
+   34  cd jre
+   35  ls
+   36  cd bin
+   37  ls
+   38  cd ..
+   39  ls
+   40  cd ..
+   41  ls
+   42  vim ~/.bashrc
+   43  pwd
+   44  vim ~/.bashrc
+   45  mvn --version
+   46  source ~/.bashrc
+   47  mvn --version
+   48  clear
+   49  ls
+   50  clear
+   51  cdd /
+   52  clear
+   53  cd /root
+   54  clear
+   55  ls
+   56  exit
+   57  ls
+   58  pwd
+   59  cd /home/jegan/
+   60  mkdir DevOpsIBM
+   61  cd DevOpsIBM/
+   62  mkdir Day1
+   63  cd Day1
+   64  ls
+   65  pwd
+   66  cd ..
+   67  clear
+   68  ls
+   69  cd Downloads/
+   70  ls
+   71  pwd
+   72  mkdir bak
+   73  cd bak/
+   74  ls
+   75  wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+   76  ls
+   77  tar xvfz apache-maven-3.6.3-bin.tar.gz 
+   78  ls
+   79  cd apache-maven-3.6.3/
+   80  ls
+   81  pwdd
+   82  pwd
+   83  cd ..
+   84  ls
+   85  rm -rf bak
+   86  ls
+   87  clear
+   88  mvn --version
+   89  cd apache-maven-3.6.3/
+   90  pwd
+   91  vim /root/.bashrc 
+   92  exit
+   93  vim /root/.bashrc 
+   94  ls -lha /root
+   95  vim ~/.bashrc 
+   96  clear
+   97  vim ~/.bashrc 
+   98  cd /home/jegan/Downloads/
+   99  ls
+  100  cdd apache-maven-3.6.3
+  101  clear
+  102  pwd
+  103  cd apache-maven-3.6.3/
+  104  pwd
+  105  vim /root/.bashrc 
+  106  gedit /root/.bashrc
+  107  source /root/.bashrc
+  108  mvn --version
+  109  cat /root/.bashrc
+  110  ls
+  111  cd bin
+  112  ls
+  113  pwd
+  114  cd ..
+  115  pwd
+  116  gedit /root/.bashrc
+  117  clear
+  118  cd /root
+  119  pwd
+  120  ls -l
+  121  ls -lha
+  122  gedit .bashrc
+  123  clear
+  124  javac -version
+  125  java -version
+  126  which gedit
+  127  /bin/gedit /root/.bashrc
+  128  cat /root/.bashrc
+  129  clear
+  130  javac -version
+  131  which javac
+  132  ls -l /bin/javac
+  133  nslookup www.google.com
+  134  vim /etc/yum.conf
+  135  clear
+  136  ls
+  137  mvn --version
+  138  ls -l /bin/javac
+  139  ls -l /etc/alternatives/javac
+  140  cat  ~/.bashrc
+  141  #yum install java-1.8.0-openjdk-devel
+  142  clear
+  143  ls
+  144  mvn --version
+  145  cd  /home/jegan/Downloads/apache-maven-3.6.3
+  146  ls
+  147  cd conf/
+  148  ls
+  149  vim settings.xml 
+  150  cd /root/.m2
+  151  ls
+  152  vim settings.xml 
+  153  cd /root
+  154  ls
+  155  clear
+  156  cd /home/jegan
+  157  ls
+  158  cd DevOpsIBM/
+  159  ls
+  160  cd Day1
+  161  ls
+  162  pwd
+  163  cd ..
+  164  clear
+  165  mkdir -p DevOpsIBM/Day1/Hello
+  166  cd DevOpsIBM/Day1/Hello/
+  167  ls
+  168  man mkdir
+  169  echo "Test" > out.txt
+  170  cat out.txt 
+  171  ls
+  172  cd ..
+  173  mkdir -p DevOpsIBM/Day1/Hello
+  174  cd DevOpsIBM/Day1/Hello/
+  175  ls
+  176  cat out.txt 
+  177  clear
+  178  ls
+  179  rm out.txt 
+  180  clear
+  181  ls
+  182  touch pom.xml
+  183  ls
+  184  ls -l
+  185  mkdir -p src/main/java/org/tektutor
+  186  mkdir -p src/test/java/org/tektutor
+  187  touch src/main/java/org/tektutor/Hello.java
+  188  touch src/test/java/org/tektutor/HelloTest.java
+  189  tree
+  190  #yum install -y epel-release && yum install -y tree
+  191  touch hello.exe
+  192  ls
+  193  rm hello.exe 
+  194  ls
+  195  clear
+  196  tree
+  197  touch some.txt
+  198  ls
+  199  rm some.txt 
+  200  ls
+  201  clear
+  202  ls
+  203  vim pom.xml 
+  204* 
+  205  vim src/main/java/org/tektutor/Hello.java 
+  206  ls
+  207  vim src/main/java/org/tektutor/Hello.java 
+  208  mvn compile
+  209  vim src/main/java/org/tektutor/Hello.java 
+  210  cd /root/.m2
+  211  ls
+  212  cd  repository/
+  213  ls
+  214  cd junit
+  215  ls
+  216  cd junit
+  217  ls
+  218  cd 3.8.1/
+  219  ls
+  220  cd ..
+  221  tree junit
+  222  cd -
+  223  cd /root/
+  224  ls
+  225  cd /home/jegan/DevOpsIBM/Day1/Hello/
+  226  ls
+  227  ls -lha ~/.m2/rep
+  228  ls -lha ~/.m2
+  229  ls -lha ~/.m2/repository/
+  230  mvn compile
+  231  cd /home/jegan/Downloads/apache-maven-3.6.3/
+  232  cd conf
+  233  ls
+  234  vim settings.xml 
+  235  cd -
+  236  cd /home/jegan/DevOpsIBM/Day1/Hello/
+  237  ls
+  238  vim pom.xml 
+  239  ls
+  240  src
+  241  ls
+  242  cd src
+  243  ls
+  244  cd main/java/org/tektutor/
+  245  ls
+  246  cd ..
+  247  ls
+  248  cd target/
+  249  ls
+  250  cd classes/
+  251  ls
+  252  tree
+  253  java org.tektutor.Hello
+  254  cd ..
+  255  mvn package
+  256  cd target
+  257  ls
+  258  cd ..
+  259  cd target/classes/
+  260  java org.tektutor.Hello
+  261  cd ..
+  262  java -cp tektutor-hello-app-1.0.0.jar org.tektutor.Hello
+  263  cd ..
+  264  cd target/
+  265  ls
+  266  cd maven-status/
+  267  ls
+  268  cd maven-compiler-plugin/
+  269  ls
+  270  cd compile/
+  271  ls
+  272  cd default-compile/
+  273  ls
+  274  cat inputFiles.lst 
+  275  cat createdFiles.lst 
+  276  cd ..
+  277  ls
+  278  cd classes/
+  279  ls
+  280  java  org.tektuor.Hello
+  281  java  org.tektutor.Hello
+  282  cd ..
+  283  ls
+  284  cd ..
+  285  ls
+  286  tree src
+  287  clear
+  288  ls
+  289  mvn clean
+  290  ls
+  291  tree
+  292  mv src/main/java/org/tektutor/Hello.java src/main/
+  293  tree
+  294  mvn compile
+  295  cd target/classes
+  296  ls
+  297  cd target/
+  298  ls
+  299  cd ..
+  300  ls
+  301  tree src
+  302  mv src/main/Hello.java src/main/java/org/tektutor/
+  303  tree src
+  304  mvn compile
+  305  vim src/test/java/org/tektutor/HelloTest.java 
+  306  clear
+  307  mvn clean compile
+  308  mvn test
+  309  vim src/test/java/org/tektutor/HelloTest.java 
+  310  clear
+  311  mvn test
+  312  vim pom.xml 
+  313  mvn test
+  314  vim src/test/java/org/tektutor/HelloTest.java 
+  315  mvn test
+  316  vim src/test/java/org/tektutor/HelloTest.java 
+  317  mvn test
+  318  vim pom.xml 
+  319  clear
+  320  mvn compile -v
+  321  mvn compile 
+  322  mvn compile -Ddetail
+  323  vim src/test/java/org/tektutor/HelloTest.java 
+  324  cd ..
+  325  cd Hello/
+  326  ls
+  327  rm -rf target/
+  328  clear
+  329  cd ..
+  330  ls
+  331  cd ..
+  332  ls
+  333  git init
+  334  yum install git
+  335  ls
+  336  git init
+  337  git add *
+  338  git status
+  339  git config --global user.name "Jeganathan Swaminathan" 
+  340  git config --global user.email "mail2jegan@gmail.com"
+  341  git commit -m "Initial commit."
+  342  git push -u origin master
+  343  git remote add origin https://github.com/tektutor/devops-us-may-2020.git
+  344  git push -u origin master
+  345  git --version
+  346  ls
+  347  cd Day1
+  348  ls
+  349  cd Hello
+  350  ls
+  351  mkdir -p src/main/java/org/tektutor
+  352  mkdir -p src/test/java/org/tektutor
+  353  tree
+  354  vim src/main/java/org/tektutor/Hello.java 
+  355  cat  pom.xml 
+  356  clear
+  357  ls
+  358  vim  pom.xml 
+  359  ls
+  360  cd ..
+  361  ls
+  362  vim bank.txt
+  363  vim pom.xml
+  364  ls
+  365  gedit Hello/pom.xml 
+  366  gedit pom.xml 
+  367  clear
+  368  ls
+  369  cd Hello/
+  370  cd target
+  371  ls
+  372  mvn package
+  373  cd  target/
+  374  ls
+  375  tar xvf tektutor-hello-app-1.0.0.jar 
+  376  ls
+  377  jar xvf tektutor-hello-app-1.0.0.jar 
+  378  ls
+  379  cd ..
+  380  ls
+  381  rm -rf  target/
+  382  clear
+  383  ls
+  384  mvn help:cmd=compile
+  385  mvn help:cmd=compile 
+  386  mvn help:describe -Dcmd=compile
+  387  clear
+  388  ls
+  389  vim pom.xml 
+  390  mvn help:describe -Dcmd=compile
+  391  vim pom.xml 
+  392  clear
+  393  vim pom.xml 
+  394  mvn help:describe -Dcmd=compile
+  395  clear
+  396  mvn compile
+  397  clear
+  398  mvn test
+  399  mvn --version
+  400  javac
+  401  clear
+  402  ls
+  403  mvn help:describe -Dplugin=maven-compiler-plugin
+  404  mvn help:describe -Dplugin=compiler
+  405  cd ..
+  406  cd Hello/
+  407  ls
+  408  mvn clean
+  409  cd ..
+  410  ls
+  411  cd ..
+  412  ls
+  413  mkdir Day2
+  414  cp -R  Day1/Hello Day2
+  415  cd Day2
+  416  ls
+  417  cd Hello/
+  418  ls
+  419  tree
+  420  mkdir -p src/west
+  421  tree
+  422  mv src/test/java/org/tektutor/HelloTest.java west
+  423  ls
+  424  tree
+  425  mv west src/west/HelloTest.java
+  426  cat src/west/HelloTest.java 
+  427  clear
+  428  ls
+  429  tree
+  430  mvn clean test
+  431  mvn help:effective-pom
+  432  ls
+  433  vim pom.xml 
+  434  clear
+  435  mvn test
+  436  clear
+  437  ls
+  438  tree
+  439  clear
+  440  mvn clean
+  441  clear
+  442  tree
+  443  vim pom.xml 
+  444  tree
+  445  vim pom.xml 
+  446  clear
+  447  mvn test
+  448  mvn --version
+  449  cd /home/jegan/Downloads/apache-maven-3.6.3
+  450  ls
+  451  cd lib
+  452  ls
+  453  pwd
+  454  cp maven-model-3.6.3.jar /tmp
+  455  cd /tmp
+  456  ls
+  457  jar xvf maven-model-3.6.3.jar 
+  458  vim META-INF/maven/org.apache.maven/maven-model/pom.xml
+  459  cd /home/jegan/
+  460  ls
+  461* 
+  462  ls
+  463  cd Day2
+  464  ls
+  465  clear
+  466  ls
+  467  cd Hello/
+  468  ls
+  469  mvn help:effective-pom
+  470  clear
+  471  mvn help:effective-pom > out.txt
+  472  vim out.txt 
+  473  clear
+  474  cd ..
+  475  ls
+  476  mkdir CppProject
+  477  cd CppProject/
+  478  ls
+  479  make
+  480  clear
+  481  ls
+  482  mkdir src test
+  483  ls
+  484  rm -rf test
+  485  ls
+  486  cd src
+  487  ls
+  488  vim Hello.cpp
+  489  ls
+  490  g++ Hello.cpp 
+  491  ls
+  492  gcc Hello.cpp 
+  493  yum install -y gcc-g++
+  494  yum install epel-release
+  495  yum install -y gcc-g++
+  496  yum install -y gcc
+  497  clear
+  498  ls
+  499  g++ Hello.cpp 
+  500  gcc Hello.cpp 
+  501  ls
+  502  yum group install "Development Tools"
+  503  cleear
+  504  ls
+  505  g++ Hello.cpp 
+  506  ls
+  507  rm a.out
+  508  ./a.out 
+  509  rm a.out
+  510  cd ..
+  511  ls
+  512  vim Makefile
+  513  ls
+  514  make
+  515  mkdir bin
+  516  make
+  517  ls
+  518  cd bin
+  519  ls
+  520  ./Hello
+  521  ./Hello.exe
+  522  ls
+  523  cdd ..
+  524  ls
+  525  rm Hello.exe
+  526  ls
+  527  cd ..
+  528  ls
+  529  tree
+  530  vim pom.xml
+  531  mvn compile
+  532  vim pom.xml 
+  533  mvn compile
+  534  clear
+  535  mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin
+  536  vim pom.xml 
+  537  mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin -Ddetail
+  538  mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin -Ddetail >  out.txt
+  539  vim out.txt 
+  540  vim pom.xml 
+  541  ls
+  542  vim pom.xml 
+  543  vi out.txt 
+  544  vim pom.xml 
+  545  clear
+  546  ls
+  547  mvn compile
+  548  ls
+  549  clear
+  550  ls
+  551  make
+  552  vim Makefile 
+  553  vim pom.xml 
+  554  mvn compile
+  555  vim pom.xml 
+  556  mvn compile
+  557  vim pom.xml 
+  558  mvn compile
+  559  mvn clean
+  560  vim pom.xml 
+  561  mvn clean
+  562  ls
+  563  mvn compile
+  564  vim pom.xml 
+  565  mvn compile
+  566  vim  pom.xml 
+  567  mvn compile
+  568  vim  pom.xml 
+  569  mvn clean
+  570  mvn compile
+  571  vim  pom.xml 
+  572  clear
+  573  mvn clean
+  574  mvn help:effective-pom
+  575  vim pom.xml 
+  576  cd ..
+  577  ls
+  578  cd Hello/
+  579  ls
+  580  mvn clean package
+  581  cd ..
+  582  clear
+  583  ls
+  584  cd Hello/
+  585  ls
+  586  cd ..
+  587  cd CppProject/
+  588  ls
+  589  vim pom.xml 
+  590  cd ..
+  591  cd Hello/
+  592  ls
+  593  vim pom.xml 
+  594  mvn clean
+  595  clear
+  596  ls
+  597  vim pom.xml 
+  598  ls
+  599  mvn package
+  600  cd target/
+  601  ls
+  602  java -cp tektutor-hello-app-1.0.0.jar org.tektutor.Hello
+  603  java  org.tektutor.Hello
+  604  cd .
+  605  cd ..
+  606  mvn clean
+  607  clear
+  608  mvn test
+  609  clear
+  610  ls
+  611  cd ..
+  612  ls
+  613  mkdir CRM
+  614  cd CRM
+  615  ls
+  616  touch pom.xml
+  617  ls
+  618  mkdir -p frontend businesslayer dataaccesslayer main
+  619  tree
+  620  vim pom.xml 
+  621  cat pom.xml 
+  622  ls
+  623  vim pom.xml 
+  624  clear
+  625  ls
+  626  cd ..
+  627  clear
+  628  ls
+  629  mv CRM/main .
+  630  ls
+  631  mv main CRM
+  632  ls
+  633  cd CRM
+  634  ls
+  635  cd frontend/
+  636  ls
+  637  touch pom.xml
+  638  mkdir -p src/main/java/org/tektutor
+  639  mkdir -p src/test/java/org/tektutor
+  640  ls
+  641  touch src/main/java/org/tektutor/Frontend.java
+  642  touch src/test/java/org/tektutor/Test.java
+  643  tree
+  644  pom.xml
+  645  ls
+  646  vim pom.xml 
+  647  ls
+  648  vim src/main/java/org/tektutor/Frontend.java 
+  649  clear
+  650  cd ..
+  651  ls
+  652  cp -R frontend businesslayer
+  653  cp -R frontend dataaccesslayer
+  654  cp -R frontend main
+  655  tree businesslayer/
+  656  clear
+  657  ls
+  658  cd businesslayer/
+  659  ls
+  660  cp -R frontend/* .
+  661  ls
+  662  rm -rf frontend/
+  663  ls
+  664  clear
+  665  ls
+  666  vim pom.xml 
+  667  ls
+  668  tree
+  669  mv src/main/java/org/tektutor/Frontend.java src/main/java/org/tektutor/BusinessLayer.java 
+  670  vim src/main/java/org/tektutor/BusinessLayer.java 
+  671  vim src/test/java/org/tektutor/Test.java 
+  672  cd ..
+  673  ls
+  674  cd dataaccesslayer/
+  675  ls
+  676  mv frontend/* .
+  677  ls
+  678  rm frontend/
+  679  ls
+  680  rm -rf frontend/
+  681  ls
+  682  vim pom.xml 
+  683  tree
+  684  mv src/main/java/org/tektutor/Frontend.java src/main/java/org/tektutor/DataAccessLayer.java 
+  685  vim src/main/java/org/tektutor/DataAccessLayer.java 
+  686  cd ..
+  687  ls
+  688  cd main/
+  689  ls
+  690  mv frontend/* .
+  691  ls
+  692  rm -rf frontend/
+  693  ls
+  694  vim pom.xml 
+  695  tree
+  696  mv src/main/java/org/tektutor/Frontend.java src/main/java/org/tektutor/Main.java 
+  697  vim src/main/java/org/tektutor/Main.java 
+  698  ls
+  699  vim src/main/java/org/tektutor/Main.java 
+  700  cd ..
+  701  clear
+  702  ls
+  703  tree
+  704  clear
+  705  ls
+  706  tree
+  707  clear
+  708  cd ..
+  709  tree
+  710  clear
+  711  tree  CRM
+  712  clear
+  713  ls
+  714  cd CRM
+  715  ls
+  716  mvn compile
+  717  vim pom.xml 
+  718  mvn compile
+  719  vim pom.xml 
+  720  cd dataaccesslayer/
+  721  vim pom.xml 
+  722  vim src/main/java/org/tektutor/DataAccessLayer.java 
+  723  cd ..
+  724  mvn compile
+  725  cd target
+  726  ls
+  727  cd businesslayer/
+  728  ls
+  729  cd target/
+  730  ls
+  731  cd classes/
+  732  ls
+  733  tree
+  734  cd ..
+  735  clear
+  736  ls
+  737  mvn compile
+  738  mvn test
+  739  cd ..
+  740  ls
+  741  vim pom.xml 
+  742  ls
+  743  cd main/
+  744  ls
+  745  cd ..
+  746  ls
+  747  vim pom.xml 
+  748  cd frontend/
+  749  ls
+  750  vim pom.xml 
+  751  mvn test
+  752  vim src/test/java/org/tektutor/Test.java 
+  753  mvn test
+  754  clear
+  755  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  756  vim src/test/java/org/tektutor/Testcase.java 
+  757  clear
+  758  mvn clean test
+  759  mvn help:effective-pom  > out.txt
+  760  vim out.txt 
+  761  cd .
+  762  cd ..
+  763  ls
+  764  cd businesslayer/
+  765  ls
+  766  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java
+  767  vim src/test/java/org/tektutor/Testcase.java 
+  768  cd ..
+  769  cd dataaccesslayer/
+  770  vim src/test/java/org/tektutor/Test.java 
+  771  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  772  mvn test
+  773  cd ..
+  774  ls
+  775  cd businesslayer/
+  776  ls
+  777  mvn test
+  778  cd ..
+  779  ls
+  780  cd frontend/
+  781  ls
+  782  mvn clean test
+  783  cd ..
+  784  ls
+  785  cd main/
+  786  ls
+  787  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  788  vim src/test/java/org/tektutor/Testcase.java 
+  789  cd ..
+  790  clear
+  791  mvn clean
+  792  clear
+  793  cd ..
+  794  ls
+  795  cd CppProject/
+  796  ls
+  797  mvn clean
+  798  clear
+  799  ls
+  800  rm out.txt 
+  801  ls
+  802  cd ..
+  803  ls
+  804  cd Hello/
+  805  ls
+  806  mvn clean
+  807  cd ..
+  808  git status
+  809  git add *
+  810  git commit -m "Added Day2 lab exercises."
+  811  git push -u origin  master
+  812  clear
+  813  cd ..
+  814  ls
+  815  git clone https://github.com/tektutor/devops-us-may-2020.git
+  816  ls
+  817  cd dev
+  818  cd devops-us-may-2020/
+  819  ls
+  820  cd Day2
+  821  ls
+  822  cd CRM
+  823  ls
+  824  cd ..
+  825  clear
+  826  ls
+  827  pwd
+  828  cd devops-us-may-2020/
+  829  git pull
+  830  cd Day2
+  831  ls
+  832  cd CRM
+  833  ls
+  834  cd frontend/
+  835  ls
+  836  vim pom.xml 
+  837  cd ..
+  838  cd main/
+  839  ls
+  840  vim pom.xml 
+  841  ls
+  842  cd ..
+  843  ls
+  844  cd frontend/
+  845  ls
+  846  vim pom.xml 
+  847  ls
+  848  mkdir fe businesslayer
+  849  ls
+  850  rm -rf businesslayer fe
+  851  ls
+  852  cd ..
+  853  mvn deploy
+  854  clear
+  855  ls
+  856  mvn help:describe -Dcmd=compile
+  857  clear
+  858  mvn help:describe -Dcmd=clean
+  859  mvn help:describe -Dcmd=site
+  860  mvn site
+  861  clear
+  862  ls
+  863  mvn dependency:tree
+  864  mvn install
+  865  vim main/src/test/java/org/tektutor/Testcase.java 
+  866  mvn dependency:tree
+  867  clear
+  868  ls
+  869  mvn help:effective-settings
+  870  clear
+  871  git --version
+  872  history
+  873* clear  
+  874  history > command_history.txt
+  875  lls
+  876  history > command_history.txt

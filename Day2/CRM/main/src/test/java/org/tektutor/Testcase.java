@@ -9,7 +9,7 @@ public class Testcase {
 	public void testMain() {
 		Main main = new Main();
 		
-		String actualResponse   = fe.getModuleName();
+		String actualResponse   = main.getModuleName();
 		String expectedResponse = "Main Module";
 
 		assertEquals ( expectedResponse, actualResponse );
