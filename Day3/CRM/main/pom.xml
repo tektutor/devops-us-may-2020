@@ -1,0 +1,53 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.tektutor</groupId>
+	<artifactId>main</artifactId>
+	<version>1.0.0</version>
+
+	<parent>
+		<groupId>org.tektutor</groupId>
+		<artifactId>crm</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>custom-compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>org.tektutor.Main</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.tektutor</groupId>
+			<artifactId>frontend</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tektutor</groupId>
+			<artifactId>businesslayer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tektutor</groupId>
+			<artifactId>dataaccesslayer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+</project>

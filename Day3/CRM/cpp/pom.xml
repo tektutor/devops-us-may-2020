@@ -1,0 +1,51 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.tektutor</groupId>
+	<artifactId>tektutor-cpp-app</artifactId>
+	<version>1.0.0</version>
+
+	<parent>
+		<groupId>org.tektutor</groupId>
+		<artifactId>crm</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+
+	<build>
+		<outputDirectory>bin</outputDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<executions>
+					<execution>
+						<id>default-compile</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>custom-compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>make</executable>
+					<workingDirectory>.</workingDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
