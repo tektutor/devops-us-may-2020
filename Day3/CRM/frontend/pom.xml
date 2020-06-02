@@ -10,4 +10,14 @@
 		<artifactId>crm</artifactId>
 		<version>1.0.0</version>
 	</parent>
+<!--
+        This section should be used in case parent pom has captured
+        junit dependency under dependencyManagement section.
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+-->
 </project>
