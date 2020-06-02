@@ -1,0 +1,1000 @@
+  746  ls
+  747  vim pom.xml 
+  748  cd frontend/
+  749  ls
+  750  vim pom.xml 
+  751  mvn test
+  752  vim src/test/java/org/tektutor/Test.java 
+  753  mvn test
+  754  clear
+  755  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  756  vim src/test/java/org/tektutor/Testcase.java 
+  757  clear
+  758  mvn clean test
+  759  mvn help:effective-pom  > out.txt
+  760  vim out.txt 
+  761  cd .
+  762  cd ..
+  763  ls
+  764  cd businesslayer/
+  765  ls
+  766  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java
+  767  vim src/test/java/org/tektutor/Testcase.java 
+  768  cd ..
+  769  cd dataaccesslayer/
+  770  vim src/test/java/org/tektutor/Test.java 
+  771  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  772  mvn test
+  773  cd ..
+  774  ls
+  775  cd businesslayer/
+  776  ls
+  777  mvn test
+  778  cd ..
+  779  ls
+  780  cd frontend/
+  781  ls
+  782  mvn clean test
+  783  cd ..
+  784  ls
+  785  cd main/
+  786  ls
+  787  mv src/test/java/org/tektutor/Test.java src/test/java/org/tektutor/Testcase.java 
+  788  vim src/test/java/org/tektutor/Testcase.java 
+  789  cd ..
+  790  clear
+  791  mvn clean
+  792  clear
+  793  cd ..
+  794  ls
+  795  cd CppProject/
+  796  ls
+  797  mvn clean
+  798  clear
+  799  ls
+  800  rm out.txt 
+  801  ls
+  802  cd ..
+  803  ls
+  804  cd Hello/
+  805  ls
+  806  mvn clean
+  807  cd ..
+  808  git status
+  809  git add *
+  810  git commit -m "Added Day2 lab exercises."
+  811  git push -u origin  master
+  812  clear
+  813  cd ..
+  814  ls
+  815  git clone https://github.com/tektutor/devops-us-may-2020.git
+  816  ls
+  817  cd dev
+  818  cd devops-us-may-2020/
+  819  ls
+  820  cd Day2
+  821  ls
+  822  cd CRM
+  823  ls
+  824  cd ..
+  825  clear
+  826  ls
+  827  pwd
+  828  cd devops-us-may-2020/
+  829  git pull
+  830  cd Day2
+  831  ls
+  832  cd CRM
+  833  ls
+  834  cd frontend/
+  835  ls
+  836  vim pom.xml 
+  837  cd ..
+  838  cd main/
+  839  ls
+  840  vim pom.xml 
+  841  ls
+  842  cd ..
+  843  ls
+  844  cd frontend/
+  845  ls
+  846  vim pom.xml 
+  847  ls
+  848  mkdir fe businesslayer
+  849  ls
+  850  rm -rf businesslayer fe
+  851  ls
+  852  cd ..
+  853  mvn deploy
+  854  clear
+  855  ls
+  856  mvn help:describe -Dcmd=compile
+  857  clear
+  858  mvn help:describe -Dcmd=clean
+  859  mvn help:describe -Dcmd=site
+  860  mvn site
+  861  clear
+  862  ls
+  863  mvn dependency:tree
+  864  mvn install
+  865  vim main/src/test/java/org/tektutor/Testcase.java 
+  866  mvn dependency:tree
+  867  clear
+  868  ls
+  869  mvn help:effective-settings
+  870  clear
+  871  git --version
+  872  history
+  873* clear  
+  874  history > command_history.txt
+  875  lls
+  876  history > command_history.txt
+  877  vim command_history.txt 
+  878  ls
+  879  mvn clean
+  880  ls
+  881  mv command_history.txt ..
+  882  ls
+  883  cd ..
+  884  ls
+  885  cd ...
+  886  cd ..
+  887  git status
+  888  git add *
+  889  git commit -m  "Added Command History."
+  890  git push -u origin master
+  891  ls
+  892  clear
+  893  ls
+  894  cd Day2
+  895  ls
+  896  cd Hello/
+  897  ls
+  898  mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin:3.1
+  899  mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin:3.1 -Ddetail
+  900  clear
+  901  mvn help:describe -Dplugin=org.apache.maven.plugins:maven-compiler-plugin:3.1 -Ddetail
+  902  clear
+  903  mvn help:describe -Dplugin=compiler:3.1 -Ddetail
+  904  mvn help:describe -Dplugin=compiler -Ddetail
+  905  mvn help:describe -Dcmd=compile
+  906  mvn help:describe -Dcmd=clean
+  907  mvn help:describe -Dcmd=site
+  908  mvn site
+  909  ccd ..
+  910  ls
+  911  cd ..
+  912  ls
+  913  cd CRM
+  914  ls
+  915  mvn site
+  916  clear
+  917  ls
+  918  vim pom.xml 
+  919  cd businesslayer/
+  920  ls
+  921  mvn clean package
+  922  cd ..
+  923  ls
+  924  cd CppProject/
+  925  ls
+  926  vim pom.xml 
+  927  cd ..
+  928  ls
+  929  cd CRM
+  930  ls
+  931  cd ..
+  932  ls
+  933  cd ..
+  934  ls
+  935  mkdir Day3
+  936  cp -R Day2/CRM Day3
+  937  cp -R Day2/CppProject Day3
+  938  ls
+  939  cd Day3
+  940  ls
+  941  mv CppProject/ CRM
+  942  ls
+  943  cd CRM
+  944  ls
+  945  mv cpp
+  946  mv CppProject cpp
+  947  ls
+  948  cd Cpp
+  949  ls
+  950  cd cpp
+  951  ls
+  952  cd ..
+  953  ls
+  954  vim pom.xml 
+  955  cd businesslayer/
+  956  vim pom.xml 
+  957  cdd ..
+  958  cd ..
+  959  ls
+  960  cd cpp/
+  961  ls
+  962  vim pom.xml 
+  963  cd ..
+  964  vim pom.xml 
+  965  cd cpp
+  966  ls
+  967  mvn help:effective-pom
+  968  cd ..
+  969  ls
+  970  vim po
+  971  clear
+  972  mvn clean package
+  973  vim pom.xml 
+  974  cd ..
+  975  cd Day2
+  976  ls
+  977  cd CRM
+  978  ls
+  979  mvn clean compile
+  980  cd target
+  981  ls
+  982  cd main/
+  983  ls
+  984  cd target/
+  985  ls
+  986  cd ..
+  987  cd .
+  988  cd ..
+  989  mvn package
+  990  cd main/target/
+  991  ls
+  992  java -cp main-1.0.0.jar org.tektutor.Main
+  993  java -cp main-1.0.0.jar:../../frontend/target/frontend-1.0.0.jar org.tektutor.Main
+  994  java -cp main-1.0.0.jar:../../frontend/target/frontend-1.0.0.jar:../../businesslayer/target/businesslayer-1.0.0.jar:../../dataaccesslayer/target/dataaccesslayer-1.0.0.jar org.tektutor.Main
+  995  cd ..
+  996  ls
+  997  cd ..
+  998  ls
+  999  cd CppProject/
+ 1000  ls
+ 1001  vim pom.xml 
+ 1002  mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin
+ 1003  cd ..
+ 1004  ls
+ 1005  cd Day3
+ 1006  ls
+ 1007  cd CRM
+ 1008  ls
+ 1009  cd ..
+ 1010  cd CRM
+ 1011  ls
+ 1012  mvn compile
+ 1013  cd main/
+ 1014  ls
+ 1015  vim pom.xml 
+ 1016  clear
+ 1017  cd ..
+ 1018  mvn help:describe -Dplugin=org.codehaus.mojo:exec-plugin:1.6.0 -Ddetail  > out.txt
+ 1019* vim out
+ 1020  mvn help:describe -Dplugin=org.codehaus.mojo:exec-plugin:1.6.0 -Ddetail 
+ 1021  cd ..
+ 1022  ls
+ 1023  cd ..
+ 1024  cd Day2
+ 1025  ls
+ 1026  cd CppProject/
+ 1027  ls
+ 1028  mvn help:describe -Dplugin=org.codehaus.mojo:exec-plugin:1.6.0 -Ddetail 
+ 1029  mvn help:describe -Dplugin=org.codehaus.mojo:exec-plugin -Ddetail 
+ 1030  mvn help:describe -Dplugin=org.codehaus.mojo:exec-plmaven-plugin -Ddetail 
+ 1031  vim  pom.xml 
+ 1032  mvn help:describe -Dplugin=org.codehaus.mojo:exec-maven-plugin -Ddetail 
+ 1033  cd ..
+ 1034  cd Day3/CRM/
+ 1035  ls
+ 1036  cd main/
+ 1037  ls
+ 1038  vim pom.xml 
+ 1039  cd ..
+ 1040  mvn compile
+ 1041  vim pom.xml 
+ 1042  cd main/
+ 1043  vim pom.xml 
+ 1044  cd ..
+ 1045  mvn test
+ 1046  mvn validate
+ 1047  vim main/pom.xml 
+ 1048  mvn help:describe -Dcmd=validate
+ 1049  ;s
+ 1050  ls
+ 1051  mvn help:effective-pom
+ 1052  cd ..
+ 1053  ls
+ 1054  cd Day1
+ 1055  ls
+ 1056  cd Hello/
+ 1057  ls
+ 1058  vim pom.xml 
+ 1059  mvn help:effective-pom
+ 1060  cd ..
+ 1061  ls
+ 1062  cd Day3
+ 1063  ls
+ 1064  cd CRM
+ 1065  ls
+ 1066  vim pom.xml 
+ 1067  cd cpp
+ 1068  ls
+ 1069  mvn help:effective-pom
+ 1070  cd ..
+ 1071  ls
+ 1072  clear
+ 1073  ls
+ 1074  mvn --version
+ 1075  mvn -version
+ 1076  cd /home/jegan/Downloads/apache-maven-3.6.3
+ 1077  ls
+ 1078  cd conf
+ 1079  ls
+ 1080  vim settings.xml 
+ 1081  cd /home/jegan/Downloads/
+ 1082  ls
+ 1083  cd apache-maven-3.6.3/conf/
+ 1084  ls
+ 1085  vim settings.xml 
+ 1086  cd ..
+ 1087  ls
+ 1088  mkdir -p /usr/share/maven
+ 1089  cp -R * /usr/share/maven
+ 1090  cd ..
+ 1091  cd /usr/share/maven
+ 1092  ls
+ 1093  clear
+ 1094  ls
+ 1095  cd -
+ 1096  ls
+ 1097  cd apache-maven-3.6.3/
+ 1098  ls
+ 1099  cd .
+ 1100  cd ..
+ 1101  ls
+ 1102  tar xvfz nexus-3.23.0-03-unix.tar.gz 
+ 1103  clear
+ 1104  ls
+ 1105  cd nexus-3.23.0-03/
+ 1106  ls
+ 1107  cd bin
+ 1108  ls
+ 1109  ls -l
+ 1110  ./nexus
+ 1111  ./nexus start
+ 1112  ls
+ 1113  cd ..
+ 1114  ls
+ 1115  cd etc
+ 1116  ls
+ 1117  vim nexus-default.properties 
+ 1118  pwd
+ 1119  vim nexus-default.properties 
+ 1120  cd ..
+ 1121  ls
+ 1122  cd bin
+ 1123  ls
+ 1124  ./nexus status
+ 1125  clear
+ 1126  firewall-cmd --zone=public --add-port=8081/tcp --permanent
+ 1127  firewall-cmd --reload
+ 1128  ifconfig ens33
+ 1129  cat /home/jegan/Downloads/sonatype-work/nexus3/admin.password 
+ 1130  cd /home/jegan
+ 1131  ls
+ 1132  cd devops-us-may-2020/
+ 1133  ls
+ 1134  git pull
+ 1135  ls
+ 1136  cd Day3
+ 1137  ls
+ 1138  cd CRM
+ 1139  ls
+ 1140  mvn clean
+ 1141  ls
+ 1142  rm out.txt 
+ 1143  ls
+ 1144  cd ..
+ 1145  cd Day2
+ 1146  ls
+ 1147  cd CppProject/
+ 1148  mvn clean
+ 1149  cd ..
+ 1150  ls
+ 1151  cd CRM
+ 1152  mvn clean
+ 1153  cd ..
+ 1154  ls
+ 1155  cd Hello/
+ 1156  ls
+ 1157  rm out.txt 
+ 1158  cd ..
+ 1159  ls
+ 1160  cd ..
+ 1161  ls
+ 1162  git add *
+ 1163  git add --all
+ 1164  git status
+ 1165  git commit -m "Added Day3 lab exercises."
+ 1166  gi push -u origin master
+ 1167  git push -u origin master
+ 1168  ls
+ 1169  cd Day3
+ 1170  ls
+ 1171  cd CRM
+ 1172  ls
+ 1173  pwd
+ 1174  git remote -v
+ 1175  ls
+ 1176  vim pom.xml 
+ 1177  pwd
+ 1178  vim pom.xml 
+ 1179  mvn --version
+ 1180  vim /home/jegan/Downloads/apache-maven-3.6.3/conf/settings.xml 
+ 1181  clear
+ 1182  ls
+ 1183  mvn deploy
+ 1184  vim pom.xml 
+ 1185  clear
+ 1186  ls
+ 1187  cd ..
+ 1188  ls
+ 1189  mvn archetype:generate -DgroupId=org.tektutor -DartifactId=tektutor-hello-plugin -Dversion=1.0.0 -DarchetypeArtifactId=maven-archetype-plugin -DinteractiveMode=false
+ 1190  l
+ 1191  ls
+ 1192  cd tektutor-hello-plugin/
+ 1193  tree
+ 1194  vim pom.xml 
+ 1195  vim src/main/java/org/tektutor/MyMojo.java 
+ 1196  clear
+ 1197  mvn install
+ 1198  vim src/main/java/org/tektutor/MyMojo.java 
+ 1199  mvn help:describe -Dplugin=hello 
+ 1200  mvn help:describe -Dplugin=org.tektutor:tektutor-hello-plugin 
+ 1201  vim pom.xml 
+ 1202  cd ..
+ 1203  mvn help:describe -Dplugin=org.tektutor:tektutor-hello-plugin 
+ 1204  ls
+ 1205  cd ..
+ 1206  pwd
+ 1207  mvn help:describe -Dplugin=org.tektutor:tektutor-hello-plugin 
+ 1208  cd devops-us-may-2020/Day3
+ 1209  ls
+ 1210  mkdir invoke-hello-plugin-app
+ 1211  cd invoke-hello-plugin-app/
+ 1212  ls
+ 1213  touch pom.xml
+ 1214  ls
+ 1215  vim pom.xml 
+ 1216  ls
+ 1217  vim pom.xml 
+ 1218  mvn validate
+ 1219  vim pom.xml 
+ 1220  mvn validate
+ 1221  vim pom.xml 
+ 1222  cd ..
+ 1223  ls
+ 1224  clear
+ 1225  ls
+ 1226  cd tektutor-hello-plugin/
+ 1227  ls
+ 1228  cd ..
+ 1229  ls
+ 1230  cd invoke-hello-plugin-app/
+ 1231  ls
+ 1232  cd ..
+ 1233  ls
+ 1234  mvn archetype:generate
+ 1235  clear
+ 1236  mvn help
+ 1237  clear
+ 1238  ls
+ 1239  cd ..
+ 1240  cd Day3/CRM
+ 1241  mvn  clean
+ 1242  cd ..
+ 1243  cd tektutor-hello-plugin/
+ 1244  mvn clean
+ 1245  cd ..
+ 1246  ls
+ 1247  cd ..
+ 1248  ls
+ 1249  cd  Day2
+ 1250  ls
+ 1251  cd CppProject/
+ 1252  ls
+ 1253  mvn clean
+ 1254  cd ..
+ 1255  ls
+ 1256  cd CRM
+ 1257  ls
+ 1258  mvn cleean
+ 1259  mvn clean
+ 1260  cd ..
+ 1261  ;ls
+ 1262  ls
+ 1263  cd Hello/
+ 1264  ls
+ 1265  cd ..
+ 1266  ls
+ 1267  cd ..
+ 1268  ls
+ 1269  git status
+ 1270  git add *
+ 1271  git commit -m "Updated pom file."
+ 1272  git push -u origin master
+ 1273  vim Day3/CRM
+ 1274  clear
+ 1275  ls
+ 1276  cd Day3
+ 1277  ls
+ 1278  cd tektutor-hello-plugin/
+ 1279  ls
+ 1280  mvn help:effective-settings
+ 1281  mvn compile -X
+ 1282  mvn help:effective-settings
+ 1283  mvn deploy  -help
+ 1284  mvn deploy --help
+ 1285  ls
+ 1286  mvn site
+ 1287  clear
+ 1288  ls
+ 1289  cd ..
+ 1290  ls
+ 1291  cd CRM/
+ 1292  ls
+ 1293  vim pom.xml 
+ 1294  mvn test
+ 1295  vim pom.xml 
+ 1296  mvn test
+ 1297  vim pom.xml 
+ 1298  mvn test
+ 1299  vim pom.xml 
+ 1300  cd frontend/
+ 1301  ls
+ 1302  mvn help:effective-pom
+ 1303  vim pom.xml 
+ 1304  mvn test
+ 1305  mvn help:effective-pom
+ 1306  cd ..
+ 1307  ls
+ 1308  vim pom.xml 
+ 1309  mvn test
+ 1310  ls
+ 1311  cd frontend/
+ 1312  ls
+ 1313  vim pom.xml 
+ 1314  cd ..
+ 1315  mvn test
+ 1316  clear
+ 1317  ls
+ 1318  cd cpp/
+ 1319  ls
+ 1320  mvn help:effective-pom
+ 1321  clear
+ 1322  ls
+ 1323  vim pom.xml 
+ 1324  mvn help:effective-pom
+ 1325  vim pom.xml +15
+ 1326  mvn help:effective-pom
+ 1327  vim pom.xml +15
+ 1328  mvn help:effective-pom
+ 1329  vim pom.xml +15
+ 1330  mvn help:effective-pom
+ 1331  vim pom.xml +15
+ 1332  vim pom.xml +20
+ 1333  cd ..
+ 1334  ls
+ 1335  mvn clean
+ 1336  cd ..
+ 1337  ls
+ 1338  cd ..
+ 1339  ls
+ 1340  mkdir Day4
+ 1341  ls
+ 1342  cd Day4
+ 1343  clear
+ 1344  git --version
+ 1345  DD#yum install -y epel-release && yum install -y git
+ 1346  clear
+ 1347  git --version
+ 1348  ls
+ 1349  cp
+ 1350  ls
+ 1351  pwd
+ 1352  mkdir GitDemo
+ 1353  cd GitDemo/
+ 1354  ls
+ 1355  cd ..
+ 1356  clear
+ 1357  ls
+ 1358  mkdir GitDemo
+ 1359  cd GitDemo/
+ 1360  ls
+ 1361  touch fruits.txt
+ 1362  ls
+ 1363  vim fruits.txt 
+ 1364  ls
+ 1365  git init
+ 1366  ls
+ 1367  ls -lha
+ 1368  tree .git
+ 1369  clear
+ 1370  git config --global user.name "Jeganathan Swaminathan"
+ 1371  git config --global user.email "mail2jegan@gmail.com"
+ 1372  git config --list
+ 1373  ls -lha
+ 1374  cd ..
+ 1375  cd devops-us-may-2020/
+ 1376  ls
+ 1377  ls -lha
+ 1378  git remote -v
+ 1379  cd Day4
+ 1380  ls
+ 1381  git clone https://github.com/tektutor/ansible-ubuntu.git
+ 1382  git clone https://github.com/tektutor/ubuntu-ansible.git
+ 1383  ls
+ 1384  cd ubuntu-ansible/
+ 1385  ls
+ 1386  ls -lha
+ 1387  git remote -v
+ 1388  cd ..
+ 1389  ls
+ 1390  git remote -v
+ 1391  cd Day4
+ 1392  ls
+ 1393  cd ubuntu-ansible/
+ 1394  ls
+ 1395  cd ..
+ 1396  ls
+ 1397  cd ..
+ 1398  ls
+ 1399  cd ..
+ 1400  ls
+ 1401  cd GitDemo/
+ 1402  ls
+ 1403  git init
+ 1404  ls
+ 1405  git config --list
+ 1406  clear
+ 1407  git status
+ 1408  ls -lha
+ 1409  rm *
+ 1410  rm -rf .git
+ 1411  clear
+ 1412  ls
+ 1413  pwd
+ 1414  git init
+ 1415  ls
+ 1416  ls -lha
+ 1417  git config --global user.name "Jeganathan Swaminathan"
+ 1418  git config --global user.mail "mail2jegan@gmail.com"
+ 1419  git config --list
+ 1420  clear
+ 1421  vim fruits.txt
+ 1422  git status
+ 1423  git add fruits.txt 
+ 1424  git status
+ 1425  git rm --cached fruits.txt 
+ 1426  git status
+ 1427  git add fruits.txt 
+ 1428  git status
+ 1429  ls
+ 1430  ls -lha
+ 1431  tree .git
+ 1432  clear
+ 1433  ls
+ 1434  git status
+ 1435  git commit -m "Initial commit."
+ 1436  git status
+ 1437  ls
+ 1438  git branch
+ 1439  diff fruits.txt 
+ 1440  git diff
+ 1441  git diff HEAD
+ 1442  git log
+ 1443  vim fruits.txt 
+ 1444  git diff
+ 1445  git status
+ 1446  git add *
+ 1447  git status
+ 1448  git commit -m "Added Orange."
+ 1449  git log
+ 1450  ls
+ 1451  sha1
+ 1452  sha-1
+ 1453  md5
+ 1454  yum install -y sha1
+ 1455  yum install -y sha-1
+ 1456  yum install -y perl-Digest-SHA1
+ 1457  'sha1
+ 1458  clear
+ 1459  ls
+ 1460  sha1 fruits.txt 
+ 1461  sha-1 fruits.txt 
+ 1462  sha1-sum fruits.txt 
+ 1463  sha1sum fruits.txt 
+ 1464  vim  fruits.txt 
+ 1465  sha1sum fruits.txt 
+ 1466  vim  fruits.txt 
+ 1467  git log
+ 1468  vim  fruits.txt 
+ 1469  sha1sum fruits.txt 
+ 1470  vim fruits.txt 
+ 1471  sha1sum fruits.txt 
+ 1472  ls
+ 1473  git history
+ 1474  git log
+ 1475  git tag
+ 1476  which sha1sum
+ 1477  clear
+ 1478  ls
+ 1479  vim fruits.txt 
+ 1480  git diff
+ 1481  git add *
+ 1482  git status
+ 1483  git commit -m "Added Orange and Grapes."
+ 1484  git log
+ 1485  ls
+ 1486  git ammend
+ 1487  clear
+ 1488  ls
+ 1489  git status
+ 1490  cat fruits.txt 
+ 1491  git branch
+ 1492  git checkout -b dev-1.0
+ 1493  git branch
+ 1494  ls
+ 1495  cat fruits.txt 
+ 1496  touch cars.txt
+ 1497  vim car.txt
+ 1498  cat car.txt 
+ 1499  mv cars.txt
+ 1500  mv car.txt cars.txt 
+ 1501  cat cars.txt 
+ 1502  git status
+ 1503  git add *
+ 1504  git commit -m "Added cars.txt with VW Polo."
+ 1505  git status
+ 1506  git branch
+ 1507  ls
+ 1508  git checkout dev-1.0
+ 1509  git branch dev-1.0
+ 1510  git checkout master
+ 1511  git branch
+ 1512  ls
+ 1513  cat fruits.txt 
+ 1514  git checkout dev-1.0
+ 1515  ls
+ 1516  vim cars.txt 
+ 1517  vim fruits.txt 
+ 1518  git status
+ 1519  git add *
+ 1520  git commit -m "Updated cars and fruits."
+ 1521  git branch
+ 1522  git checkout master
+ 1523  ls
+ 1524  cat fruits.txt 
+ 1525  git merge dev-1.0
+ 1526  git branch
+ 1527  ls
+ 1528  git log
+ 1529  git merge
+ 1530  ls
+ 1531  git merge --help
+ 1532  ls
+ 1533  git branch
+ 1534  ls
+ 1535  vim cars.txt 
+ 1536  git checkout dev-1.0
+ 1537  git branch
+ 1538  vim cars.txt 
+ 1539  git checkout master
+ 1540  git add cars.txt 
+ 1541  git checkout dev-1.0
+ 1542  vim cars.txt 
+ 1543  git checkout master
+ 1544  vim cars.txt 
+ 1545  git status
+ 1546  git commit -m "Added BMW X5 in master branch."
+ 1547  git branch
+ 1548  git checkout dev-1.0
+ 1549  vim cars.txt 
+ 1550  git --version
+ 1551  git branch
+ 1552  vim cars.txt 
+ 1553  git commit -a -m "Added Audi Q7 in dev 1.0 branch."
+ 1554  git branch
+ 1555  git checkout master
+ 1556  git merge dev-1.0
+ 1557  git branch
+ 1558  vim cars.txt 
+ 1559  git status
+ 1560  git commit -m "Resolved merge conflict."
+ 1561  git commit -m -a "Resolved merge conflict."
+ 1562  git status
+ 1563  git add cars.txt 
+ 1564  git commit -m "Resolved merge conflicts."
+ 1565  git status
+ 1566  ls
+ 1567  vim cars.txt 
+ 1568  cat cars.txt 
+ 1569  git reset --HEAD
+ 1570  git reset HEAD
+ 1571  cat cars.txt 
+ 1572  git add cars.txt 
+ 1573  git status
+ 1574  git reset HEAD
+ 1575  ls
+ 1576  cat cars.txt 
+ 1577  git reset --hard
+ 1578  cat cars.txt 
+ 1579  git status
+ 1580  git branch
+ 1581  git log
+ 1582  git tag -a 1.0 f2f7c02a87b79782285c3b361c3b613290abc38f
+ 1583  git log
+ 1584  git tag
+ 1585  git tag -a 2.0 eec5b6f296f422463476a71ca81c63419dd41490.0 
+ 1586  git tag -a 2.0 eec5b6f296f422463476a71ca81c63419dd41490
+ 1587  git tag
+ 1588  git log --help
+ 1589  git log 1
+ 1590  git checkout 2.0
+ 1591  vim fruits.txt 
+ 1592  git checkout 1.0
+ 1593  git tag
+ 1594  git checkout 2.0
+ 1595  vim fruits.txt 
+ 1596  git log
+ 1597  git branch
+ 1598  git checkout dev-1.0
+ 1599  git log
+ 1600  git branch
+ 1601  ls
+ 1602  git 
+ 1603  git mv cars.txt mycars.txt
+ 1604  ls
+ 1605  git status
+ 1606  git commit -m "Renameed cars.txt to mycars.txt"
+ 1607  git log
+ 1608  git remote add origin https://github.com/tektutor/git--demo-may-2020.git
+ 1609  git status
+ 1610  git checkout master
+ 1611  git branch
+ 1612  ls
+ 1613  cat cars.txt 
+ 1614  ls
+ 1615  git remote add origin https://github.com/tektutor/git--demo-may-2020.git
+ 1616  git push -u origin master
+ 1617  git mv cars.txt mycars.txt
+ 1618  ls
+ 1619  git commit -m "Renamed cars.txt to mycars.txt."
+ 1620  git push -u origin master
+ 1621  history
+ 1622  history > git_command-history.txt
+ 1623  ls
+ 1624  git add *
+ 1625  git status
+ 1626  git commit -m "Added command history."
+ 1627  uname -a
+ 1628  cat /etc/redhat-release 
+ 1629  clear
+ 1630  #supervisord
+ 1631  #frontend web app (Weblogic) that connect to oracle db server 
+ 1632  #Docker Image -> Install both Weblogic and Oracle DB Server
+ 1633  #Docker Image1 --> Install weblogic
+ 1634  #Docker Image2 --> Install Oracle DB Server
+ 1635  clear
+ 1636  docker --version
+ 1637  cd ..
+ 1638  clear
+ 1639  pwd
+ 1640  docker --version
+ 1641  yum install -y yum-utils
+ 1642  yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+ 1643  yum install docker-ce docker-ce-cli containerd.io
+ 1644  docker --version
+ 1645  docker images
+ 1646  systemctl enable docker
+ 1647  systemctl status docker
+ 1648  systemctl start docker
+ 1649  systemctl status docker
+ 1650  vim /etc/yum.repos.d/docker-ce.repo
+ 1651  ls /etc/yum.repos.d/
+ 1652  vim /etc/yum.repos.d/epel.repo 
+ 1653  cat /etc/redhat-release 
+ 1654  echo $?
+ 1655  ls
+ 1656  echo $?
+ 1657  fsafsf
+ 1658  echo $?
+ 1659  docker --version
+ 1660  docker images
+ 1661  systemctl stop docker
+ 1662  docker images
+ 1663  systemctl enable docker && systemctl start docker
+ 1664  echo $?
+ 1665  docker images
+ 1666  docker info
+ 1667  clear
+ 1668  docker pull hello-world
+ 1669  docker images
+ 1670  docker image inspect hello-world:latest 
+ 1671  clear
+ 1672  docker images
+ 1673  docker run hello-world 
+ 1674  #LXC - Lightweight Containership
+ 1675  #Docker Inc - Linux Kernal Namespace & CGroups
+ 1676  Rkt - Rocket - Container Runtime
+ 1677  clear
+ 1678  docker info
+ 1679  clear
+ 1680  docker image inspect hello-world:latest 
+ 1681  cd /var/lib/docker/
+ 1682  clear
+ 1683  ls
+ 1684  cd image/
+ 1685  ls
+ 1686  cd overlay2/
+ 1687  ls
+ 1688  cat repositories.json 
+ 1689  cdd imagedb/
+ 1690  cd imagedb/
+ 1691  ls
+ 1692  cd content/
+ 1693  ls
+ 1694  cd sha256/
+ 1695  ls
+ 1696  vim bf756fb1ae65adf866bd8c456593cd24beb6a0a061dedf42b26a993176745f6b 
+ 1697  cd ..
+ 1698  ls
+ 1699  cd layerdb/
+ 1700  ls
+ 1701  cd sha256/
+ 1702  ls
+ 1703  cd 9c27e219663c25e0f28493790cc0b88bc973ba3b1686355f221c38a36978ac63/
+ 1704  ls
+ 1705  cd /root
+ 1706  docker ps
+ 1707  docker images
+ 1708  docker ps
+ 1709  docker ps -a
+ 1710  docker run -it ubuntu:16.04 /bin/bash
+ 1711  vim Dockerfile
+ 1712  ls
+ 1713  mkdir test
+ 1714  mv Dockerfile test/
+ 1715  ls
+ 1716  cd test/
+ 1717  ls
+ 1718  docker build -t test .
+ 1719  vim Dockerfile 
+ 1720  docker build -t test .
+ 1721  docker images
+ 1722  docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:5.6
+ 1723  docker ps
+ 1724  docker exec -it some-mysql bash
+ 1725  history
+ 1726  clear
+ 1727  history > command_history
+ 1728  ls
+ 1729  cd /etc/yum.repos.d/
+ 1730  ls
+ 1731  cat docker-ce.repo 
+ 1732  vim docker-ce.repo
+ 1733  clear
+ 1734  ls
+ 1735  cd ..
+ 1736  ls
+ 1737  cd ..
+ 1738  ls
+ 1739  cd /home/jegan/
+ 1740  ls
+ 1741  cd devops-us-may-2020/
+ 1742  ls
+ 1743  mkdir Day5
+ 1744  cd Day5
+ 1745  history > command_history
