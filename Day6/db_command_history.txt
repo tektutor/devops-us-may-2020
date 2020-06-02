@@ -1,0 +1,31 @@
+Create a mysql container with external volume mounting
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker run --name mysql1 --hostname mysql1 -v /home/jegan/devops-us-may-2020/Day6/databases:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:5.6
+
+In the above command, we named the container as 'mysql1' and its hosts as 'mysql1'.
+
+We can get inside the container using the below command
+
+docker exec -it mysql1 /bin/bash
+
+We may launch mysql client inside mysql1 container ash show below
+
+mysql -u root -p
+
+We may create a database as shown below
+
+CREATE DATABASE tektutor;
+
+We need to switch to this new database in order create table and insert records.
+
+USE tektutor;
+
+We may now create a table.
+CREATE TABLE trainings (name VARCHAR2(25), duration VARCHAR2(15));
+
+We may insert couple of records as shown below.
+INSERT INTO trainings VALUES( 'DevOps', '5 days' );
+INSERT INTO trainings VALUES( 'Python', '5 days' );
+
+We can see the records inserted as shown  below
+SELECT * FROM trainings;
