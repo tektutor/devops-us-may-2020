@@ -21,7 +21,7 @@ We need to switch to this new database in order create table and insert records.
 USE tektutor;
 
 We may now create a table.
-CREATE TABLE trainings (name VARCHAR2(25), duration VARCHAR2(15));
+CREATE TABLE trainings (name VARCHAR(25), duration VARCHAR(15));
 
 We may insert couple of records as shown below.
 INSERT INTO trainings VALUES( 'DevOps', '5 days' );
