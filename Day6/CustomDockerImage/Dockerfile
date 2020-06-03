@@ -16,5 +16,9 @@ RUN echo 'root:root' | chpasswd
 COPY sshd /etc/pam.d/sshd
 COPY sshd_config /etc/ssh/sshd_config
 
+#Copy authorized_keys to enable certificate based login authentication
+RUN mkdir -p /root/.ssh
+COPY authorized_keys /root/.ssh/authorized_keys
+
 #Configure default startup application in container. This start ssh server by default.
 CMD ["/etc/init.d/ssh", "start", "-D"] 
