@@ -1,0 +1,74 @@
+K8 Master Node Components
+  - kube-controller-manager
+  - scheduler
+  - etcd
+  - kube-proxy
+  - API Server
+  - kubelet agent
+  - container runtime environment (Docker)
+
+K8 Worker Node
+  - kubelet
+  - kube-proxy
+  - container runtime environment (Docker)
+
+kubectl  - client tool
+
+Kubernetes Objects
+  - Deployment
+     - Deployment manages ReplicaSet
+  - ReplicaSet
+     - ReplicaSet manages Pods 
+  - Pod
+     - Pod manages Docker containers
+
+Deployment
+   - manages one or more replicasets
+   
+   labels:
+      app=nginx
+
+   - How nginx deployment identifies its respective replicasets?
+         select all replicasets whose label matches app=nginx
+
+ReplicaSet
+   - manages one or more pods of same image type and version (nginx:1.18)
+
+   labels:
+      app=nginx
+
+   How nginx replicaseet identifies its corresponding pods?
+       select all pods whose label matches app=nginx
+
+Pod
+   labels:
+     app=nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
