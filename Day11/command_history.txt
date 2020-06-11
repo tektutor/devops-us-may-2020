@@ -1,0 +1,274 @@
+    1  sudo apt-get update
+    2  sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    3  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    4  which kubeadm
+    5  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    6  $(lsb_release -cs) \
+    7  stable"
+    8  sudo apt-get update
+    9  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   10  docker --version
+   11  docker images
+   12  cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+   13  net.bridge.bridge-nf-call-ip6tables = 1
+   14  net.bridge.bridge-nf-call-iptables = 1
+   15  EOF
+   16  sudo sysctl --system
+   17  sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+   18  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo
+   19  apt-key add -
+   20  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+   21  cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   22  deb https://apt.kubernetes.io/ kubernetes-xenial main
+   23  EOF
+   24  sudo apt-get update
+   25  sudo apt-get install -y kubelet kubeadm kubectl
+   26  which kubeadm
+   27  which kubectl
+   28  which kubelet
+   29  kubeadm join 142.93.247.39:6443 --token i0ruo8.jen30lbdide33zxn     --discovery-token-ca-cert-hash sha256:c87c30bdc5d1a74abd8fb6b46586fda5e8ae2ae86964ad71951e2c98d68ecc2f
+   30  kubeadm
+   31  kubeadm reset
+   32  kubeadm join 142.93.247.39:6443 --token xxp131.bc4t2pb82v6cui1i \
+   33  kubeadm reset
+   34  rm -rf $HOME/.kube
+   35  kubeadm join 142.93.247.39:6443 --token xxp131.bc4t2pb82v6cui1i     --discovery-token-ca-cert-hash sha256:2850cfbd51f3ed8b5c36a8a4737c4ea359db8f001cd5d82642101633dfd7b64e
+   36  kubeadm reset
+   37  clear
+   38  kubeadm reset
+   39  rm -rf $HOME/.kube
+   40  sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+   41  vim token 
+   42  cat token
+   43  mkdir -p $HOME/.kube
+   44  kubectl get pods
+   45  kubectl get pods -n kube-system
+   46  kubeadm reset
+   47  exit
+   48  kubectl get pods
+   49  kubeadm reset
+   50  rm -f $HOME/.kube
+   51  rm -rf $HOME/.kube
+   52  sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+   53  vim token
+   54  mkdir -p $HOME/.kube
+   55  kubectl get nodes
+   56  kubectl get pods -n kube-system
+   57  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   58  kubectl get pods -n kube-system
+   59  kubectl get pods -n kube-system -n kube-system
+   60  kubectl get pods -n kube-system -n kube-system -w
+   61  kubectl get pods -n kube-system -n kube-system
+   62  kubectl get nodes
+   63  cat token
+   64  kubectl get pods -n kube-system -n kube-system -w
+   65  kubectl get pods -n kube-system -n kube-system
+   66  kubectl get pods -n kube-system -n kube-system -w
+   67  kubectl get nodes
+   68  cat token
+   69  kubectl get nodes
+   70  kubectl get pods -n kube-system -n kube-system -w
+   71  kubectl get nodes
+   72  kubectl get po -n kube-system
+   73  kubectl get po -n kube-system -o widde
+   74  kubectl get po -n kube-system -o wide
+   75  git clone https://github.com/tektutor/devops-us-may-2020.git
+   76  ls
+   77  cd devops-us-may-2020/
+   78  ls
+   79  cd Day9
+   80  ls
+   81  vim nginx-dep.yml 
+   82  cp nginx-dep.yml nginx-red-dep.yml
+   83  vim nginx-red-dep.yml 
+   84  cp nginx-dep.yml nginx-blue-dep.yml
+   85  cp nginx-dep.yml nginx-green-dep.yml
+   86  vim nginx-blue-dep.yml 
+   87  ls
+   88  cd .
+   89  cd ..
+   90  ls
+   91  mkdir Day11
+   92  cp Day9/nginx-green-dep.yml Day11
+   93  cp Day9/nginx-blue-dep.yml Day11
+   94  cp Day9/nginx-red-dep.yml Day11
+   95  ls
+   96  cd Day11
+   97  ls
+   98  kubectl create -f nginx-red-dep.yml --save-config
+   99  kubectl --version
+  100  kubectl version
+  101  ls
+  102  vim nginx-blue-dep.yml 
+  103  ls
+  104  vim nginx-red-dep.yml 
+  105  kubectl create deployment nginx --image=nginx:1.18 
+  106  kubectl get deploy nginx -o yml > test.yml
+  107  kubectl get deploy nginx -o yaml > test.yml
+  108  vim test.yml 
+  109  kubectl delete deploy/nginx
+  110  vim nginx-blue-dep.yml 
+  111  cd ..
+  112  ls
+  113  cd Day9
+  114  ls
+  115  rm nginx-green-dep.yml nginx-red-dep.yml nginx-blue-dep.yml 
+  116  vim nginx-dep.yml 
+  117  cd ..
+  118  ls
+  119  git add *
+  120  git config --global user.name "Jeganathan Swaminathan"
+  121  git config --global user.email "mail2jegan@gmail.com"
+  122  git commit -m "Added Day11 lab exercises."
+  123  git push -u origin master
+  124  cd Day11
+  125  ls
+  126  cd ..
+  127  ls -lha
+  128  git pull
+  129  pwd
+  130  clear
+  131  ls
+  132  cd Day11
+  133  ls
+  134  vim nginx-blue-dep.yml 
+  135  kubectl get namespaces
+  136  kubectl get ns
+  137  kubectl create namespace tektutor
+  138  kubectl get ns
+  139  ls
+  140  vim nginx-dep.yml
+  141  ls
+  142  rm nginx-dep.yml 
+  143  ls
+  144  rm test.yml 
+  145  ls
+  146  kubectl create -f nginx-blue-dep.yml --save-config
+  147  kubectl create -f nginx-green-dep.yml --save-config
+  148  kubectl create -f nginx-red-dep.yml --save-config
+  149  kubectl get pods
+  150  kubectl get pods -n tektutor
+  151  kubectl get pods -n tektutor -o wide
+  152  ls
+  153  cd ..
+  154  ls
+  155  cd ..
+  156  ls
+  157  cd $HOME/.kube
+  158  ls
+  159  vim config
+  160  cd ..
+  161  vim ~/.kube/config
+  162  ls
+  163  cd devops-us-may-2020/
+  164  ls
+  165  cd Day11
+  166  ls
+  167  vim calico-network-policy.yml
+  168  vim nginx-green-dep.yml 
+  169  clear
+  170  kubectl get deployments
+  171  kubectl get deployments -n tektutor
+  172  kubectl get pods -n tektutor
+  173  kubectl expose deployment nginx-green --type=NodePort --port=80
+  174  kubectl expose deployment nginx-green --type=NodePort --port=80 -n tektutor
+  175  kubectl get svc
+  176  kubectl get svc -n tektutor
+  177  kubectl get nodes -o wide
+  178  curl http://142.93.198.145:30939
+  179  kubectl get pods -n tektutor
+  180  kubectl exec -it nginx-blue-6c96bdb5bc-hrkhz bash
+  181  kubectl exec -it nginx-blue-6c96bdb5bc-hrkhz bash -n tektutor
+  182  kubectl exec -it nginx-red-6956987795-w42pl bash -n tektutor
+  183  ls
+  184  vim calico-network-policy.yml 
+  185  kubectl apply -f calico-network-policy.yml 
+  186  kubectl exec -it nginx-red-6956987795-w42pl bash -n tektutor
+  187  kubectl exec -it nginx-blue-6c96bdb5bc-hrkhz bash -n tektutor
+  188  curl http://142.93.198.145:30939
+  189  kubectl get pods -n tektutor
+  190  kubectl get networkpolicy
+  191  kubectl get networkpolicy -n tektutor
+  192  kubectl describe networkpolicy allow-bluepods-toaccess-greenpods
+  193  kubectl describe networkpolicy allow-bluepods-toaccess-greenpods -n tektutor
+  194  kubectl exec -it nginx-blue-6c96bdb5bc-hrkhz bash -n tektutor
+  195  kubectl exec -it nginx-green-5687dffc95-qmvlx bash
+  196  curl http://localhost
+  197  curl http://localhost:80
+  198  exit
+  199  kubectl get nodes
+  200  set -o vi
+  201  /curl
+  202  kubectl get pods -n tektutor
+  203  kubectl get svc -n tektutor
+  204  curl http://localhost:30939
+  205  curl http://142.93.198.145:30939
+  206  kubectl delete networkpolicy -n tektutor allow-bluepods-toaccess-greepods
+  207  kubectl get networkpolicy -n tektutor
+  208  kubectl delete networkpolicy -n tektutor allow-bluepods-toaccess-greenpods
+  209  curl http://142.93.198.145:30939
+  210  curl http://localhost:30939
+  211  kubectl get pods
+  212  kubectl get pods -n tektutor
+  213  kubectl exec -it nginx-blue-6c96bdb5bc-hrkhz bash
+  214  curl http://localhost:30939
+  215  exit
+  216  kubectl exec -it nginx-red-6956987795-w42pl bash
+  217  curl http://localhost:30939
+  218  exit
+  219  ls
+  220  cd devops-us-may-2020/
+  221  ls
+  222  cd Day11
+  223  ls
+  224  vim calico-network-policy.yml 
+  225  kubectl apply -f calico-network-policy.yml 
+  226  kubectl get pods -n tektutor
+  227  kubectl exec -it nginx-blue-6c96bdb5bc-z9kbd bash
+  228  kubectl exec -it nginx-blue-6c96bdb5bc-z9kbd bash -n tektutor
+  229  ls
+  230  vim calico-network-policy.yml 
+  231  kubectl apply -f calico-network-policy.yml 
+  232  kubectl exec -it nginx-blue-6c96bdb5bc-z9kbd bash -n tektutor
+  233  kubectl get svc
+  234  kubectl get svc -n tektutor
+  235  curl http://142.93.198.145:30939
+  236  ls
+  237  vim calico-network-policy.yml 
+  238  kubectl apply -f calico-network-policy.yml 
+  239  vim calico-network-policy.yml +14
+  240  kubectl apply -f calico-network-policy.yml 
+  241  curl http://142.93.198.145:30939
+  242  kubectl exec -it nginx-blue-6c96bdb5bc-z9kbd bash -n tektutor
+  243  kubectl get nodes
+  244  kubectl describe node ubuntu-s-2vcpu-4gb-nyc1-01
+  245  kubectl tain node ubuntu-s-2vcpu-4gb-nyc1-01 node-role.kubernetes.io/master:NoSchedule-
+  246  kubectl taint node ubuntu-s-2vcpu-4gb-nyc1-01 node-role.kubernetes.io/master:NoSchedule-
+  247  kubectl delete deploy nginx-green nginx-blue nginx-red
+  248  kubectl delete deploy nginx-green nginx-blue nginx-red -n tektutor
+  249  kubectl get pods -n tektutor
+  250  vim nginx-green-dep.yml 
+  251  kubectl apply -f nginx-green-dep.yml 
+  252  kubectl get pods -o wide -n tektutor
+  253  kubectl 
+  254  kubectl drain worker1
+  255  kubectl drain node worker1
+  256  kubectl get nodes
+  257  kubectl drain node worker2
+  258  kubectl drain worker2
+  259  kubectl get nodes
+  260  kubectl get pods -o wide
+  261  kubectl get pods -o wide -n tektutor
+  262  kubectl cordon worker1
+  263  kubectl cordon worker2
+  264  kubectl get pods -o wide -n tektutor
+  265  kubectl delete deploy nginx-green
+  266  kubectl delete deploy nginx-green -n tektutor
+  267  kubectl apply -f nginx-green-dep.yml 
+  268  kubectl get pods -o wide -n tektutor
+  269  ls
+  270  cd ..
+  271  git status
+  272  git add *
+  273  git commit -m "Added Calico network policy exercises."
+  274  history > command_history.txt
