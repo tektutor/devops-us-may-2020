@@ -1,0 +1,15 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+   name: allow-bluepods-toaccess-greenpods
+   namespace: tektutor
+spec:
+   podSelector:
+      matchLabels:
+         app: nginx-green
+   ingress:
+      - from:
+         - podSelector:
+              matchLabels:
+                 app: nginx-blue
+         
