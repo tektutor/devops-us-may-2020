@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-red
+  name: nginx-red
+  namespace: tektutor 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-red
+  template:
+    metadata:
+      labels:
+        app: nginx-red
+    spec:
+      containers:
+      - image: nginx:1.18
+        imagePullPolicy: IfNotPresent
+        name: nginx-red
