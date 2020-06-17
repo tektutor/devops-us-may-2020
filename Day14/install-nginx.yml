@@ -1,0 +1,5 @@
+- name: This playbook will install, configure and deploy web page into nginx web server
+  hosts: all
+  tasks:
+    - name: Install nginx in Ubuntu
+      apt: name=nginx state=latest update_cache=yes
