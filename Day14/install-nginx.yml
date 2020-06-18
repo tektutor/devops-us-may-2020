@@ -1,12 +1,29 @@
 - name: This playbook will install, configure and deploy web page into nginx web server
   hosts: all 
+  vars:
+    - provisioner_tool: Docker
+    - conf_mgr_tool: Ansible
   tasks:
     - name: Install nginx in Ubuntu
       apt: name=nginx state=latest update_cache=yes
 
-    - name: Start nginx service
+    - name: Configure nginx web root folder
+      copy: src=default dest=/etc/nginx/sites-available/default backup=yes
+
+    - name: Create customized nginx web root folder
+      file: path=/var/html state=directory mode=0777
+
+    - name: Restart nginx service
       #service: name=nginx state=started 
-      shell: service nginx start
+      shell: service nginx restart
+
+    - name: Retrieve IP address of ansible node
+      shell: hostname -i
+      register: node_ip_address 
+
+    - name: Deploy html page into nginx web  server 
+      template: src=index.html.j2 dest=/var/html/index.html
+    
 
 - name: This play will test nginx installation
   hosts: localhost
@@ -15,4 +32,7 @@
   tasks:
     - name: Curl nginx web page on Ubuntu
       shell: "curl http://localhost:{{item}}"
+      register: output
       with_sequence: start="{{start_port}}" end="{{end_port}}"
+
+    - debug: var=output

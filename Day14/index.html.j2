@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>Welcome Page</title>
+	</head>
+
+	<body>
+		<h1>Hostname - "{{ansible_hostname}}"</h1>
+		<h1>IP Address - {{node_ip_address.stdout}}</h1>
+		<h1>Provisioned by {{provisioner_tool}}</h1>
+		<h1>Configured by {{conf_mgr_tool}}</h1>
+	</body>
+</html>
