@@ -6,9 +6,11 @@
     - conf_mgr_tool: Ansible
   tasks:
     - name: Install nginx in Ubuntu
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
       apt: name=nginx state=latest update_cache=yes
 
-    - name: Configure nginx web root folder
+    - name: Configure nginx web root folder in Ubuntu
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
       copy: src=default dest=/etc/nginx/sites-available/default backup=yes
 
     - name: Create customized nginx web root folder
