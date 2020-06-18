@@ -7,3 +7,12 @@
     - name: Start nginx service
       #service: name=nginx state=started 
       shell: service nginx start
+
+- name: This play will test nginx installation
+  hosts: localhost
+  vars_files:
+     - my_ports_file
+  tasks:
+    - name: Curl nginx web page on Ubuntu
+      shell: "curl http://localhost:{{item}}"
+      with_sequence: start="{{start_port}}" end="{{end_port}}"
