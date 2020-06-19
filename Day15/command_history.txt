@@ -1,0 +1,1000 @@
+   88  cd ..
+   89  ls
+   90  git status
+   91  git add *
+   92  git commit -m "Added Database exercise."
+   93  git push -u  origin master
+   94  ls
+   95  cd Day6
+   96  ls
+   97  cdd databases/
+   98  ls
+   99  cd databases/
+  100  ls
+  101  docker ps
+  102  docker run --name mysql2 --hostname mysql2 -v /home/jegan/devops-us-may-2020/Day6/databases:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:5.6
+  103  docker ps
+  104  docker exec -it mysql2 bash
+  105  docker  ps
+  106  docker run --name mysql2 --hostname mysql2 -v /home/jegan/devops-us-may-2020/Day6/databases:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:5.6
+  107  docker rm -f mysql2
+  108  clear
+  109  docker ps
+  110  ls
+  111  cd ..
+  112  ls
+  113  vim db_command_history.txt 
+  114  ls
+  115  mkdir CustomDockerImage
+  116  cd CustomDockerImage/
+  117  ls
+  118  clear
+  119  ls
+  120  vim Dockerfile
+  121  docker run -dit ubuntu:16.04 bash
+  122  docker ps
+  123  docker exec -ti elastic_greider bash
+  124  docker ps -a
+  125  docker rm -f $(docker ps -aq)
+  126  ls
+  127  vim Dockerfile 
+  128  clear
+  129  ls
+  130  docker build -t tektutor/sshd .
+  131  vim Dockerfile 
+  132  docker build -t tektutor/sshd .
+  133  docker images
+  134  vim Dockerfile 
+  135  cd ..
+  136  clear
+  137  ls
+  138  docker run -d --name sshd1 --hostname ssdh1 tektutor/sshd 
+  139  docker run -d --name sshd2 --hostname ssdh2 tektutor/sshd 
+  140  docker ps
+  141  cd CustomDockerImage/
+  142  ls
+  143  vim Dockerfile 
+  144  ls
+  145  cd ..
+  146  clear
+  147  docker ps
+  148  docker inspect sshd1
+  149  clear
+  150  docker inspect sshd1 | grep IPA
+  151  docker inspect sshd2 | grep IPA
+  152  ssh root@172.17.0.2
+  153  docker rm -f $(docker ps -aq)
+  154  cd CustomDockerImage/
+  155  ls
+  156  vim Dockerfile 
+  157  ls
+  158  docker build -t tektutor/sshd .
+  159  set -o vi
+  160  docker run -d --name sshd1 --hostname ssdh1 tektutor/sshd 
+  161  docker run -d --name sshd2 --hostname ssdh2 tektutor/sshd 
+  162  docker ps
+  163  ssh root@172.17.0.2
+  164  vim Dockerfile 
+  165  docker build -t tektutor/sshd .
+  166  docker rm -f $(docker ps -aq)
+  167  docker run -d --name sshd1 --hostname ssdh1 tektutor/sshd 
+  168  ssh root@172.17.0.2
+  169  ls
+  170  docker ps
+  171  docker exec -it sshd1 bash
+  172  docker logs sshd1
+  173  vim Dockerfile 
+  174  docker exec -it sshd1 bash
+  175  docker restart sshd1
+  176  docker ps
+  177  docker exec -it sshd1 bash
+  178  ssh root@172.17.0.2
+  179  clear
+  180  ls
+  181  vim Dockerfile 
+  182  docker ps
+  183  docker inspect sshd1 | grep  IPA
+  184  ssh root@172.17.0.2
+  185  vim Dockerfile 
+  186  ls
+  187  docker exec -it sshd1 bash
+  188  docker restart sshd1
+  189  ssh root@172.17.0.2
+  190  vim Dockerfile 
+  191  docker ps
+  192  docker cp sshd1:/etc/ssh/sshd_config .
+  193  docker cp sshd1:/etc/pam.d/sshd .
+  194  ls
+  195  vim Dockerfile 
+  196  docker rm -f $(docker ps  -aq)
+  197  docker build -t tektutor/sshd .
+  198            
+  199  cd ..
+  200  docker run -d --name sshd1 --hostname ssdh1 tektutor/sshd 
+  201  ssh root@172.17.0.2
+  202  cd CustomDockerImage/
+  203  ls
+  204  cd ..
+  205  ls
+  206  cd ..
+  207  git status
+  208  git add *
+  209  git commit -m "Added Custom image lab exercise."
+  210  git push -u origin master
+  211  cd Day6
+  212  ls
+  213  cd CustomDockerImage/
+  214  ;ls
+  215  vim sshd_config 
+  216  vim Dockerfile 
+  217  docker ps
+  218  docker run -d --name sshd2 --hostname ssdh2 tektutor/sshd 
+  219  ssh root@172.17.0.3
+  220  vim sshd_config 
+  221  ssh-keygen
+  222  cp /root/.ssh/id_rsa.pub authorized_keys
+  223  ls
+  224  vim Dockerfile 
+  225  docker rm -f $(docker ps -aq)
+  226  docker build -t tektutor/sshd .
+  227  docker run -d --name sshd1 --hostname ssdh1 tektutor/sshd 
+  228  ssh root@172.17.0.2
+  229  exit
+  230  vim ~/.bashrc
+  231  source ~/.bashrc
+  232  clear
+  233  ls
+  234  cd /home/jegan/Downloads/
+  235  ls
+  236  ./dind-cluster-v1.15.sh status
+  237  clear
+  238  kubectl get nodes
+  239  set -o vi
+  240  export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+  241  kubectl get nodes
+  242  cd ..
+  243  cd devops-us-may-2020/
+  244  ls
+  245  cd Day9
+  246  mkdir kubernetes-notes.txt
+  247  ls
+  248  rm -rf kubernetes-notes.txt/
+  249  vim kubernetes-notes.txt
+  250  ls
+  251  cd /home/jegan/Downloads/
+  252  ls
+  253  ./dind-cluster-v1.15.sh 
+  254  clear
+  255  ls
+  256  ./dind-cluster-v1.15.sh down
+  257  ./dind-cluster-v1.15.sh up
+  258  ./dind-cluster-v1.15.sh reup
+  259  ls
+  260  ./dind-cluster-v1.15.sh down
+  261  eexit
+  262  exit
+  263  kubectl get nodes
+  264  docker exec -it kube-master bash
+  265  clear
+  266  kubectl get nodes
+  267  kubectl get pods
+  268  kubectl get pods -n kube-system
+  269  kubectl get pods -n all-namespaces
+  270  kubectl get pods --all-namespaces
+  271  kubectl get pods --all-namespaces -o wide
+  272  clear
+  273  pwd
+  274  which kubectl
+  275  kubectl get pods
+  276  kubectl create deployment nginx --image=nginx:1.18
+  277  kubectl get pods
+  278  kubectl get deployments
+  279  kubectl get rs
+  280  clear
+  281  kubectl get all
+  282  kubectl get deploy,rs,po
+  283  kubectl describe deployment/nginx
+  284  kubectl describe rs/nginx-69bddffb77
+  285  clear
+  286  ls
+  287  kubectl edit deployment/nginx
+  288  kubectl get pods
+  289  kubectl get pods -w
+  290  kubectl get pods 
+  291  kubectl get rs
+  292  kubectl get pods
+  293  kubectl edit pod/nginx-69bddffb77-jzg62
+  294  kubectl
+  295  clear
+  296  kubectl get podds
+  297  kubectl get pods
+  298  kubectl logs pod/nginx-69bddffb77-jzg62
+  299  kubectl logs nginx-69bddffb77-jzg62
+  300  kubectl logs nginx-69bddffb77-fxc8k
+  301  kubectl edit deployment
+  302  kubectl get deploy,rs,po
+  303  kubectl get po -w
+  304  kubectl logsnginx-78d4999847-fvzdx
+  305  kubectl logs nginx-78d4999847-fvzdx
+  306  kubectl edit deploy/nginx
+  307  kubectl get pods -w
+  308  kubectl delete deploy/nginx
+  309  kubectl get deploy,rs,po
+  310  kubectl create deployment nginx --image=nginx:1.19
+  311  kubectl get deploy
+  312  kubectl get rs
+  313  kubectl get po
+  314  kubectl get po -w
+  315  kubectl logs nginx-78d44d754b-fml68
+  316  systemctl status network
+  317  systemctl restart network
+  318  kubectl get po -w
+  319  kubectl get pods
+  320  kubectl delete pod/nginx-78d44d754b-fml68
+  321  kubectl get pods
+  322  kubectl get pods -w
+  323  kubectl get pods -w -o wide
+  324  docker exec -it kube-node-2 bash
+  325  kubectl get nodes
+  326  kubectl delete deploy/nginx
+  327  kubeclt create deploy nginx --image=nginx:1.19
+  328  kubectl create deploy nginx --image=nginx:1.19
+  329  kubectl get deploy,rs,po
+  330  kubectl get po -w
+  331  clear
+  332  ls
+  333  clear
+  334  ls
+  335  kubectl create deployment tomcat --image=tomcat:8
+  336  kubectl get po -w
+  337  clear
+  338  ls
+  339  exit
+  340  lks
+  341  ls
+  342  cd dev
+  343  cd /home/jegan/devops-us-may-2020/
+  344  ls
+  345  git status
+  346  git add *
+  347  git commit -m "Added custom image exercise."
+  348  git push  -u origin master
+  349  ls
+  350  s
+  351  clear
+  352  ls
+  353  mkdir Day7
+  354  ls
+  355  cd Day7
+  356  docker images
+  357  docker rmi 4562f8b8c4fc 81b42963ef88 f6033f9bc7d6 df84b437ae6d
+  358  clear
+  359  docker images
+  360  ls
+  361  python3 --version
+  362  python --version
+  363  systemctl status docker
+  364  clear
+  365  ls
+  366  mkdir ContainerizePythonApp
+  367  cd ContainerizePythonApp/
+  368  ls
+  369  vim hello.py
+  370  ls
+  371  python hello.py 
+  372  pip install flash
+  373  ls
+  374  vim hello.py 
+  375  yum install -y python-pip
+  376  clear
+  377  pip install flash
+  378  pip install --upgrade pip
+  379  ls
+  380  pip install flask
+  381  clear
+  382  ls
+  383  python hello.py
+  384  clear
+  385  ls
+  386  pwd
+  387  ls
+  388  vim hello.py 
+  389  ls
+  390  python --version
+  391  #yum install -y python2
+  392  python --version
+  393  which python
+  394  ls -l /bin/python
+  395  python2 --version
+  396  which python2
+  397  #yum install -y python-pip
+  398  pip --version
+  399  ls
+  400  python hello.py 
+  401  clear
+  402  ls
+  403  python hello.py 
+  404  ls
+  405  vim Dockerfile
+  406  ls
+  407  docker build -t tektutor/hello-ms .
+  408  vim requirement.txt
+  409  vim requirement.txt 
+  410  vim Dockerfile 
+  411  lsw
+  412  ls
+  413  mv requirement.txt requirements.txt 
+  414  ls
+  415  docker build -t tektutor/hello-ms .
+  416  vim Dockerfile 
+  417  pip
+  418  pip --list
+  419  pip flask
+  420  pip flask --version
+  421  flask --version
+  422  vim requirements.txt 
+  423  vim Dockerfile 
+  424  docker build -t tektutor/hello-ms .
+  425  vim Dockerfile 
+  426  docker build -t tektutor/hello-ms .
+  427  vim Dockerfile 
+  428  docker build -t tektutor/hello-ms .
+  429  vim Dockerfile 
+  430  docker build -t tektutor/hello-ms .
+  431  vim Dockerfile 
+  432  ls
+  433  vim Dockerfile 
+  434  docker build -t tektutor/hello-ms .
+  435  ls
+  436  vim Dockerfile 
+  437  docker build -t tektutor/hello-ms .
+  438  vim Dockerfile 
+  439  clar
+  440  clear
+  441  ls
+  442  docker images
+  443  docker run -d --name ms --hostname ms -p 5000:5000 tektutor/hello-ms
+  444  docker ps
+  445  vim Dockerfile 
+  446  docker inspect ms | grep IPA
+  447  curl  http://172.17.0.3:5000
+  448  docker ps
+  449  vim Dockerfile 
+  450  docker ps
+  451  docker rm -f ms
+  452  set -o vi
+  453  docker build -t tektutor/hello-ms .
+  454  docker run -d --name ms --hostname ms -p 5000:5000 tektutor/hello-ms
+  455  curl  http://172.17.0.3:5000
+  456  clear
+  457  ls
+  458  docker exec -it ms bash
+  459  s
+  460  ls
+  461  vim hello.py 
+  462  ls
+  463  vim Dockerfile 
+  464  vim hello.py 
+  465  clear
+  466  docker rm -f $(docker ps -aq)
+  467  docker build -t tektutor/hello-ms .
+  468  docker run -d --name ms --hostname ms -p 5000:5000 tektutor/hello-ms
+  469  curl http://localhost:500
+  470  curl http://localhost:5000
+  471  ifconfig
+  472  clear
+  473  ls
+  474  vim hello.py 
+  475  ifconfig
+  476  clear
+  477  ls
+  478  vim Dockerfile 
+  479  clear
+  480  ls
+  481  vim hello.py 
+  482  ifconfig ens33
+  483  vim hello.py 
+  484  docker rm -f ms
+  485  docker build -t tektutor/hello-ms .
+  486  clear
+  487  ls
+  488  docker build -t tektutor/hello-ms .
+  489  docker run -d --name ms --hostname ms -p 5000:5000 tektutor/hello-ms
+  490  curl http://localhost:5000
+  491  ps
+  492  docker ps
+  493  docker ps -a
+  494  docker logs ms
+  495  vim hello.py 
+  496  clear
+  497  ifconfig ens33
+  498  ifconfig
+  499  vim hello.py 
+  500  docker build -t tektutor/hello-ms .
+  501  docker rm -f ms
+  502  docker run -d --name ms --hostname ms -p 5000:5000 tektutor/hello-ms
+  503  docker ps
+  504  curl http://localhost:5000
+  505  ifconfig  ens33
+  506  clear
+  507  docker run -d --name ms2 --hostname ms2 -p 5001:5000 tektutor/hello-ms
+  508  docker ps
+  509  ifconfig ens33
+  510  curl http://172.16.124.205:5001
+  511  vim Dockerfile 
+  512  firewall-cmd --remove-port=5000/tcp --permanent
+  513  firewall-cmd
+  514  firewall-cmd 
+  515  vim Dockerfile 
+  516  firewall-cmd --zone=public --add-port=5000/tcp --permanent
+  517  docker ps
+  518  docker stop ms
+  519  clar
+  520  clear
+  521  docker rm -f $(docker ps -aq)
+  522  docker run -d --name c1 --hostname c1 -p 5000 tektutor/hello-ms
+  523  docker rm -f $(docker ps -aq)
+  524  clear
+  525  docker rm -f $(docker ps -aq)
+  526  clear
+  527  docker run -d --name c1 --hostname c1 tektutor/hello-ms
+  528  docker run -d --name c2 --hostname c2 tektutor/hello-ms
+  529  docker run -d --name c3 --hostname c3 tektutor/hello-ms
+  530  docker ps
+  531  docker exec -it c1 bash
+  532  ls
+  533  vim hello.py 
+  534  docker cp hello.py c1:/hello.py
+  535  vim hello.py 
+  536  docker cp hello.py c2:/hello.py
+  537  vim hello.py 
+  538  docker cp hello.py c3:/hello.py
+  539  docker ps
+  540  curl http://172.17.0.2:5000
+  541  clear
+  542  docker restart c1 c2 c3
+  543  curl http://172.17.0.2:5000
+  544  curl http://172.17.0.2:5001
+  545  curl http://172.17.0.3:5001
+  546  curl http://172.17.0.3:5000
+  547  curl http://172.17.0.4:5000
+  548  clear
+  549  ls
+  550  docker ps
+  551  docker images
+  552  clear
+  553  docker run -d --name lb --hostname lb -p 80:80 nginx
+  554  docker ps
+  555  docker exec -it lb bash
+  556  ls
+  557  docker cp lb:/etc/nginx/nginx.conf .
+  558  ls
+  559  vim nginx.conf 
+  560  docker cp nginx.conf lb:/etc/nginx/nginx.conf
+  561  vim nginx.conf 
+  562  docker restart lb
+  563  docker ps
+  564  curl http://localhost
+  565  docker stop c2
+  566  vim Dockerfile 
+  567  clear
+  568  ls
+  569  docker network ls
+  570  docker ps
+  571  docker start c1
+  572  docker start c2
+  573  docker ps
+  574  clear
+  575  docker network
+  576  docker network create net1
+  577  docker network create net2
+  578  docker network ls
+  579  ls /var/lib/docker/network/
+  580  ls /var/lib/docker/network/files/
+  581  clear
+  582  ls
+  583  #docker network create net1
+  584  #docker network create net2
+  585  docker network ls
+  586  docker rm -f $(docker ps -aq)
+  587  docker run -dit --name c1 --hostname c1 --network=net1 ubuntu:16.04 /bin/bash
+  588  docker inspect c1 | grep IPA
+  589  docker run -dit --name c2 --hostname c2 --network=net2 ubuntu:16.04 /bin/bash
+  590  docker inspect c2 | grep IPA
+  591  clear
+  592  docker network inspect bridge
+  593  ifconfig
+  594  docker network inspect net1
+  595  docker network create --help
+  596  clear
+  597  docker network inspect net1
+  598  docker network inspect net2
+  599  clear
+  600  docker inspect c1 | grep IPA
+  601  docker inspect c2 | grep IPA
+  602  docker exec -it c1 bash
+  603  docker exec -it c2 bash
+  604  docker inspect c1
+  605  docker inspect c2
+  606  docker network
+  607  docker network connect
+  608  docker network connect net2 c1
+  609  docker inspect c1
+  610  docker exec -it c1 bash
+  611  docker exec -it c2 bash
+  612  docker exec -it c1 bash
+  613  docker run --help
+  614  clear
+  615  docker run -dit --name c3 --hostname c3 --network=net1 --ip=172.18.0.10
+  616  docker run -dit --name c3 --hostname c3 --network=net1 -ip=172.18.0.10
+  617  docker run --help
+  618  docker run -dit --name c3 --hostname c3 --ip=172.1.0.10
+  619  docker ps
+  620  docker ps -r c3
+  621  docker ps -a
+  622  docker run -dit --name c3 --hostname c3 --ip=172.17.0.10
+  623  ls
+  624  vim Dockerfile 
+  625  #export HTTP_PROXY=http://10.20.30.40:80
+  626  #export HTTPS_PROXY=http://10.20.30.40:80
+  627  docker images
+  628  clar
+  629  clear
+  630  docker run -d --name db --hostname db -e MYSQL_ROOT_PASSWORD=admin123 mysql:5.6
+  631  docker ps
+  632  docker rm -f c1 c2
+  633  docker ps
+  634  docker run --name wp --hostname wp --network net1 -d wordpress
+  635  docker ps
+  636  docker inspect wp|grep IPA
+  637  docker inspect db
+  638  docker network connect db net1
+  639  docker network connect net1 db
+  640  docker restart wp
+  641  docker stop wp
+  642  clar
+  643  clear
+  644  ls
+  645  docker rm -f wp db
+  646  docker run -d --name db --hostname db -e MYSQL_ROOT_PASSWORD=admin123 --network=net1 mysql:5.6
+  647  docker run --name wp --hostname wp --network net1 -d wordpress
+  648  docker ps
+  649  clear
+  650  docker rm -f wp
+  651  clear
+  652  #docker run -d --name db --hostname db -e MYSQL_ROOT_PASSWORD=admin123 --network=net1 mysql:5.6
+  653  docker run --name wp --hostname wp --network net1 -d -e WORDPRESS_DB_HOST=172.18.0.2 -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=admin123 wordpress
+  654  pwd
+  655  cd ..
+  656  ls
+  657  cd ..
+  658  git status
+  659  git add * -a
+  660  git add * 
+  661  git status
+  662  git commit -m "Added Day 7 exercises."
+  663  ls
+  664  history > Day7/command_history.txt
+  665  git add *
+  666  git status
+  667  git commit -m "
+  668  Added command history."
+  669  git push -u origin master
+  670  clear
+  671  cd /home/jegan/Downloads/
+  672  ls
+  673  wget https://github.com/kubernetes-retired/kubeadm-dind-cluster/releases/download/v0.3.0/dind-cluster-v1.15.sh
+  674  ls
+  675  pwd
+  676  ls -l dind-cluster-v1.15.sh 
+  677  chmod +x ./dind-cluster-v1.15.sh 
+  678  ls
+  679  ls -l
+  680  ./dind-cluster-v1.15.sh up
+  681  echo ~
+  682  ./dind-cluster-v1.15.sh down
+  683  ./dind-cluster-v1.15.sh up
+  684  cd ..
+  685  ls
+  686  cd devops-us-may-2020/
+  687  ls
+  688  mkdir Day8
+  689  clear
+  690  ls
+  691  mkdir Day9
+  692  clear
+  693  ls
+  694  clear
+  695  lsw
+  696  clear
+  697  ls
+  698  vim ~/.bashrc 
+  699  cleear
+  700  clear
+  701  cd Day9
+  702  ls
+  703  vim kubernetes-notes.txt 
+  704  exit
+  705  ls
+  706  cd /home/jegan/
+  707  ;ls
+  708  ls
+  709  cd Downloads/
+  710  ls
+  711  ./dind-cluster-v1.15.sh up
+  712  kubectl get pods
+  713  kubectl create deployment nginx --image=nginx:1.19
+  714  kubectl get pods
+  715  kubectl get pods -n kube-system
+  716  kubectl get pods
+  717  kubectl scale deployment/nginx --replicas=3
+  718  kubectl get po -w
+  719  kubectl get rs
+  720  kubectl scale deployment/nginx --replicas=6
+  721  kubectl get po -w
+  722  kubectl scale deployment/nginx --replicas=20
+  723  kubectl get po -w
+  724  kubectl get po
+  725  kubectl edit deploy/nginx 
+  726  kubectl get pods -o wide
+  727  kubectl get pods -o wide | grep kube-node-2
+  728  kubectl get pods -o wide | grep kube-node-2 | wc -l
+  729  kubectl get pods -o wide | grep kube-node-1 | wc -l
+  730  kubectl scale
+  731  kubectl scale deployment/nginx --replicas=6
+  732  kubectl get po -w
+  733  kubectl get po 
+  734  kubectl get po -o wide
+  735  kubectl exec -it nginx-78d44d754b-txzrj bash
+  736  kubectl get pods
+  737  clear
+  738  kubectl get pods
+  739  kubectl delete pod/nginx-78d44d754b-txzrj
+  740  kubectl get deploy
+  741  kubectl get rs
+  742  kubectl delete pod/nginx-78d44d754b-26z6k
+  743  kubectl get rs
+  744  kubectl get deploy,rs,po -w
+  745  kubectl get pods
+  746  kubectl delete pod/nginx-78d44d754b-bfx8j 
+  747  kubectl get deploy,rs,po -w
+  748  kubectl get deploy,rs,po
+  749  cleear
+  750  clear
+  751  kubectl delete pod/nginx-78d44d754b-tkkvq
+  752  kubectl get po
+  753  kubectl get rs
+  754  kubectl delete rs/nginx-78d44d754b
+  755  kubectl get rs
+  756  kubectl edit deployment nginx
+  757  kubectl describe deployment nginx
+  758  clear
+  759  kubectl get rs
+  760  kubectl describe rs/nginx-78d44d754b
+  761  kubectl edit deploy/nginx
+  762  kubectl describe 
+  763  kubectl describe
+  764  kubectl describe rs
+  765  kubectl describe rs --help
+  766  vim employee.json
+  767  ls
+  768  kubectl edit deployment/nginx
+  769  cd ..
+  770  ls
+  771  cd devops-us-may-2020/
+  772  ls
+  773  cd Day9
+  774  ls
+  775  vim nginx-deployment.yml
+  776  kubectl edit deployment/nginx
+  777  kubectl get deployment
+  778  kubectl get deployment -o jsonb
+  779  kubectl get deployment -o json
+  780  kubectl get deployment -o yaml
+  781  kubectl get deployment/nginx -o yaml > nginx-dep.yml
+  782  ls
+  783  vim nginx-dep.yml 
+  784  ls
+  785  rm nginx-deployment.yml 
+  786  clear
+  787  ls
+  788  vim nginx-dep.yml 
+  789  kubectl get deploy
+  790  kubectl delete deploy/nginx
+  791  kubectl get po
+  792  clear
+  793  ls
+  794  kubectl create -f nginx-dep.yml --save-config
+  795  kubectl get deploy,rs,po
+  796  ls
+  797  vim nginx-dep.yml 
+  798  kubectl get deploy,rs,po
+  799  kubectl apply -f nginx-dep.yml 
+  800  kubectl get deploy,rs,po
+  801  kubectl edit -f nginx-dep.yml 
+  802  ls
+  803  #kubectl delete -f nginx-dep.yml 
+  804  kubectl delete -f nginx-dep.yml 
+  805  kubectl get deploy,rs,po
+  806  kubectl create -f nginx-dep.yml --save-config
+  807  kubectl apply -f nginx-dep.yml 
+  808  kubectl delete -f nginx-dep.yml 
+  809  kubectl apply -f nginx-dep.yml 
+  810  kubectl get po
+  811  kubectl get po/nginx-69bddffb77-srhf6 -o yaml > nginx-pod.yml
+  812  vim nginx-pod.yml 
+  813  kubectl get pods
+  814  ls
+  815  kubectl create -f nginx-pod.yml --save-config
+  816  kubectl get pods
+  817  kubectl delete pod/nginx-69bddffb77-srhf6
+  818  kubectl get pods
+  819  kubectl delete pod/nginx
+  820  kubectl get pods
+  821  history > command_history
+  822  cd ..
+  823  git status
+  824  git add *
+  825  git commit -m "Added command history."
+  826  git  push -u origin master
+  827  ls
+  828  cd Day9
+  829  ls
+  830  cd ..
+  831  ls
+  832  mkdir Day10
+  833  cd Day10
+  834  ls
+  835  kubectl get nodes
+  836  ls
+  837  cd /home/jegan/Downloads/
+  838  ls
+  839  cat ~/.bashrc
+  840  ls -lha $HOME/.kubeadm-dind-cluster
+  841  pwd
+  842  cd /root
+  843  ls
+  844  cd /home/jegan
+  845  ls
+  846  cd devops-us-may-2020/
+  847  ls
+  848  cd Day10
+  849  kubectl get nodes
+  850  kubect get pods
+  851  kubectl get pods
+  852  kubectl get pods -o wide
+  853  kubectl get pods -n kube-system
+  854  kubectl get nodes -o wide
+  855  curl http://10.244.3.22
+  856  docker exec -it kube-node-1 bash
+  857  cd ..
+  858  ls
+  859  cd Day9
+  860  ls
+  861  vim nginx-dep.yml 
+  862  kubectl scale deployment nginx --replicas=4
+  863  kubectl get pods
+  864  cd ..
+  865  cd Day10
+  866  ls
+  867  kubectl expose deployment nginx --type=NodePort --port=80
+  868  kubectl get services
+  869  kubectl get svc
+  870  cd ..
+  871  cd Day10
+  872  cd ../Day9
+  873  cd ../Day10
+  874  ls
+  875  kubectl get pods -o wide
+  876  kubectl get nodes -o wide
+  877  curl http://10.192.0.2:32382
+  878  curl http://10.192.0.3:32382
+  879  curl http://10.192.0.4:32382
+  880  kubectl delete service svc
+  881  kubectl delete service nginx
+  882  kubectl delete deployment nginx
+  883  clear
+  884  kubectl get pods
+  885  clear
+  886  cd ..
+  887  cd Day9
+  888  ls
+  889  kubectl create -f nginx-dep.yml --save-config
+  890  kubectl get pods
+  891  kubectl get pods -w
+  892  kubectl scale deployment nginx --replicas=4
+  893  kubectl get pods
+  894  kubectl expose deployment nginx --type=NodePort --port=80
+  895  kubectl get services
+  896  kubectl get nodes -o wide
+  897  curl  http://10.192.0.4:30426
+  898  curl  http://10.192.0.2:30426
+  899  curl  http://10.192.0.3:30426
+  900  curl  http://10.192.0.3:30426clear
+  901  clear
+  902  cd ..
+  903  cd Day10
+  904  kubectl get pods
+  905  kubectl scale deployment  nginx --replicas=1
+  906  curl  http://10.192.0.3:30426
+  907  curl  http://10.192.0.2:30426
+  908  curl  http://10.192.0.4:30426
+  909  clear
+  910  kubectl get pods
+  911  kubectl get pods -o wide
+  912  curl  http://10.192.0.2:30426
+  913  clear
+  914  kubectl scale deployment  nginx --replicas=10
+  915  kubectl get pods
+  916  kubectl get pods  -o wide 
+  917  clear
+  918  curl  http://10.192.0.2:30426
+  919  firewall-cmd --zone=public --add-port=30426 --permanent
+  920  firewall-cmd --zone=public --add-port=30426/tcp --permanent
+  921  firewall-cmd --reload
+  922  kubectl get nodes -o wide
+  923  docker exec -it kube-master bash
+  924  kubectl create -f ../Day9/nginx-dep.yml --save-config
+  925  curl  http://10.192.0.2:30426
+  926  cleear
+  927  clear
+  928  kubectl get pods -n kube-system
+  929  docker exec -it kube-master bash
+  930  kubectl get svc -o wide
+  931  kubectl expose --help
+  932  clear
+  933  ls
+  934  clear
+  935  ls
+  936  docker exec -it kube-master bash
+  937  ls
+  938  cd /home/jegan/Downloads/
+  939  ls
+  940  vim ./dind-cluster-v1.15.sh 
+  941  ls
+  942  vim ./dind-cluster-v1.15.sh 
+  943  exit
+  944  kubectl get po -w
+  945  clear
+  946  kubectl get po -w
+  947  exit
+  948  ls
+  949  cd /home/jegan/Downloads/
+  950  ls
+  951  ./dind-cluster-v1.15.sh up
+  952  set -o vi
+  953  export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+  954  kubectl get nodes
+  955  pply -f https://docs.projectcalico.org/manifests/calico.yaml
+  956  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+  957  kubectl get pods -n kube-system
+  958  kubectl get pods -n kube-system -w
+  959  kubectl get pods -n kube-system
+  960  kubectl get pods -n kube-system -w
+  961  kubectl get pods -n kube-system
+  962  cd ..
+  963  ls
+  964  cd devops-us-may-2020/
+  965  ls
+  966  cd Day9
+  967  ls
+  968  vim nginx-pod.yml 
+  969  cp nginx-pod.yml nginx-blue-pod.yml
+  970  cp nginx-pod.yml nginx-red-pod.yml
+  971  vim nginx-blue-pod.yml 
+  972  kubectl create -f nginx-blue-pod.yml 
+  973  kubectl create -f nginx-red-pod.yml 
+  974  kubectl delete pods --selector color=red
+  975  kubectl 
+  976  kubectl create 
+  977  kubectl get po
+  978  kubectl delete pod nginx
+  979  vim nginx-blue-pod.yml 
+  980  kubectl create -f nginx-red-pod.yml --save-config
+  981  kubectl create -f nginx-blue-pod.yml --save-config
+  982  vim nginx-blue-pod.yml 
+  983  kubectl get po
+  984  kubectl delete pod nginx
+  985  kubectl create -f nginx-red-pod.yml --save-config
+  986  kubectl create -f nginx-blue-pod.yml --save-config
+  987  kubectl get po
+  988  kubectl exec -it nginx-blue bash
+  989  kubectl get po
+  990  exit
+  991  kubectl get pods
+  992  kubectl get pods -o wide
+  993  kubectl kubectl exec -it nginx-red bash
+  994  kubectl exec -it nginx-red bash
+  995  exit
+  996  ls
+  997  cd /home/jegan/devops-us-may-2020/Day14
+  998* 
+  999* 
+ 1000  vim inventory 
+ 1001  docker ps
+ 1002  vim ../Day13/Ansible/ubuntu-ansible/Dockerfile 
+ 1003  rrun
+ 1004  set -o vi
+ 1005  vim install-nginx.yml 
+ 1006  vim index.html
+ 1007  ansible -i inventory ubuntu1 -m setup
+ 1008  ansible -i inventory ubuntu1 -m setup | grep 172.17.0
+ 1009  vim index.html
+ 1010  vim index.html 
+ 1011  cd ..
+ 1012  cd Day15
+ 1013  ls
+ 1014  cd centos-sshd-passwordless/
+ 1015  ls
+ 1016  cd ..
+ 1017  ls
+ 1018  git status
+ 1019  git add *
+ 1020  git commit -m "Fixed metalink issues by disabling gpg check."
+ 1021  git push -u origin master
+ 1022  ls
+ 1023  vim  default.conf 
+ 1024  clear
+ 1025  git status
+ 1026  git add * -a
+ 1027  git commit -m "Added refactored code."
+ 1028  git commit -m "Added refactored code." -a
+ 1029  ls
+ 1030  git push -u origin master
+ 1031  ls
+ 1032  clear
+ 1033  ls
+ 1034  cd centos-sshd-passwordless/
+ 1035  ls
+ 1036  rm -rf .git
+ 1037  cd ..
+ 1038  ls
+ 1039  git status
+ 1040  git add after-refactoring before-refactoring
+ 1041  git status
+ 1042  git commit -m "Added before and after refactoring folders."
+ 1043  git push -u origin master
+ 1044  ls
+ 1045  cd before-refactoring/
+ 1046  ls
+ 1047  cd ..
+ 1048  ls
+ 1049  cd after-refactoring/
+ 1050  ls
+ 1051  vim install-nginx-ubuntu.yml 
+ 1052  ls
+ 1053  vim install-nginx-centos.yml 
+ 1054  ls
+ 1055  clear
+ 1056  ansible-playbook install-nginx.yml 
+ 1057  ansible --version
+ 1058  vim /usr/lib/python2.7/site-packages/ansible/modules
+ 1059  vim /usr/lib/python2.7/site-packages/ansible/modules/
+ 1060  cd /usr/lib/python2.7/site-packages/ansible/modules/
+ 1061  ls
+ 1062  vim .
+ 1063  ls
+ 1064  find . -name "template.py"
+ 1065  vim files/template.py
+ 1066  cd -
+ 1067  vim install-nginx-ubuntu.yml 
+ 1068  vim common-nginx-tasks.yml 
+ 1069  ansible --version
+ 1070  cd /usr/lib/python2.7/site-packages
+ 1071  ls
+ 1072  cd -
+ 1073  ls
+ 1074  vim install-nginx.yml 
+ 1075  ls
+ 1076  clear
+ 1077  ansible-playbook install-nginx.yml --limit=ubuntu1
+ 1078  ls
+ 1079  vim install-nginx.yml 
+ 1080  ansible-playbook install-nginx.yml --limit=ubuntu1
+ 1081  ls
+ 1082  ansible-playbook install-nginx.yml --limit=localhost
+ 1083  ansible-playbook install-nginx.yml
+ 1084  vim ansible.cfg 
+ 1085  cd ..
+ 1086  ls
+ 1087  history > command_history.txt

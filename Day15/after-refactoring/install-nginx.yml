@@ -17,3 +17,5 @@
      - my_ports_file
   tasks:
      - include: test-nginx.yml
+     - name : Invoke ping playbook
+       shell: ansible-playbook ping.yml
