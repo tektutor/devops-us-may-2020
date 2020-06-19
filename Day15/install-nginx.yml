@@ -9,7 +9,7 @@
       when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
       apt: name=nginx state=latest update_cache=yes
 
-    - name: Fix metalink issue and disable gpg check 
+    - name: Fix metalink issue and disable gpg check in CentOS
       when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
       copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo 
 
@@ -19,7 +19,7 @@
 
     - name: Install nginx in CentOS 
       when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
-      yum: name=nginx state=latest 
+      yum: name=nginx state=latest  
 
     - name: Configure nginx web root folder in Ubuntu
       when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
