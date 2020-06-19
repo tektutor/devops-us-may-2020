@@ -1,0 +1,1537 @@
+2020-06-19 06:45:27,173 p=2931 u=root n=ansible | PLAY [This playbook will install, configure and deploy web page into nginx web server] ****
+2020-06-19 06:45:27,182 p=2931 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 06:45:28,446 p=2931 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 06:45:28,447 p=2931 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 06:45:28,514 p=2931 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 06:45:28,514 p=2931 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 06:45:28,535 p=2931 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu3 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 06:45:28,535 p=2931 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 06:45:40,352 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:40,531 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:40,541 p=2931 u=root n=ansible | TASK [Install nginx in Ubuntu] ************************************************************
+2020-06-19 06:45:40,689 p=2931 u=root n=ansible | skipping: [centos1]
+2020-06-19 06:45:40,728 p=2931 u=root n=ansible | skipping: [centos2]
+2020-06-19 06:45:46,523 p=2931 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 06:45:46,606 p=2931 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 06:45:46,607 p=2931 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 06:45:46,620 p=2931 u=root n=ansible | TASK [Fix metalink issue and disable gpg check in CentOS] *********************************
+2020-06-19 06:45:46,710 p=2931 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 06:45:46,748 p=2931 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 06:45:46,757 p=2931 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 06:45:47,598 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:47,603 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:47,625 p=2931 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux(EPEL) in CentOS] ************************
+2020-06-19 06:45:47,723 p=2931 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 06:45:47,759 p=2931 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 06:45:47,763 p=2931 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 06:45:51,517 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:51,543 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:51,555 p=2931 u=root n=ansible | TASK [Install nginx in CentOS] ************************************************************
+2020-06-19 06:45:51,662 p=2931 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 06:45:51,690 p=2931 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 06:45:51,695 p=2931 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 06:45:54,480 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:54,490 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:54,502 p=2931 u=root n=ansible | TASK [Configure nginx web root folder in Ubuntu] ******************************************
+2020-06-19 06:45:54,651 p=2931 u=root n=ansible | skipping: [centos1]
+2020-06-19 06:45:54,684 p=2931 u=root n=ansible | skipping: [centos2]
+2020-06-19 06:45:55,151 p=2931 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 06:45:55,187 p=2931 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 06:45:55,201 p=2931 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 06:45:55,216 p=2931 u=root n=ansible | TASK [Configure nginx web root folder in CentOS] ******************************************
+2020-06-19 06:45:55,319 p=2931 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 06:45:55,350 p=2931 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 06:45:55,352 p=2931 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 06:45:55,875 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:55,900 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:55,910 p=2931 u=root n=ansible | TASK [Create customized nginx web root folder] ********************************************
+2020-06-19 06:45:56,382 p=2931 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 06:45:56,386 p=2931 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 06:45:56,398 p=2931 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 06:45:56,476 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:45:56,502 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:45:56,516 p=2931 u=root n=ansible | TASK [Restart nginx service] **************************************************************
+2020-06-19 06:45:58,074 p=2931 u=root n=ansible | [WARNING]: Consider using the service module rather than running 'service'.  If you need
+to use command because service is insufficient you can add 'warn: false' to this command
+task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-06-19 06:45:58,075 p=2931 u=root n=ansible | changed: [centos1]
+2020-06-19 06:45:58,087 p=2931 u=root n=ansible | changed: [centos2]
+2020-06-19 06:45:58,244 p=2931 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 06:45:58,258 p=2931 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 06:45:58,266 p=2931 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 06:45:58,279 p=2931 u=root n=ansible | TASK [Retrieve IP address of ansible node] ************************************************
+2020-06-19 06:45:58,697 p=2931 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 06:45:58,713 p=2931 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 06:45:58,755 p=2931 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 06:45:59,633 p=2931 u=root n=ansible | changed: [centos2]
+2020-06-19 06:45:59,634 p=2931 u=root n=ansible | changed: [centos1]
+2020-06-19 06:45:59,643 p=2931 u=root n=ansible | TASK [Deploy html page into nginx web  server] ********************************************
+2020-06-19 06:46:00,462 p=2931 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 06:46:00,470 p=2931 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 06:46:00,513 p=2931 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 06:46:00,576 p=2931 u=root n=ansible | ok: [centos2]
+2020-06-19 06:46:00,623 p=2931 u=root n=ansible | ok: [centos1]
+2020-06-19 06:46:00,634 p=2931 u=root n=ansible | PLAY [This play will test nginx installation] *********************************************
+2020-06-19 06:46:00,643 p=2931 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 06:46:26,550 p=2931 u=root n=ansible | ok: [localhost]
+2020-06-19 06:46:26,575 p=2931 u=root n=ansible | TASK [Curl nginx web page on Ubuntu] ******************************************************
+2020-06-19 06:46:26,849 p=2931 u=root n=ansible | changed: [localhost] => (item=8001)
+2020-06-19 06:46:27,049 p=2931 u=root n=ansible | changed: [localhost] => (item=8002)
+2020-06-19 06:46:27,260 p=2931 u=root n=ansible | changed: [localhost] => (item=8003)
+2020-06-19 06:46:27,499 p=2931 u=root n=ansible | changed: [localhost] => (item=8004)
+2020-06-19 06:46:27,698 p=2931 u=root n=ansible | changed: [localhost] => (item=8005)
+2020-06-19 06:46:27,704 p=2931 u=root n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you
+need to use command because get_url or uri is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2020-06-19 06:46:27,743 p=2931 u=root n=ansible | TASK [debug] ******************************************************************************
+2020-06-19 06:46:27,825 p=2931 u=root n=ansible | ok: [localhost] => {
+    "output": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8001", 
+                "delta": "0:00:00.014188", 
+                "end": "2020-06-19 06:46:26.817031", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8001", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8001", 
+                "rc": 0, 
+                "start": "2020-06-19 06:46:26.802843", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  36862      0 --:--:-- --:--:-- --:--:-- 42200", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  36862      0 --:--:-- --:--:-- --:--:-- 42200"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu1</h1>\n\t\t<h1>IP Address - 172.17.0.2</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.2</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8002", 
+                "delta": "0:00:00.014569", 
+                "end": "2020-06-19 06:46:27.020909", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8002", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8002", 
+                "rc": 0, 
+                "start": "2020-06-19 06:46:27.006340", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  33630      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  33630      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu2</h1>\n\t\t<h1>IP Address - 172.17.0.3</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.3</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8003", 
+                "delta": "0:00:00.016519", 
+                "end": "2020-06-19 06:46:27.228162", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8003", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8003", 
+                "rc": 0, 
+                "start": "2020-06-19 06:46:27.211643", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  30181      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  30181      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu3</h1>\n\t\t<h1>IP Address - 172.17.0.4</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu3</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.4</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8004", 
+                "delta": "0:00:00.015455", 
+                "end": "2020-06-19 06:46:27.471041", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8004", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8004", 
+                "rc": 0, 
+                "start": "2020-06-19 06:46:27.455586", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32937      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32937      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos1</h1>\n\t\t<h1>IP Address - 172.17.0.5</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.5</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8005", 
+                "delta": "0:00:00.014287", 
+                "end": "2020-06-19 06:46:27.671758", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8005", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8005", 
+                "rc": 0, 
+                "start": "2020-06-19 06:46:27.657471", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  34539      0 --:--:-- --:--:-- --:--:-- 42200", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  34539      0 --:--:-- --:--:-- --:--:-- 42200"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos2</h1>\n\t\t<h1>IP Address - 172.17.0.6</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.6</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }
+        ], 
+        "warnings": [
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+        ]
+    }
+}
+2020-06-19 06:46:27,826 p=2931 u=root n=ansible | PLAY RECAP ********************************************************************************
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | centos1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | centos2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | ubuntu1                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | ubuntu2                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 06:46:27,827 p=2931 u=root n=ansible | ubuntu3                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 07:05:33,967 p=6250 u=root n=ansible | PLAY [This playbook will install, configure and deploy web page into nginx web server] ****
+2020-06-19 07:05:33,975 p=6250 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:05:35,185 p=6250 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu3 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:05:35,185 p=6250 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:05:35,187 p=6250 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:05:35,187 p=6250 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:05:35,302 p=6250 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:05:35,302 p=6250 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:05:46,599 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:05:46,765 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:05:46,774 p=6250 u=root n=ansible | TASK [Install nginx in Ubuntu] ************************************************************
+2020-06-19 07:05:46,907 p=6250 u=root n=ansible | skipping: [centos1]
+2020-06-19 07:05:46,932 p=6250 u=root n=ansible | skipping: [centos2]
+2020-06-19 07:05:52,537 p=6250 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:05:52,548 p=6250 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:05:52,614 p=6250 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:05:52,627 p=6250 u=root n=ansible | TASK [Fix metalink issue and disable gpg check in CentOS] *********************************
+2020-06-19 07:05:52,706 p=6250 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 07:05:52,737 p=6250 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 07:05:52,741 p=6250 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 07:05:53,566 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:05:53,568 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:05:53,580 p=6250 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux(EPEL) in CentOS] ************************
+2020-06-19 07:05:53,662 p=6250 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 07:05:53,696 p=6250 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 07:05:53,701 p=6250 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 07:05:57,528 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:05:57,531 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:05:57,544 p=6250 u=root n=ansible | TASK [Install nginx in CentOS] ************************************************************
+2020-06-19 07:05:57,630 p=6250 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 07:05:57,656 p=6250 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 07:05:57,657 p=6250 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 07:06:00,419 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:06:00,428 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:06:00,441 p=6250 u=root n=ansible | TASK [Configure nginx web root folder in Ubuntu] ******************************************
+2020-06-19 07:06:00,588 p=6250 u=root n=ansible | skipping: [centos1]
+2020-06-19 07:06:00,643 p=6250 u=root n=ansible | skipping: [centos2]
+2020-06-19 07:06:01,102 p=6250 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:06:01,114 p=6250 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:06:01,136 p=6250 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:06:01,149 p=6250 u=root n=ansible | TASK [Configure nginx web root folder in CentOS] ******************************************
+2020-06-19 07:06:01,248 p=6250 u=root n=ansible | skipping: [ubuntu1]
+2020-06-19 07:06:01,283 p=6250 u=root n=ansible | skipping: [ubuntu2]
+2020-06-19 07:06:01,284 p=6250 u=root n=ansible | skipping: [ubuntu3]
+2020-06-19 07:06:01,830 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:06:01,838 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:06:01,849 p=6250 u=root n=ansible | TASK [Create customized nginx web root folder] ********************************************
+2020-06-19 07:06:02,284 p=6250 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:06:02,292 p=6250 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:06:02,297 p=6250 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:06:02,400 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:06:02,473 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:06:02,503 p=6250 u=root n=ansible | TASK [Restart nginx service] **************************************************************
+2020-06-19 07:06:04,213 p=6250 u=root n=ansible | [WARNING]: Consider using the service module rather than running 'service'.  If you need
+to use command because service is insufficient you can add 'warn: false' to this command
+task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-06-19 07:06:04,213 p=6250 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:06:04,242 p=6250 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:06:04,246 p=6250 u=root n=ansible | changed: [centos2]
+2020-06-19 07:06:04,271 p=6250 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:06:04,300 p=6250 u=root n=ansible | changed: [centos1]
+2020-06-19 07:06:04,314 p=6250 u=root n=ansible | TASK [Retrieve IP address of ansible node] ************************************************
+2020-06-19 07:06:04,878 p=6250 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:06:04,912 p=6250 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:06:04,922 p=6250 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:06:05,828 p=6250 u=root n=ansible | changed: [centos1]
+2020-06-19 07:06:05,889 p=6250 u=root n=ansible | changed: [centos2]
+2020-06-19 07:06:05,901 p=6250 u=root n=ansible | TASK [Deploy html page into nginx web  server] ********************************************
+2020-06-19 07:06:06,677 p=6250 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:06:06,696 p=6250 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:06:06,755 p=6250 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:06:06,826 p=6250 u=root n=ansible | ok: [centos1]
+2020-06-19 07:06:06,903 p=6250 u=root n=ansible | ok: [centos2]
+2020-06-19 07:06:06,911 p=6250 u=root n=ansible | PLAY [This play will test nginx installation] *********************************************
+2020-06-19 07:06:06,919 p=6250 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:06:33,188 p=6250 u=root n=ansible | ok: [localhost]
+2020-06-19 07:06:33,229 p=6250 u=root n=ansible | TASK [Curl nginx web page on Ubuntu] ******************************************************
+2020-06-19 07:06:33,492 p=6250 u=root n=ansible | changed: [localhost] => (item=8001)
+2020-06-19 07:06:33,716 p=6250 u=root n=ansible | changed: [localhost] => (item=8002)
+2020-06-19 07:06:33,961 p=6250 u=root n=ansible | changed: [localhost] => (item=8003)
+2020-06-19 07:06:34,178 p=6250 u=root n=ansible | changed: [localhost] => (item=8004)
+2020-06-19 07:06:34,411 p=6250 u=root n=ansible | changed: [localhost] => (item=8005)
+2020-06-19 07:06:34,416 p=6250 u=root n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you
+need to use command because get_url or uri is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2020-06-19 07:06:34,451 p=6250 u=root n=ansible | TASK [debug] ******************************************************************************
+2020-06-19 07:06:34,540 p=6250 u=root n=ansible | ok: [localhost] => {
+    "output": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8001", 
+                "delta": "0:00:00.014438", 
+                "end": "2020-06-19 07:06:33.463546", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8001", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8001", 
+                "rc": 0, 
+                "start": "2020-06-19 07:06:33.449108", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  31921      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  31921      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu1</h1>\n\t\t<h1>IP Address - 172.17.0.2</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.2</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8002", 
+                "delta": "0:00:00.015675", 
+                "end": "2020-06-19 07:06:33.685595", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8002", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8002", 
+                "rc": 0, 
+                "start": "2020-06-19 07:06:33.669920", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  33386      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  33386      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu2</h1>\n\t\t<h1>IP Address - 172.17.0.3</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.3</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8003", 
+                "delta": "0:00:00.014353", 
+                "end": "2020-06-19 07:06:33.934249", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8003", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8003", 
+                "rc": 0, 
+                "start": "2020-06-19 07:06:33.919896", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  35207      0 --:--:-- --:--:-- --:--:-- 42200", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  35207      0 --:--:-- --:--:-- --:--:-- 42200"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu3</h1>\n\t\t<h1>IP Address - 172.17.0.4</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu3</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.4</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8004", 
+                "delta": "0:00:00.015267", 
+                "end": "2020-06-19 07:06:34.149305", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8004", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8004", 
+                "rc": 0, 
+                "start": "2020-06-19 07:06:34.134038", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  34766      0 --:--:-- --:--:-- --:--:-- 42200", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  34766      0 --:--:-- --:--:-- --:--:-- 42200"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos1</h1>\n\t\t<h1>IP Address - 172.17.0.5</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.5</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8005", 
+                "delta": "0:00:00.016291", 
+                "end": "2020-06-19 07:06:34.378900", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8005", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8005", 
+                "rc": 0, 
+                "start": "2020-06-19 07:06:34.362609", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32476      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32476      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos2</h1>\n\t\t<h1>IP Address - 172.17.0.6</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.6</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }
+        ], 
+        "warnings": [
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+        ]
+    }
+}
+2020-06-19 07:06:34,542 p=6250 u=root n=ansible | PLAY RECAP ********************************************************************************
+2020-06-19 07:06:34,542 p=6250 u=root n=ansible | centos1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2020-06-19 07:06:34,543 p=6250 u=root n=ansible | centos2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2020-06-19 07:06:34,543 p=6250 u=root n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:06:34,543 p=6250 u=root n=ansible | ubuntu1                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 07:06:34,543 p=6250 u=root n=ansible | ubuntu2                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 07:06:34,543 p=6250 u=root n=ansible | ubuntu3                    : ok=7    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-06-19 07:17:44,944 p=9066 u=root n=ansible | PLAY [This playbook will install, configure and deploy web page into nginx web server] ****
+2020-06-19 07:17:44,953 p=9066 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:17:46,259 p=9066 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:17:46,259 p=9066 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:17:46,278 p=9066 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu3 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:17:46,278 p=9066 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:17:46,298 p=9066 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:17:46,298 p=9066 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:17:57,951 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:17:58,029 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:17:58,043 p=9066 u=root n=ansible | TASK [include] ****************************************************************************
+2020-06-19 07:17:58,348 p=9066 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/install-nginx-ubuntu.yml for ubuntu1, ubuntu2, ubuntu3
+2020-06-19 07:17:58,351 p=9066 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/install-nginx-centos.yml for centos1, centos2
+2020-06-19 07:17:58,368 p=9066 u=root n=ansible | TASK [Install nginx in Ubuntu] ************************************************************
+2020-06-19 07:18:04,894 p=9066 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:18:04,915 p=9066 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:18:04,954 p=9066 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:18:04,977 p=9066 u=root n=ansible | TASK [Fix metalink issue and disable gpg check in CentOS] *********************************
+2020-06-19 07:18:06,002 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:06,003 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:06,018 p=9066 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux(EPEL) in CentOS] ************************
+2020-06-19 07:18:09,478 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:10,522 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:10,545 p=9066 u=root n=ansible | TASK [Install nginx in CentOS] ************************************************************
+2020-06-19 07:18:13,766 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:13,829 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:13,847 p=9066 u=root n=ansible | TASK [include] ****************************************************************************
+2020-06-19 07:18:14,072 p=9066 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/configure-nginx-ubuntu.yml for ubuntu1, ubuntu2, ubuntu3
+2020-06-19 07:18:14,075 p=9066 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/configure-nginx-centos.yml for centos1, centos2
+2020-06-19 07:18:14,107 p=9066 u=root n=ansible | TASK [Configure nginx web root folder in Ubuntu] ******************************************
+2020-06-19 07:18:14,894 p=9066 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:18:14,903 p=9066 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:18:14,914 p=9066 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:18:14,933 p=9066 u=root n=ansible | TASK [Configure nginx web root folder in CentOS] ******************************************
+2020-06-19 07:18:15,495 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:15,520 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:15,530 p=9066 u=root n=ansible | TASK [Create customized nginx web root folder] ********************************************
+2020-06-19 07:18:15,986 p=9066 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:18:15,999 p=9066 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:18:16,007 p=9066 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:18:16,092 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:16,159 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:16,175 p=9066 u=root n=ansible | TASK [Restart nginx service] **************************************************************
+2020-06-19 07:18:17,869 p=9066 u=root n=ansible | [WARNING]: Consider using the service module rather than running 'service'.  If you need
+to use command because service is insufficient you can add 'warn: false' to this command
+task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-06-19 07:18:17,870 p=9066 u=root n=ansible | changed: [centos1]
+2020-06-19 07:18:17,923 p=9066 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:18:17,937 p=9066 u=root n=ansible | changed: [centos2]
+2020-06-19 07:18:17,986 p=9066 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:18:18,018 p=9066 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:18:18,035 p=9066 u=root n=ansible | TASK [Retrieve IP address of ansible node] ************************************************
+2020-06-19 07:18:18,578 p=9066 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:18:18,612 p=9066 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:18:18,649 p=9066 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:18:19,614 p=9066 u=root n=ansible | changed: [centos1]
+2020-06-19 07:18:19,641 p=9066 u=root n=ansible | changed: [centos2]
+2020-06-19 07:18:19,655 p=9066 u=root n=ansible | TASK [Deploy html page into nginx web  server] ********************************************
+2020-06-19 07:18:20,652 p=9066 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:18:20,725 p=9066 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:18:20,726 p=9066 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:18:20,853 p=9066 u=root n=ansible | ok: [centos2]
+2020-06-19 07:18:20,861 p=9066 u=root n=ansible | ok: [centos1]
+2020-06-19 07:18:20,867 p=9066 u=root n=ansible | PLAY [This play will test nginx installation] *********************************************
+2020-06-19 07:18:20,874 p=9066 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:18:46,898 p=9066 u=root n=ansible | ok: [localhost]
+2020-06-19 07:18:46,923 p=9066 u=root n=ansible | TASK [Curl nginx web page on Ubuntu] ******************************************************
+2020-06-19 07:18:47,190 p=9066 u=root n=ansible | changed: [localhost] => (item=8001)
+2020-06-19 07:18:47,511 p=9066 u=root n=ansible | changed: [localhost] => (item=8002)
+2020-06-19 07:18:47,770 p=9066 u=root n=ansible | changed: [localhost] => (item=8003)
+2020-06-19 07:18:47,989 p=9066 u=root n=ansible | changed: [localhost] => (item=8004)
+2020-06-19 07:18:48,215 p=9066 u=root n=ansible | changed: [localhost] => (item=8005)
+2020-06-19 07:18:48,220 p=9066 u=root n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you
+need to use command because get_url or uri is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2020-06-19 07:18:48,259 p=9066 u=root n=ansible | TASK [debug] ******************************************************************************
+2020-06-19 07:18:48,345 p=9066 u=root n=ansible | ok: [localhost] => {
+    "output": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8001", 
+                "delta": "0:00:00.015348", 
+                "end": "2020-06-19 07:18:47.157880", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8001", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8001", 
+                "rc": 0, 
+                "start": "2020-06-19 07:18:47.142532", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  29924      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  29924      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu1</h1>\n\t\t<h1>IP Address - 172.17.0.2</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.2</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8002", 
+                "delta": "0:00:00.028168", 
+                "end": "2020-06-19 07:18:47.457452", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8002", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8002", 
+                "rc": 0, 
+                "start": "2020-06-19 07:18:47.429284", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  28715      0 --:--:-- --:--:-- --:--:-- 30142", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  28715      0 --:--:-- --:--:-- --:--:-- 30142"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu2</h1>\n\t\t<h1>IP Address - 172.17.0.3</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.3</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8003", 
+                "delta": "0:00:00.024404", 
+                "end": "2020-06-19 07:18:47.734846", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8003", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8003", 
+                "rc": 0, 
+                "start": "2020-06-19 07:18:47.710442", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32973      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32973      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu3</h1>\n\t\t<h1>IP Address - 172.17.0.4</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu3</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.4</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8004", 
+                "delta": "0:00:00.015031", 
+                "end": "2020-06-19 07:18:47.958900", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8004", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8004", 
+                "rc": 0, 
+                "start": "2020-06-19 07:18:47.943869", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  33808      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  33808      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos1</h1>\n\t\t<h1>IP Address - 172.17.0.5</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.5</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8005", 
+                "delta": "0:00:00.016371", 
+                "end": "2020-06-19 07:18:48.185563", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8005", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8005", 
+                "rc": 0, 
+                "start": "2020-06-19 07:18:48.169192", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  33025      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  33025      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos2</h1>\n\t\t<h1>IP Address - 172.17.0.6</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.6</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }
+        ], 
+        "warnings": [
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+        ]
+    }
+}
+2020-06-19 07:18:48,347 p=9066 u=root n=ansible | PLAY RECAP ********************************************************************************
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | centos1                    : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | centos2                    : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | ubuntu1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | ubuntu2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:18:48,348 p=9066 u=root n=ansible | ubuntu3                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:29:58,268 p=12071 u=root n=ansible | PLAY [This playbook will install, configure and deploy web page into nginx web server] ****
+2020-06-19 07:29:58,280 p=12071 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:29:59,646 p=12071 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:29:59,647 p=12071 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:29:59,658 p=12071 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:29:59,658 p=12071 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:29:59,704 p=12071 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 16.04 on host ubuntu3 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform 
+python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for 
+more information. This feature will be removed in version 2.12. Deprecation warnings can 
+be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-06-19 07:29:59,705 p=12071 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:30:13,051 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:30:13,410 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:30:13,712 p=12071 u=root n=ansible | ok: [centos3]
+2020-06-19 07:30:13,727 p=12071 u=root n=ansible | TASK [include] ****************************************************************************
+2020-06-19 07:30:14,196 p=12071 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/install-nginx-ubuntu.yml for ubuntu1, ubuntu2, ubuntu3
+2020-06-19 07:30:14,200 p=12071 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/install-nginx-centos.yml for centos1, centos2, centos3
+2020-06-19 07:30:14,247 p=12071 u=root n=ansible | TASK [Install nginx in Ubuntu] ************************************************************
+2020-06-19 07:30:21,250 p=12071 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:30:21,458 p=12071 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:30:21,467 p=12071 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:30:21,486 p=12071 u=root n=ansible | TASK [Fix metalink issue and disable gpg check in CentOS] *********************************
+2020-06-19 07:30:22,520 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:30:22,527 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:30:24,071 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:30:24,084 p=12071 u=root n=ansible | TASK [Install Extra Packages for Enterprise Linux(EPEL) in CentOS] ************************
+2020-06-19 07:30:28,738 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:30:28,829 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:30:53,427 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:30:53,440 p=12071 u=root n=ansible | TASK [Install nginx in CentOS] ************************************************************
+2020-06-19 07:30:56,377 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:30:56,403 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:32:40,000 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:40,010 p=12071 u=root n=ansible | TASK [include] ****************************************************************************
+2020-06-19 07:32:40,212 p=12071 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/configure-nginx-ubuntu.yml for ubuntu1, ubuntu2, ubuntu3
+2020-06-19 07:32:40,214 p=12071 u=root n=ansible | included: /home/jegan/devops-us-may-2020/Day15/after-refactoring/configure-nginx-centos.yml for centos1, centos2, centos3
+2020-06-19 07:32:40,253 p=12071 u=root n=ansible | TASK [Configure nginx web root folder in Ubuntu] ******************************************
+2020-06-19 07:32:40,844 p=12071 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:32:40,848 p=12071 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:32:40,863 p=12071 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:32:40,878 p=12071 u=root n=ansible | TASK [Configure nginx web root folder in CentOS] ******************************************
+2020-06-19 07:32:41,436 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:32:41,704 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:32:43,687 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:43,698 p=12071 u=root n=ansible | TASK [Create customized nginx web root folder] ********************************************
+2020-06-19 07:32:44,148 p=12071 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:32:44,184 p=12071 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:32:44,198 p=12071 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:32:44,225 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:32:44,295 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:32:44,515 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:44,526 p=12071 u=root n=ansible | TASK [Restart nginx service] **************************************************************
+2020-06-19 07:32:46,063 p=12071 u=root n=ansible | [WARNING]: Consider using the service module rather than running 'service'.  If you need
+to use command because service is insufficient you can add 'warn: false' to this command
+task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-06-19 07:32:46,063 p=12071 u=root n=ansible | changed: [centos1]
+2020-06-19 07:32:46,130 p=12071 u=root n=ansible | changed: [centos2]
+2020-06-19 07:32:46,174 p=12071 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:32:46,176 p=12071 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:32:46,212 p=12071 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:32:47,190 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:47,200 p=12071 u=root n=ansible | TASK [Retrieve IP address of ansible node] ************************************************
+2020-06-19 07:32:47,653 p=12071 u=root n=ansible | changed: [ubuntu1]
+2020-06-19 07:32:47,658 p=12071 u=root n=ansible | changed: [ubuntu2]
+2020-06-19 07:32:47,707 p=12071 u=root n=ansible | changed: [ubuntu3]
+2020-06-19 07:32:48,637 p=12071 u=root n=ansible | changed: [centos2]
+2020-06-19 07:32:48,685 p=12071 u=root n=ansible | changed: [centos1]
+2020-06-19 07:32:48,904 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:48,915 p=12071 u=root n=ansible | TASK [Deploy html page into nginx web  server] ********************************************
+2020-06-19 07:32:49,725 p=12071 u=root n=ansible | ok: [ubuntu2]
+2020-06-19 07:32:49,730 p=12071 u=root n=ansible | ok: [ubuntu1]
+2020-06-19 07:32:49,775 p=12071 u=root n=ansible | ok: [ubuntu3]
+2020-06-19 07:32:49,830 p=12071 u=root n=ansible | ok: [centos1]
+2020-06-19 07:32:49,835 p=12071 u=root n=ansible | ok: [centos2]
+2020-06-19 07:32:51,707 p=12071 u=root n=ansible | changed: [centos3]
+2020-06-19 07:32:51,712 p=12071 u=root n=ansible | PLAY [This play will test nginx installation] *********************************************
+2020-06-19 07:32:51,717 p=12071 u=root n=ansible | TASK [Gathering Facts] ********************************************************************
+2020-06-19 07:33:17,622 p=12071 u=root n=ansible | ok: [localhost]
+2020-06-19 07:33:17,650 p=12071 u=root n=ansible | TASK [Curl nginx web page on Ubuntu] ******************************************************
+2020-06-19 07:33:17,918 p=12071 u=root n=ansible | changed: [localhost] => (item=8001)
+2020-06-19 07:33:18,125 p=12071 u=root n=ansible | changed: [localhost] => (item=8002)
+2020-06-19 07:33:18,339 p=12071 u=root n=ansible | changed: [localhost] => (item=8003)
+2020-06-19 07:33:18,543 p=12071 u=root n=ansible | changed: [localhost] => (item=8004)
+2020-06-19 07:33:18,749 p=12071 u=root n=ansible | changed: [localhost] => (item=8005)
+2020-06-19 07:33:18,959 p=12071 u=root n=ansible | changed: [localhost] => (item=8006)
+2020-06-19 07:33:18,964 p=12071 u=root n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you
+need to use command because get_url or uri is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2020-06-19 07:33:18,999 p=12071 u=root n=ansible | TASK [debug] ******************************************************************************
+2020-06-19 07:33:19,081 p=12071 u=root n=ansible | ok: [localhost] => {
+    "output": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8001", 
+                "delta": "0:00:00.015525", 
+                "end": "2020-06-19 07:33:17.887312", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8001", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8001", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:17.871787", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32198      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32198      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu1</h1>\n\t\t<h1>IP Address - 172.17.0.2</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.2</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8002", 
+                "delta": "0:00:00.016859", 
+                "end": "2020-06-19 07:33:18.094334", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8002", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8002", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:18.077475", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32652      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32652      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu2</h1>\n\t\t<h1>IP Address - 172.17.0.3</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.3</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8003", 
+                "delta": "0:00:00.014019", 
+                "end": "2020-06-19 07:33:18.314206", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8003", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8003", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:18.300187", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  36435      0 --:--:-- --:--:-- --:--:-- 42200", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  36435      0 --:--:-- --:--:-- --:--:-- 42200"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - ubuntu3</h1>\n\t\t<h1>IP Address - 172.17.0.4</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - ubuntu3</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.4</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8004", 
+                "delta": "0:00:00.014751", 
+                "end": "2020-06-19 07:33:18.515587", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8004", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8004", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:18.500836", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  34331      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  34331      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos1</h1>\n\t\t<h1>IP Address - 172.17.0.5</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos1</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.5</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8005", 
+                "delta": "0:00:00.014886", 
+                "end": "2020-06-19 07:33:18.713865", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8005", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8005", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:18.698979", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32262      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32262      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos2</h1>\n\t\t<h1>IP Address - 172.17.0.6</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos2</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.6</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }, 
+            {
+                "ansible_loop_var": "item", 
+                "changed": true, 
+                "cmd": "curl http://localhost:8006", 
+                "delta": "0:00:00.014764", 
+                "end": "2020-06-19 07:33:18.930871", 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "curl http://localhost:8006", 
+                        "_uses_shell": true, 
+                        "argv": null, 
+                        "chdir": null, 
+                        "creates": null, 
+                        "executable": null, 
+                        "removes": null, 
+                        "stdin": null, 
+                        "stdin_add_newline": true, 
+                        "strip_empty_ends": true, 
+                        "warn": true
+                    }
+                }, 
+                "item": "8006", 
+                "rc": 0, 
+                "start": "2020-06-19 07:33:18.916107", 
+                "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r100   211  100   211    0     0  32130      0 --:--:-- --:--:-- --:--:-- 35166", 
+                "stderr_lines": [
+                    "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current", 
+                    "                                 Dload  Upload   Total   Spent    Left  Speed", 
+                    "", 
+                    "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0", 
+                    "100   211  100   211    0     0  32130      0 --:--:-- --:--:-- --:--:-- 35166"
+                ], 
+                "stdout": "<html>\n\t<head>\n\t\t<title>Welcome Page</title>\n\t</head>\n\n\t<body>\n\t\t<h1>Hostname - centos3</h1>\n\t\t<h1>IP Address - 172.17.0.7</h1>\n\t\t<h1>Provisioned by Docker</h1>\n\t\t<h1>Configured by Ansible</h1>\n\t</body>\n</html>", 
+                "stdout_lines": [
+                    "<html>", 
+                    "\t<head>", 
+                    "\t\t<title>Welcome Page</title>", 
+                    "\t</head>", 
+                    "", 
+                    "\t<body>", 
+                    "\t\t<h1>Hostname - centos3</h1>", 
+                    "\t\t<h1>IP Address - 172.17.0.7</h1>", 
+                    "\t\t<h1>Provisioned by Docker</h1>", 
+                    "\t\t<h1>Configured by Ansible</h1>", 
+                    "\t</body>", 
+                    "</html>"
+                ]
+            }
+        ], 
+        "warnings": [
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.", 
+            "Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+        ]
+    }
+}
+2020-06-19 07:33:19,083 p=12071 u=root n=ansible | PLAY RECAP ********************************************************************************
+2020-06-19 07:33:19,083 p=12071 u=root n=ansible | centos1                    : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,084 p=12071 u=root n=ansible | centos2                    : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,084 p=12071 u=root n=ansible | centos3                    : ok=11   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,084 p=12071 u=root n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,084 p=12071 u=root n=ansible | ubuntu1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,084 p=12071 u=root n=ansible | ubuntu2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-06-19 07:33:19,085 p=12071 u=root n=ansible | ubuntu3                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

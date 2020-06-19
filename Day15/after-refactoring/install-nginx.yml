@@ -1,0 +1,19 @@
+- name: This playbook will install, configure and deploy web page into nginx web server
+  hosts: all 
+  gather_facts: yes 
+  vars:
+    - provisioner_tool: Docker
+    - conf_mgr_tool: Ansible
+  tasks:
+    - include: "install-nginx-{{ansible_distribution|lower}}.yml"
+
+    - include: "configure-nginx-{{ansible_distribution|lower}}.yml"
+
+    - include: common-nginx-tasks.yml
+
+- name: This play will test nginx installation
+  hosts: localhost
+  vars_files:
+     - my_ports_file
+  tasks:
+     - include: test-nginx.yml
