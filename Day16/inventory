@@ -15,4 +15,9 @@ centos[1:3]
 [all:vars]
 ansible_host=localhost
 ansible_user=root
+ansible_become_user=root
+ansible_become_password=root
 ansible_private_key_file=/root/.ssh/id_rsa
+
+[dev:vars]
+

@@ -1,0 +1,1000 @@
+  680  ./dind-cluster-v1.15.sh up
+  681  echo ~
+  682  ./dind-cluster-v1.15.sh down
+  683  ./dind-cluster-v1.15.sh up
+  684  cd ..
+  685  ls
+  686  cd devops-us-may-2020/
+  687  ls
+  688  mkdir Day8
+  689  clear
+  690  ls
+  691  mkdir Day9
+  692  clear
+  693  ls
+  694  clear
+  695  lsw
+  696  clear
+  697  ls
+  698  vim ~/.bashrc 
+  699  cleear
+  700  clear
+  701  cd Day9
+  702  ls
+  703  vim kubernetes-notes.txt 
+  704  exit
+  705  ls
+  706  cd /home/jegan/
+  707  ;ls
+  708  ls
+  709  cd Downloads/
+  710  ls
+  711  ./dind-cluster-v1.15.sh up
+  712  kubectl get pods
+  713  kubectl create deployment nginx --image=nginx:1.19
+  714  kubectl get pods
+  715  kubectl get pods -n kube-system
+  716  kubectl get pods
+  717  kubectl scale deployment/nginx --replicas=3
+  718  kubectl get po -w
+  719  kubectl get rs
+  720  kubectl scale deployment/nginx --replicas=6
+  721  kubectl get po -w
+  722  kubectl scale deployment/nginx --replicas=20
+  723  kubectl get po -w
+  724  kubectl get po
+  725  kubectl edit deploy/nginx 
+  726  kubectl get pods -o wide
+  727  kubectl get pods -o wide | grep kube-node-2
+  728  kubectl get pods -o wide | grep kube-node-2 | wc -l
+  729  kubectl get pods -o wide | grep kube-node-1 | wc -l
+  730  kubectl scale
+  731  kubectl scale deployment/nginx --replicas=6
+  732  kubectl get po -w
+  733  kubectl get po 
+  734  kubectl get po -o wide
+  735  kubectl exec -it nginx-78d44d754b-txzrj bash
+  736  kubectl get pods
+  737  clear
+  738  kubectl get pods
+  739  kubectl delete pod/nginx-78d44d754b-txzrj
+  740  kubectl get deploy
+  741  kubectl get rs
+  742  kubectl delete pod/nginx-78d44d754b-26z6k
+  743  kubectl get rs
+  744  kubectl get deploy,rs,po -w
+  745  kubectl get pods
+  746  kubectl delete pod/nginx-78d44d754b-bfx8j 
+  747  kubectl get deploy,rs,po -w
+  748  kubectl get deploy,rs,po
+  749  cleear
+  750  clear
+  751  kubectl delete pod/nginx-78d44d754b-tkkvq
+  752  kubectl get po
+  753  kubectl get rs
+  754  kubectl delete rs/nginx-78d44d754b
+  755  kubectl get rs
+  756  kubectl edit deployment nginx
+  757  kubectl describe deployment nginx
+  758  clear
+  759  kubectl get rs
+  760  kubectl describe rs/nginx-78d44d754b
+  761  kubectl edit deploy/nginx
+  762  kubectl describe 
+  763  kubectl describe
+  764  kubectl describe rs
+  765  kubectl describe rs --help
+  766  vim employee.json
+  767  ls
+  768  kubectl edit deployment/nginx
+  769  cd ..
+  770  ls
+  771  cd devops-us-may-2020/
+  772  ls
+  773  cd Day9
+  774  ls
+  775  vim nginx-deployment.yml
+  776  kubectl edit deployment/nginx
+  777  kubectl get deployment
+  778  kubectl get deployment -o jsonb
+  779  kubectl get deployment -o json
+  780  kubectl get deployment -o yaml
+  781  kubectl get deployment/nginx -o yaml > nginx-dep.yml
+  782  ls
+  783  vim nginx-dep.yml 
+  784  ls
+  785  rm nginx-deployment.yml 
+  786  clear
+  787  ls
+  788  vim nginx-dep.yml 
+  789  kubectl get deploy
+  790  kubectl delete deploy/nginx
+  791  kubectl get po
+  792  clear
+  793  ls
+  794  kubectl create -f nginx-dep.yml --save-config
+  795  kubectl get deploy,rs,po
+  796  ls
+  797  vim nginx-dep.yml 
+  798  kubectl get deploy,rs,po
+  799  kubectl apply -f nginx-dep.yml 
+  800  kubectl get deploy,rs,po
+  801  kubectl edit -f nginx-dep.yml 
+  802  ls
+  803  #kubectl delete -f nginx-dep.yml 
+  804  kubectl delete -f nginx-dep.yml 
+  805  kubectl get deploy,rs,po
+  806  kubectl create -f nginx-dep.yml --save-config
+  807  kubectl apply -f nginx-dep.yml 
+  808  kubectl delete -f nginx-dep.yml 
+  809  kubectl apply -f nginx-dep.yml 
+  810  kubectl get po
+  811  kubectl get po/nginx-69bddffb77-srhf6 -o yaml > nginx-pod.yml
+  812  vim nginx-pod.yml 
+  813  kubectl get pods
+  814  ls
+  815  kubectl create -f nginx-pod.yml --save-config
+  816  kubectl get pods
+  817  kubectl delete pod/nginx-69bddffb77-srhf6
+  818  kubectl get pods
+  819  kubectl delete pod/nginx
+  820  kubectl get pods
+  821  history > command_history
+  822  cd ..
+  823  git status
+  824  git add *
+  825  git commit -m "Added command history."
+  826  git  push -u origin master
+  827  ls
+  828  cd Day9
+  829  ls
+  830  cd ..
+  831  ls
+  832  mkdir Day10
+  833  cd Day10
+  834  ls
+  835  kubectl get nodes
+  836  ls
+  837  cd /home/jegan/Downloads/
+  838  ls
+  839  cat ~/.bashrc
+  840  ls -lha $HOME/.kubeadm-dind-cluster
+  841  pwd
+  842  cd /root
+  843  ls
+  844  cd /home/jegan
+  845  ls
+  846  cd devops-us-may-2020/
+  847  ls
+  848  cd Day10
+  849  kubectl get nodes
+  850  kubect get pods
+  851  kubectl get pods
+  852  kubectl get pods -o wide
+  853  kubectl get pods -n kube-system
+  854  kubectl get nodes -o wide
+  855  curl http://10.244.3.22
+  856  docker exec -it kube-node-1 bash
+  857  cd ..
+  858  ls
+  859  cd Day9
+  860  ls
+  861  vim nginx-dep.yml 
+  862  kubectl scale deployment nginx --replicas=4
+  863  kubectl get pods
+  864  cd ..
+  865  cd Day10
+  866  ls
+  867  kubectl expose deployment nginx --type=NodePort --port=80
+  868  kubectl get services
+  869  kubectl get svc
+  870  cd ..
+  871  cd Day10
+  872  cd ../Day9
+  873  cd ../Day10
+  874  ls
+  875  kubectl get pods -o wide
+  876  kubectl get nodes -o wide
+  877  curl http://10.192.0.2:32382
+  878  curl http://10.192.0.3:32382
+  879  curl http://10.192.0.4:32382
+  880  kubectl delete service svc
+  881  kubectl delete service nginx
+  882  kubectl delete deployment nginx
+  883  clear
+  884  kubectl get pods
+  885  clear
+  886  cd ..
+  887  cd Day9
+  888  ls
+  889  kubectl create -f nginx-dep.yml --save-config
+  890  kubectl get pods
+  891  kubectl get pods -w
+  892  kubectl scale deployment nginx --replicas=4
+  893  kubectl get pods
+  894  kubectl expose deployment nginx --type=NodePort --port=80
+  895  kubectl get services
+  896  kubectl get nodes -o wide
+  897  curl  http://10.192.0.4:30426
+  898  curl  http://10.192.0.2:30426
+  899  curl  http://10.192.0.3:30426
+  900  curl  http://10.192.0.3:30426clear
+  901  clear
+  902  cd ..
+  903  cd Day10
+  904  kubectl get pods
+  905  kubectl scale deployment  nginx --replicas=1
+  906  curl  http://10.192.0.3:30426
+  907  curl  http://10.192.0.2:30426
+  908  curl  http://10.192.0.4:30426
+  909  clear
+  910  kubectl get pods
+  911  kubectl get pods -o wide
+  912  curl  http://10.192.0.2:30426
+  913  clear
+  914  kubectl scale deployment  nginx --replicas=10
+  915  kubectl get pods
+  916  kubectl get pods  -o wide 
+  917  clear
+  918  curl  http://10.192.0.2:30426
+  919  firewall-cmd --zone=public --add-port=30426 --permanent
+  920  firewall-cmd --zone=public --add-port=30426/tcp --permanent
+  921  firewall-cmd --reload
+  922  kubectl get nodes -o wide
+  923  docker exec -it kube-master bash
+  924  kubectl create -f ../Day9/nginx-dep.yml --save-config
+  925  curl  http://10.192.0.2:30426
+  926  cleear
+  927  clear
+  928  kubectl get pods -n kube-system
+  929  docker exec -it kube-master bash
+  930  kubectl get svc -o wide
+  931  kubectl expose --help
+  932  clear
+  933  ls
+  934  clear
+  935  ls
+  936  docker exec -it kube-master bash
+  937  ls
+  938  cd /home/jegan/Downloads/
+  939  ls
+  940  vim ./dind-cluster-v1.15.sh 
+  941  ls
+  942  vim ./dind-cluster-v1.15.sh 
+  943  exit
+  944  kubectl get po -w
+  945  clear
+  946  kubectl get po -w
+  947  exit
+  948  ls
+  949  cd /home/jegan/Downloads/
+  950  ls
+  951  ./dind-cluster-v1.15.sh up
+  952  set -o vi
+  953  export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+  954  kubectl get nodes
+  955  pply -f https://docs.projectcalico.org/manifests/calico.yaml
+  956  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+  957  kubectl get pods -n kube-system
+  958  kubectl get pods -n kube-system -w
+  959  kubectl get pods -n kube-system
+  960  kubectl get pods -n kube-system -w
+  961  kubectl get pods -n kube-system
+  962  cd ..
+  963  ls
+  964  cd devops-us-may-2020/
+  965  ls
+  966  cd Day9
+  967  ls
+  968  vim nginx-pod.yml 
+  969  cp nginx-pod.yml nginx-blue-pod.yml
+  970  cp nginx-pod.yml nginx-red-pod.yml
+  971  vim nginx-blue-pod.yml 
+  972  kubectl create -f nginx-blue-pod.yml 
+  973  kubectl create -f nginx-red-pod.yml 
+  974  kubectl delete pods --selector color=red
+  975  kubectl 
+  976  kubectl create 
+  977  kubectl get po
+  978  kubectl delete pod nginx
+  979  vim nginx-blue-pod.yml 
+  980  kubectl create -f nginx-red-pod.yml --save-config
+  981  kubectl create -f nginx-blue-pod.yml --save-config
+  982  vim nginx-blue-pod.yml 
+  983  kubectl get po
+  984  kubectl delete pod nginx
+  985  kubectl create -f nginx-red-pod.yml --save-config
+  986  kubectl create -f nginx-blue-pod.yml --save-config
+  987  kubectl get po
+  988  kubectl exec -it nginx-blue bash
+  989  kubectl get po
+  990  exit
+  991  kubectl get pods
+  992  kubectl get pods -o wide
+  993  kubectl kubectl exec -it nginx-red bash
+  994  kubectl exec -it nginx-red bash
+  995  exit
+  996  ls
+  997  cd /home/jegan/Downloads/
+  998  ls
+  999  ./dind-cluster-v1.15.sh up
+ 1000  clear
+ 1001  ls
+ 1002  set -o vi
+ 1003  export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+ 1004  kubectl get nodes
+ 1005  which kubelet
+ 1006  which kubectl
+ 1007  which kubeadm
+ 1008  ls -l /root/.kubeadm-dind-cluster/
+ 1009  docker ps
+ 1010  docker exec -it kube-master bash
+ 1011  kubectl get nodes
+ 1012  clear
+ 1013  ./dind-cluster-v1.15.sh 
+ 1014  docker images
+ 1015  clear
+ 1016  ls
+ 1017  kubectl get nodes
+ 1018  ls
+ 1019  cd ..
+ 1020  ls
+ 1021  cd devops-us-may-2020/
+ 1022  ls
+ 1023  git pull
+ 1024  clear
+ 1025  ls
+ 1026  mkdir Day13
+ 1027  cd Day13
+ 1028  ls
+ 1029  vim mysql-dep.yml
+ 1030  kubectl apply -f mysql-dep.yml 
+ 1031  kubectl get pods
+ 1032  kubectl get pods -w
+ 1033  kubectl get pvc
+ 1034  kubectl get pvc -w
+ 1035  kubectl describe pod/wordpress-mysql-67565bd57-cf2x8
+ 1036  kubectl describe pvc/mysql-pv-claim
+ 1037  ls
+ 1038  vim mysql-dep.yml 
+ 1039  kubectl apply -f mysql-dep.yml 
+ 1040  kubectl delete -f mysql-dep.yml 
+ 1041  kubectl apply -f mysql-dep.yml 
+ 1042  kubectl get pvc -w
+ 1043  ls
+ 1044  kubectl get pods
+ 1045  kubectl get pv
+ 1046  kubectl get pvc
+ 1047  clear
+ 1048  ls
+ 1049  kubectl get pvc
+ 1050  clear
+ 1051  kubectl get pvc
+ 1052  clear
+ 1053  yum install -y ansible
+ 1054  ansible --version
+ 1055  /home/jegan/Downloads/dind-cluster-v1.15.sh down
+ 1056  cd /usr/share/ansible/
+ 1057  ls
+ 1058  cd -
+ 1059  clear
+ 1060  ansible --version
+ 1061  ls
+ 1062  mkdir Ansible
+ 1063  cd Ansible/
+ 1064  ls
+ 1065  git clone https://github.com/tektutor/ubuntu-ansible.git
+ 1066  cd ubuntu-ansible/
+ 1067  ls
+ 1068  vim Dockerfile 
+ 1069  ls
+ 1070  clear
+ 1071  ls
+ 1072  ssh-keygen
+ 1073  ls
+ 1074  cp /root/.ssh/id_rsa.pub authorized_keys
+ 1075  ls
+ 1076  docker build -t tektutor/ansible-ubuntu .
+ 1077  cat authorized_keys 
+ 1078  ls -l /root/.ssh
+ 1079  vim Dockerfile 
+ 1080  docker images
+ 1081  docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu 
+ 1082  docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu 
+ 1083  docker ps
+ 1084  vim Dockerfile 
+ 1085  docker ps -a
+ 1086  docker logs ubuntu1
+ 1087  vim Dockerfile 
+ 1088  clear
+ 1089  ls
+ 1090  cd ..
+ 1091  docker ps
+ 1092  ssh -p 2001 root@localhost
+ 1093  ssh -p 2002 root@localhost
+ 1094  docker images
+ 1095  docker build -t tektutor/ansible-ubuntu
+ 1096  ls
+ 1097  cd ubuntu-ansible/
+ 1098  ls
+ 1099  vim Dockerfile 
+ 1100  docker images
+ 1101  docker inspect ubuntu:16.04
+ 1102  docker inspect tektutor/ansible-ubuntu:latest 
+ 1103  vim Dockerfile 
+ 1104  clear
+ 1105  ls
+ 1106  docker ps
+ 1107  ssh -p 2002 root@localhost
+ 1108  cd ..
+ 1109  ls
+ 1110  vim inventory
+ 1111  docker inspect ubuntu1 | grep IPA
+ 1112  docker inspect ubuntu2 | grep IPA
+ 1113  ssh root@172.17.0.2
+ 1114  clear
+ 1115  ssh -p 2003 root@54.164.170.52
+ 1116  ls
+ 1117  vim inventory 
+ 1118  vim Do
+ 1119  vim ubuntu-ansible/Dockerfile 
+ 1120  vim inventory 
+ 1121  ansible -i inventory all -m ping
+ 1122  yes
+ 1123  clear
+ 1124  ansible -i inventory all -m ping
+ 1125  ansible -i inventory ubuntu1 -m ping
+ 1126  ansible -i inventory ubuntu3 -m ping
+ 1127  ansible -i inventory ubuntu2 -m ping
+ 1128  ansible -i inventory ubuntu3 -m ping
+ 1129  vim inventory 
+ 1130  ansible -i inventory prod -m ping
+ 1131  ansible -i inventory dev -m ping
+ 1132  vim inventory 
+ 1133  ls
+ 1134  vim inventory 
+ 1135  docker stop ubuntu2
+ 1136  ansible -i inventory dev -m ping
+ 1137  vim inventory 
+ 1138  ansible -i inventory dev -m ping
+ 1139  vim inventory 
+ 1140  vim inventory +12
+ 1141  ansible -i inventory dev -m ping
+ 1142  vim inventory +12
+ 1143  ansible -i inventory dev -m ping
+ 1144  vim inventory +12
+ 1145  ansible -i inventory all -m ping
+ 1146  vim inventory +12
+ 1147  ansible -i inventory all -m ping
+ 1148  docker start ubuntu2
+ 1149  ansible -i inventory all -m ping
+ 1150  vim inventory 
+ 1151  ansible -i inventory ubuntu2 -m ping
+ 1152  vim inventory 
+ 1153  ansible -i inventory all -m ping
+ 1154  vim inventory 
+ 1155  ansible -i inventory all -m ping
+ 1156  ansible -i inventory all -m service -a "name=ssh"
+ 1157  ansible -i inventory all -m shell -a "service ssh status"
+ 1158  ansible -i inventory all -m shell -a "hostame -i"
+ 1159  ansible -i inventory all -m shell -a "hostname -i"
+ 1160  ansible-doc -l
+ 1161  ansible-doc -l | wc -l
+ 1162  ansible-doc copy
+ 1163  ansible-doc apt
+ 1164  ansible-doc yum
+ 1165  ansible-doc  ping
+ 1166  ansible-doc copy
+ 1167  ansible-doc -l
+ 1168  ansible-doc ping
+ 1169  clear
+ 1170  ls
+ 1171  cd ubuntu-ansible/
+ 1172  ls
+ 1173  rm -rf .git
+ 1174  cd ..
+ 1175  ls
+ 1176  history > command_history.txt
+ 1177  cat command_history.txt 
+ 1178  cd ..
+ 1179  ls
+ 1180  mkdir Day14
+ 1181  cd Day14
+ 1182  clear
+ 1183  docker ps
+ 1184  vim ping.yml
+ 1185  ls
+ 1186  docker ps
+ 1187  clear
+ 1188  ls
+ 1189  cp ../Day13/Ansible/inventory .
+ 1190  ls
+ 1191  cat inventory 
+ 1192  vim inventory 
+ 1193  cd ..
+ 1194  git add *
+ 1195  git commit -m "Added Day13 and Day14 lab exercises."
+ 1196  git push -u origin master
+ 1197  cd Day14
+ 1198  vim ping.yml 
+ 1199  clear
+ 1200  ls
+ 1201  ansible-playbook -i inventory ping.yml 
+ 1202  vim ping.yml 
+ 1203  docker ps
+ 1204  ssh -p 2001 root@localhost
+ 1205  ssh -p 2002 root@localhost
+ 1206  vim inventory 
+ 1207  cp /root/.ssh/id_rsa.pub authorized_keys
+ 1208  ls
+ 1209  #docker cp authorized_keys ubuntu1:/root/.ssh/authorized_keys
+ 1210  #docker cp authorized_keys ubuntu2:/root/.ssh/authorized_keys
+ 1211  docker images
+ 1212  clear
+ 1213  ls
+ 1214  ansible-playbook -i inventory ping.yml 
+ 1215  vim ping.yml 
+ 1216  ansible -i inventory ubuntu1 -m setup
+ 1217  ansible -i inventory ubuntu1 -m setup | grep ansible_distri
+ 1218  ansible-playbook -i inventory ping.yml 
+ 1219  ls
+ 1220  rm authorized_keys 
+ 1221  ls
+ 1222  cd ..
+ 1223  git pull
+ 1224  ls
+ 1225  cd Day14
+ 1226  ls
+ 1227  vim install-nginx.yml
+ 1228  ansible-doc apt
+ 1229  vim install-nginx.yml
+ 1230  ansible-doc apt
+ 1231  vim install-nginx.yml 
+ 1232  cp install-nginx.yml test.yml
+ 1233  vim test.yml 
+ 1234  clear
+ 1235  ansible-playbook -i inventory test
+ 1236  ansible-playbook -i inventory test.yml 
+ 1237  ansible-playbook -i inventory install-nginx.yml 
+ 1238  ls
+ 1239  rm test.yml 
+ 1240  ls
+ 1241  cd ..
+ 1242  git add *
+ 1243  git commit -m "Added install-nginx playbook."
+ 1244  git push -u origin master
+ 1245  ls
+ 1246  cd Day14
+ 1247  ls
+ 1248  vim install-nginx.yml 
+ 1249  docker exec -it ubuntu1 bash
+ 1250  ls
+ 1251  vim install-nginx.yml 
+ 1252  ansible-doc apt
+ 1253  vim install-nginx.yml 
+ 1254  set -o vi
+ 1255  vim install-nginx.yml 
+ 1256  clear
+ 1257  ansible-playbook -i inventory install-nginx.yml 
+ 1258  vim install-nginx.yml 
+ 1259  docker inspect ubuntu1 | grep IPA
+ 1260  docker inspect ubuntu2 | grep IPA
+ 1261  ansible -i inventory ubuntu1 -m shell -a "hostname -i"
+ 1262  ansible -i inventory ubuntu2 -m shell -a "hostname -i"
+ 1263  curl  http://172.17.0.2
+ 1264  ansible -i inventory ubuntu2 -m shell -a "service nginx status"
+ 1265  vim install-nginx.yml 
+ 1266  ansible-doc service
+ 1267  vim install-nginx.yml 
+ 1268  ansible-playbook -i inventory install-nginx.yml 
+ 1269  curl  http://172.17.0.2
+ 1270  vim install-nginx.yml 
+ 1271  cat /etc/redhat-release 
+ 1272  systemctl status sshd
+ 1273  vim install-nginx.yml 
+ 1274  ls
+ 1275  vim install-nginx.yml 
+ 1276  ansible-playbook -i inventory install-nginx.yml 
+ 1277  curl  http://172.17.0.2
+ 1278  curl  http://172.17.0.3
+ 1279  cd ..
+ 1280  git status
+ 1281  git add *
+ 1282  ansible -version
+ 1283  ansible --version
+ 1284  vim /usr/lib/python2.7/site-packages/ansible
+ 1285  vim /usr/lib/python2.7/site-packages/ansible/
+ 1286  cd /usr/lib/python2.7/site-packages/ansible/modules
+ 1287  find . -name 
+ 1288  find . -name "service"
+ 1289  find . -name service
+ 1290  find . -name service.py
+ 1291  vim system/service.py
+ 1292  cd -
+ 1293  ls
+ 1294  cd Day14
+ 1295  cd ..
+ 1296  git status
+ 1297  git commit -m "Pushing Day14 lab exercises."
+ 1298  git push -u origin master
+ 1299  cd Day14
+ 1300  ls
+ 1301  vim install-nginx.yml 
+ 1302  ansible-playbook -i inventory install-nginx.yml 
+ 1303  ls
+ 1304  echo $?
+ 1305  dfsd
+ 1306  echo $?
+ 1307  vim install-nginx.yml 
+ 1308  docker ps
+ 1309  vim install-nginx.yml 
+ 1310  ansible-playbook -i inventory install-nginx.yml 
+ 1311  vim install-nginx.yml 
+ 1312  ansible-playbook -i inventory install-nginx.yml 
+ 1313  vim install-nginx.yml 
+ 1314  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ansible-ubuntu 
+ 1315  vim inventory 
+ 1316  vim my_ports_file 
+ 1317  ansible-playbook -i inventory install-nginx.yml 
+ 1318  vim install-nginx.yml 
+ 1319  cd ..
+ 1320  git add *
+ 1321  git commit -m  "Pushed latest lab exercises."
+ 1322  git push -u origin master
+ 1323  cd Day14
+ 1324  ls
+ 1325  vim install-nginx.yml 
+ 1326  vim my_ports_file 
+ 1327  vim inventory 
+ 1328  cd ..
+ 1329  git pull
+ 1330  git status
+ 1331  cd Day14
+ 1332  vim inventory 
+ 1333  docker ps
+ 1334  ssh -p 2003 ubuntu3
+ 1335  ssh -p 2003 root@localhost
+ 1336  vim inventory 
+ 1337  docker exec -it ubuntu1 bash
+ 1338  ls
+ 1339  docker cp ubuntu1:/etc/nginx/sites-available/default .
+ 1340  ls
+ 1341  vim default 
+ 1342  vim install-nginx.yml 
+ 1343  vim default 
+ 1344  docker exec -it ubuntu1 bash
+ 1345  ls
+ 1346  vim install-nginx.yml 
+ 1347  ansible-doc file
+ 1348  vim install-nginx.yml 
+ 1349  ansible-playbook -i inventory install-nginx.yml 
+ 1350  vim install-nginx.yml 
+ 1351  ansible-playbook -i inventory install-nginx.yml 
+ 1352  vim install-nginx.yml 
+ 1353  ansible-playbook -i inventory install-nginx.yml 
+ 1354  vim install-nginx.yml 
+ 1355  ansible-playbook -i inventory install-nginx.yml 
+ 1356  vim index.html 
+ 1357  ansible-playbook -i inventory install-nginx.yml 
+ 1358  vim install-nginx.yml 
+ 1359  ansible-playbook -i inventory install-nginx.yml 
+ 1360  vim install-nginx.yml 
+ 1361  ansible-playbook -i inventory install-nginx.yml 
+ 1362  vim install-nginx.yml 
+ 1363  ls
+ 1364  mv index.html index.html.j2
+ 1365  ls
+ 1366  vim install-nginx.yml 
+ 1367  cd ..
+ 1368  git add *
+ 1369  git commit -m "Added template example."
+ 1370  git push -u origin master
+ 1371  cd Day14
+ 1372  ls
+ 1373  vim install-nginx.yml 
+ 1374  ansible-playbook -i inventory install-nginx.yml -vvvv
+ 1375  cd ..
+ 1376  git pull
+ 1377  git status
+ 1378  vim Day14/index.html.j2 
+ 1379  ansible-playbook -i Day14/inventory Day14/install-nginx.yml 
+ 1380  cd Day14
+ 1381  ls
+ 1382  vim inventory 
+ 1383  ansible -i  inventory ubuntu1 -m setup | grep ansible_host
+ 1384  vim install-nginx.yml 
+ 1385  ansible-playbook -i Day14/inventory Day14/install-nginx.yml 
+ 1386  ansible-playbook -i inventory install-nginx.yml 
+ 1387  vim install-nginx.yml 
+ 1388  ansible-playbook -i inventory install-nginx.yml 
+ 1389  vim install-nginx.yml 
+ 1390  clear
+ 1391  ls
+ 1392  cd ..
+ 1393  ls
+ 1394  mkdir Day15
+ 1395  cd Day15
+ 1396  ls
+ 1397  cp ../Day14/* .
+ 1398  ls
+ 1399  git clone https://github.com/tektutor/centos-sshd-passwordless.git
+ 1400  ls
+ 1401  cd centos-sshd-passwordless/
+ 1402  ls
+ 1403  rm -rf .git
+ 1404  clear
+ 1405  ls
+ 1406  pwd
+ 1407  ls
+ 1408  vim 
+ 1409  vim Dockerfile 
+ 1410  ls
+ 1411  cp /root/.ssh/id_rsa.pub authorized_keys
+ 1412  ls
+ 1413  docker build -t tektutor/ansible-centos .
+ 1414  docker images
+ 1415  docker ps
+ 1416  docker run -d --name centos1 --hostname centos1 -p 2004:22 -p 8004:80 tektutor/ansible-centos 
+ 1417  docker run -d --name centos2 --hostname centos2 -p 2005:22 -p 8005:80 tektutor/ansible-centos 
+ 1418  docker ps
+ 1419  ssh -p 2004 root@localhost
+ 1420  ssh -p 2005 root@localhost
+ 1421  cd ..
+ 1422  ls
+ 1423  vim inventory 
+ 1424  vim my_ports_file 
+ 1425  ansible-playbook -i inventory install-nginx.yml 
+ 1426  cat my_ports_file 
+ 1427  vim install-nginx.yml 
+ 1428  clear
+ 1429  ansible -i inventory ubuntu1 -m setup | grep ansible_distribution
+ 1430  ansible -i inventory centos1 -m setup | grep ansible_distribution
+ 1431  ansible -i inventory centos1 -m setup | grep ansible_os_family
+ 1432  ansible -i inventory ubuntu1 -m setup | grep ansible_os_family
+ 1433  vim install-nginx.yml 
+ 1434  ansible-playbook -i inventory install-nginx.yml 
+ 1435  vim install-nginx.yml 
+ 1436  cd ..
+ 1437  git status
+ 1438  git add *
+ 1439  git commit -m "Added Day14 and Day15 lab exercises."
+ 1440  git push -u origin master
+ 1441  cd Day15
+ 1442  ls
+ 1443  vim install-nginx.yml 
+ 1444  cd ..
+ 1445  git add *
+ 1446  git status
+ 1447  git commit -m "Updated Day15 lab exercises."
+ 1448  git push -u origin master
+ 1449  cd Day15
+ 1450  ls
+ 1451  vim install-nginx.yml 
+ 1452  ansible-playbook -i inventory install-nginx.yml 
+ 1453  ssh -p 2004 root@localhost
+ 1454  docker cp centos1:/etc/yum.repos.d/epel.repo .
+ 1455  ls
+ 1456  vim epel.repo 
+ 1457  man yum
+ 1458  ansible-doc yum
+ 1459  ls
+ 1460  vim epel.repo 
+ 1461  ansible-playbook -i inventory install-nginx.yml 
+ 1462  vim install-nginx.yml 
+ 1463  ansible-playbook -i inventory install-nginx.yml 
+ 1464  clear
+ 1465  vim install-nginx.yml 
+ 1466  ls
+ 1467  vim epel.repo 
+ 1468  vim install-nginx.yml 
+ 1469  docker exec -it centos1 bash
+ 1470  vim install-nginx.yml 
+ 1471  clear
+ 1472  cd ..
+ 1473  ls
+ 1474  git pull
+ 1475  git status
+ 1476  git add *
+ 1477  git commit -m "Updated Day15 lab exercise."
+ 1478  git push -u origin master
+ 1479  ls
+ 1480  cd Day15
+ 1481  ls
+ 1482  vim epel.repo 
+ 1483  ls
+ 1484  vim install-nginx.yml 
+ 1485  docker exec -it centos1 bash
+ 1486  docker cp centos1:/etc/nginx/conf.d/default.conf .
+ 1487  ls
+ 1488  vim default.conf 
+ 1489  vim install-nginx.yml 
+ 1490  git status
+ 1491  git add *
+ 1492  git commit -m "Updated Day15 lab exercises."
+ 1493  git push -u origin master
+ 1494  vim install-nginx.yml 
+ 1495  ansible-playbook -i inventory install-nginx.yml 
+ 1496  ls
+ 1497  cd ..
+ 1498  ls
+ 1499  cd Day14
+ 1500  ls
+ 1501  cd ..
+ 1502  ls
+ 1503  cd Day13
+ 1504  ls
+ 1505  cd Ansible/
+ 1506  ls
+ 1507  cd ubuntu-ansible/
+ 1508  ls
+ 1509  vim Dockerfile 
+ 1510  cd ..
+ 1511  ls
+ 1512  cd ..
+ 1513  ls
+ 1514  cd ..
+ 1515  ls
+ 1516  vim Day15
+ 1517  ls
+ 1518  cd Day15
+ 1519  ls
+ 1520  vim ansible.cfg
+ 1521  ansible-playbook install-nginx.yml 
+ 1522  vim ansible.cfg 
+ 1523  ls
+ 1524  ansible-playbook install-nginx.yml 
+ 1525  vim install-nginx.yml 
+ 1526  git add *
+ 1527  git status
+ 1528  vim ansible.log 
+ 1529  git rm --cache ansible.log
+ 1530  git commit -m "Added ansible.cfg file."
+ 1531  git push -u origin master
+ 1532  ls
+ 1533  vim ansible.log 
+ 1534  vim ansible.cfg 
+ 1535  vim install-nginx.yml 
+ 1536  ls
+ 1537  ansible-playbook install-nginx.yml 
+ 1538  ls
+ 1539  mkdir before-refactoring
+ 1540  mkdir after-refactoring
+ 1541  mv * after-refactoring/
+ 1542  ls
+ 1543  cd after-refactoring/
+ 1544  ls
+ 1545  mv before-refactoring ..
+ 1546  mv centos-sshd-passwordless ..
+ 1547  ls
+ 1548  cd ..
+ 1549  ls
+ 1550  cd ..
+ 1551  ls
+ 1552  git checkout Day15
+ 1553  ls
+ 1554  cd Day15
+ 1555  ls
+ 1556  mv *.yml before-refactoring/
+ 1557  ls
+ 1558  mv *.cfg before-refactoring/
+ 1559  ls
+ 1560  mv default* before-refactoring/
+ 1561  ls
+ 1562  mv epel.repo before-refactoring/
+ 1563  ls
+ 1564  mv i* before-refactoring/
+ 1565  ls
+ 1566  mv my_ports_file before-refactoring/
+ 1567  ls
+ 1568  cd after-refactoring/
+ 1569  ls
+ 1570  cd ..
+ 1571  ls
+ 1572  cd before-refactoring/
+ 1573  ls
+ 1574  vim install-nginx.yml 
+ 1575  cd ..
+ 1576  ls
+ 1577  cd after-refactoring/
+ 1578  ls
+ 1579  vim configure-nginx-centos.yml 
+ 1580  cd ..
+ 1581  ls
+ 1582  cd after-refactoring/
+ 1583  ls
+ 1584  vim install-nginx.yml 
+ 1585  ls
+ 1586  ansible-playbook install-nginx.yml 
+ 1587  ls
+ 1588  vim install-nginx.yml 
+ 1589  cd ..
+ 1590  cd after-refactoring/
+ 1591  vim install-nginx.yml 
+ 1592  docker ps
+ 1593  docker run -d --name centos3 --hostname centos3 -p 2006:22 -p 8006:80 tektutor/ansible-centos
+ 1594  vim ansible.cfg 
+ 1595  vim inventory 
+ 1596  ansible-playbook install-nginx.yml 
+ 1597  cd ..
+ 1598  ls
+ 1599  cd ..
+ 1600  cd Day16
+ 1601  ls
+ 1602  vim provision-docker-containers.yml 
+ 1603  ls
+ 1604  vim inventory
+ 1605  cat inventory 
+ 1606  ansible-playbook -i inventory aws-ubuntu provision-docker-containers.yml 
+ 1607  vim provision-docker-containers.yml 
+ 1608  ls
+ 1609  vim hosts
+ 1610  ls
+ 1611  ansible-playbook -i hosts provision-docker-containers.yml 
+ 1612  vim provision-docker-containers.yml 
+ 1613  ansible-playbook provision-docker-containers.yml 
+ 1614  vim provision-docker-containers.yml 
+ 1615  ls -l /root
+ 1616  pwd
+ 1617  ansible-playbook provision-docker-containers.yml 
+ 1618  ls
+ 1619  rm -rf ubuntu-ansible/
+ 1620  ansible-playbook provision-docker-containers.yml 
+ 1621  vim provision-docker-containers.yml 
+ 1622  ansible-playbook provision-docker-containers.yml 
+ 1623  ls -l /root
+ 1624  ls -l /root/ubuntu-ansible/
+ 1625  ansible-doc docker-image
+ 1626  ansible-doc docker_image
+ 1627  ls
+ 1628  vim provision-docker-containers.yml 
+ 1629  docker images
+ 1630  clear
+ 1631  ls
+ 1632  ansible-playbook provision-docker-containers.yml 
+ 1633  ls
+ 1634  vim provision-docker-containers.yml 
+ 1635  ansible-playbook provision-docker-containers.yml 
+ 1636  vim provision-docker-containers.yml 
+ 1637  ansible-playbook provision-docker-containers.yml 
+ 1638  docker images
+ 1639  systemctl status docker
+ 1640  docker images
+ 1641  export DOCKER_HOST=tcp://34.202.233.177:4243
+ 1642  docker images
+ 1643  vim provision-docker-containers.yml 
+ 1644  ls
+ 1645  vim inventory 
+ 1646  ls
+ 1647  vim hosts 
+ 1648  rm hosts 
+ 1649  ls
+ 1650  vim provision-docker-containers.yml 
+ 1651  ansible-playbook provision-docker-containers.yml -vvvv 
+ 1652  vim /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+ 1653  vim /root/.ansible/tmp/ansible-local-55198AEj0b9/tmpadqWY7
+ 1654  vim provision-docker-containers.yml 
+ 1655  ls
+ 1656  vim install-vim.yml 
+ 1657  docker ps
+ 1658  vim inventory 
+ 1659  ansible-playbook -i inventory install-vim.yml 
+ 1660  ssh -p 2001 root@localhost
+ 1661  export DOCKER_HOST=tcp://localhost:4243
+ 1662  docker images
+ 1663  docker ps
+ 1664  docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu 
+ 1665  docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu 
+ 1666  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ansible-ubuntu 
+ 1667  ansible-playbook -i inventory install-vim.yml -vvvv
+ 1668  vim inventory 
+ 1669  ansible-doc -l | grep kubernetes
+ 1670  vim provision-docker-containers.yml 
+ 1671  ls
+ 1672  rm -rf ubuntu-ansible/
+ 1673  ls
+ 1674  cd ..
+ 1675  ls
+ 1676  git add *
+ 1677  git add * --all
+ 1678  git status
+ 1679  history > Day16/command_history.txt

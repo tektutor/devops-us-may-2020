@@ -1,0 +1,16 @@
+- name: Install vim editor in dev environment
+  hosts: dev
+  become: yes
+  tasks:
+    - name: Install non existing software - expecting a failure here 
+      apt: name=vim1 state=latest update_cache=yes
+      ignore_errors: true
+      register: output
+
+    - debug: msg="{{output.failed}}"
+      when: output.failed == true
+
+    - name: Install vim editor
+      when: output.failed == true
+      apt: name=vim state=latest update_cache=yes
+

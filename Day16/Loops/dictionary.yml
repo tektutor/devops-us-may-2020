@@ -1,0 +1,12 @@
+- name: This play will demonstrate use of dictionary variable and its loop navigation
+  hosts: all
+  vars_files:
+    - tools.conf
+         
+  tasks:
+    - name: Print all dictionary items 
+      debug: msg="export {{item.key}}={{item.value}}"
+      with_dict: "{{env}}"
+
+    - name: Copy the python script to remote machines
+      copy: src=hello.py dest=/root/hello.py

@@ -1,0 +1,38 @@
+- name: This playbook will provision docker containers
+  hosts: localhost
+  tasks:
+    - name: Cleanup clone folder if any
+      shell: rm -rf /root/ubuntu-ansible
+
+    - name: Clone Ubuntu ansible tektutor repository
+      shell: git clone https://github.com/tektutor/ubuntu-ansible.git /root/ubuntu-ansible
+
+#    - name: Create key pairs
+#      shell: ssh-keygen -b 2048 -t rsa -f /root/.ssh/id_rsa -q -N ""
+
+    - name: copy public key
+      shell: cp /root/.ssh/id_rsa.pub /root/ubuntu-ansible/authorized_keys
+
+    - name: Install python package installer
+      shell: yum install -y python-pip
+
+    - name: Install docker-py python module
+      shell: pip install docker-py
+
+    - name: Build ubuntu ansible image
+      docker_image:
+          docker_host: tcp://34.202.233.177:4243
+          name: "tektutor/ansible-ubuntu"
+          state: build
+          path: /root/ubuntu-ansible
+   
+    - name: Provision ubuntu containers
+      docker_container:
+          docker_host: tcp://34.202.233.177:4243
+          image: "tektutor/ansible-ubuntu"
+          name: "ubuntu{{item}}"
+          state: started
+          ports:
+            - "200{{item}}:22"
+            - "800{{item}}:80"
+      with_sequence: start=1 end=5
