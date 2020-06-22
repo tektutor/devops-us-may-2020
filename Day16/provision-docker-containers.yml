@@ -19,20 +19,26 @@
     - name: Install docker-py python module
       shell: pip install docker-py
 
+    - name: Remove all existing containers
+      shell: docker rm -f $(docker ps -aq)
+
+    #- name: Remove existing image
+    #  shell: docker rmi tektutor/ansible-ubuntu
+
     - name: Build ubuntu ansible image
       docker_image:
-          docker_host: tcp://34.202.233.177:4243
+          docker_host: tcp://localhost:4243
           name: "tektutor/ansible-ubuntu"
           state: build
           path: /root/ubuntu-ansible
    
     - name: Provision ubuntu containers
       docker_container:
-          docker_host: tcp://34.202.233.177:4243
+          docker_host: tcp://localhost:4243
           image: "tektutor/ansible-ubuntu"
           name: "ubuntu{{item}}"
           state: started
           ports:
-            - "200{{item}}:22"
-            - "800{{item}}:80"
-      with_sequence: start=1 end=5
+            - "2{{item}}:22"
+            - "8{{item}}:80"
+      with_sequence: start=1 end=15 format=%03d
