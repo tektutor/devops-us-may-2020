@@ -1,0 +1,12 @@
+- name: Demonstrates block with rescue and always
+  hosts: localhost
+  tasks:
+     - name: Execute the block
+       block:
+         # - apt: name=some-software state=latest update_cache=yes
+         # - apt: name=some-other-software state=latest update_cache=yes
+           - command: /bin/true
+       rescue:
+          - debug: msg="Error occurred, unable to install the softwares."
+       always:
+          - debug: msg="You will see this message always irrespective whether block executed successfuly or not."

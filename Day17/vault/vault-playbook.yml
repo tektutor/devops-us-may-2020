@@ -1,5 +1,5 @@
 - name: This playbook will demonstrate accessing vault protected data
-  hosts: localhost
+  hosts: all 
   vars_files:
     - contacts.yml
   tasks:
