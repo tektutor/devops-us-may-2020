@@ -21,9 +21,11 @@
 
     - name: Remove all existing containers
       shell: docker rm -f $(docker ps -aq)
+      ignore_errors: yes
 
     #- name: Remove existing image
     #  shell: docker rmi tektutor/ansible-ubuntu
+    #  ignore_errors: yes
 
     - name: Build ubuntu ansible image
       docker_image:
