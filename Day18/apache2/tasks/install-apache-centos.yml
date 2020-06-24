@@ -1,0 +1,8 @@
+- name: Fix the epel metalink issue
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
+
+- name: Install Extra Packages for Enterprise LinuX (EPEL) in CentOS
+  yum: name=epel-release state=latest
+
+- name: Install apache in CentOS
+  yum: name=httpd state=latest

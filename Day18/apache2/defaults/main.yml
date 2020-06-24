@@ -1,0 +1,4 @@
+---
+# defaults file for apache2
+greeting_msg: DevOps!
+provisioner_tool: Docker

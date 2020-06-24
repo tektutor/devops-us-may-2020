@@ -1,0 +1,2 @@
+- name: Install apache in Ubuntu
+  apt: name=apache2 state=latest update_cache=yes

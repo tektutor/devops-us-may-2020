@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>Welcome to {{greeting_msg}}</title>
+	</head>
+
+	<body>
+		<h1>Provisioner Tool : {{provisioner_tool}}</h1>
+		<h1>Configuration Management Tool : {{conf_mgr_tool}}</h1>
+		<h1>Hostname : {{ansible_hostname}}</h1>
+		<h1>IP Address : {{ ip_address.stdout }}</h1> 
+	</body>
+</html>

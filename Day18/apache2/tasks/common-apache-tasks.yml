@@ -1,0 +1,9 @@
+- name: Retrieve IP Address 
+  shell: hostname -i
+  register: ip_address
+
+- name: Create custom web root folder in Ubuntu
+  file: path=/var/html state=directory mode=0777
+
+- name: Deploy custom web page to apache web server
+  template: src=index.html.j2 dest=/var/html/index.html

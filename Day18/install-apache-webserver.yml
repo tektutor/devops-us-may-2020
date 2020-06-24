@@ -1,0 +1,4 @@
+- name: Install apache in Ubuntu and CentOS platforms
+  hosts: all
+  roles:
+    - apache2

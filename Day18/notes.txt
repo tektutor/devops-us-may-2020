@@ -1,0 +1,13 @@
+Team 1 
+++++++
+ - Weblogic, Tomcat and Oracle DB Server
+
+Team 2
+ - WebSphere, nginx and Oracle DB Server
+
+Ansible Role
+ - reusable code/library
+ - it can't be executed independently
+ - it can only be invoked from a playbook
+ - it is like dll in windows or shared library(.so) in Linux
+ - ansible-galaxy tool to create the folder structure

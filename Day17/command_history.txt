@@ -1,0 +1,1000 @@
+    7  git add *
+    8  ansible -version
+    9  ansible --version
+   10  vim /usr/lib/python2.7/site-packages/ansible
+   11  vim /usr/lib/python2.7/site-packages/ansible/
+   12  cd /usr/lib/python2.7/site-packages/ansible/modules
+   13  find . -name 
+   14  find . -name "service"
+   15  find . -name service
+   16  find . -name service.py
+   17  vim system/service.py
+   18  cd -
+   19  ls
+   20  cd Day14
+   21  cd ..
+   22  git status
+   23  git commit -m "Pushing Day14 lab exercises."
+   24  git push -u origin master
+   25  cd Day14
+   26  ls
+   27  vim install-nginx.yml 
+   28  ansible-playbook -i inventory install-nginx.yml 
+   29  ls
+   30  echo $?
+   31  dfsd
+   32  echo $?
+   33  vim install-nginx.yml 
+   34  docker ps
+   35  vim install-nginx.yml 
+   36  ansible-playbook -i inventory install-nginx.yml 
+   37  vim install-nginx.yml 
+   38  ansible-playbook -i inventory install-nginx.yml 
+   39  vim install-nginx.yml 
+   40  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ansible-ubuntu 
+   41  vim inventory 
+   42  vim my_ports_file 
+   43  ansible-playbook -i inventory install-nginx.yml 
+   44  vim install-nginx.yml 
+   45  cd ..
+   46  git add *
+   47  git commit -m  "Pushed latest lab exercises."
+   48  git push -u origin master
+   49  cd Day14
+   50  ls
+   51  vim install-nginx.yml 
+   52  vim my_ports_file 
+   53  vim inventory 
+   54  cd ..
+   55  git pull
+   56  git status
+   57  cd Day14
+   58  vim inventory 
+   59  docker ps
+   60  ssh -p 2003 ubuntu3
+   61  ssh -p 2003 root@localhost
+   62  vim inventory 
+   63  docker exec -it ubuntu1 bash
+   64  ls
+   65  docker cp ubuntu1:/etc/nginx/sites-available/default .
+   66  ls
+   67  vim default 
+   68  vim install-nginx.yml 
+   69  vim default 
+   70  docker exec -it ubuntu1 bash
+   71  ls
+   72  vim install-nginx.yml 
+   73  ansible-doc file
+   74  vim install-nginx.yml 
+   75  ansible-playbook -i inventory install-nginx.yml 
+   76  vim install-nginx.yml 
+   77  ansible-playbook -i inventory install-nginx.yml 
+   78  vim install-nginx.yml 
+   79  ansible-playbook -i inventory install-nginx.yml 
+   80  vim install-nginx.yml 
+   81  ansible-playbook -i inventory install-nginx.yml 
+   82  vim index.html 
+   83  ansible-playbook -i inventory install-nginx.yml 
+   84  vim install-nginx.yml 
+   85  ansible-playbook -i inventory install-nginx.yml 
+   86  vim install-nginx.yml 
+   87  ansible-playbook -i inventory install-nginx.yml 
+   88  vim install-nginx.yml 
+   89  ls
+   90  mv index.html index.html.j2
+   91  ls
+   92  vim install-nginx.yml 
+   93  cd ..
+   94  git add *
+   95  git commit -m "Added template example."
+   96  git push -u origin master
+   97  cd Day14
+   98  ls
+   99  vim install-nginx.yml 
+  100  ansible-playbook -i inventory install-nginx.yml -vvvv
+  101  cd ..
+  102  git pull
+  103  git status
+  104  vim Day14/index.html.j2 
+  105  ansible-playbook -i Day14/inventory Day14/install-nginx.yml 
+  106  cd Day14
+  107  ls
+  108  vim inventory 
+  109  ansible -i  inventory ubuntu1 -m setup | grep ansible_host
+  110  vim install-nginx.yml 
+  111  ansible-playbook -i Day14/inventory Day14/install-nginx.yml 
+  112  ansible-playbook -i inventory install-nginx.yml 
+  113  vim install-nginx.yml 
+  114  ansible-playbook -i inventory install-nginx.yml 
+  115  vim install-nginx.yml 
+  116  clear
+  117  ls
+  118  cd ..
+  119  ls
+  120  mkdir Day15
+  121  cd Day15
+  122  ls
+  123  cp ../Day14/* .
+  124  ls
+  125  git clone https://github.com/tektutor/centos-sshd-passwordless.git
+  126  ls
+  127  cd centos-sshd-passwordless/
+  128  ls
+  129  rm -rf .git
+  130  clear
+  131  ls
+  132  pwd
+  133  ls
+  134  vim 
+  135  vim Dockerfile 
+  136  ls
+  137  cp /root/.ssh/id_rsa.pub authorized_keys
+  138  ls
+  139  docker build -t tektutor/ansible-centos .
+  140  docker images
+  141  docker ps
+  142  docker run -d --name centos1 --hostname centos1 -p 2004:22 -p 8004:80 tektutor/ansible-centos 
+  143  docker run -d --name centos2 --hostname centos2 -p 2005:22 -p 8005:80 tektutor/ansible-centos 
+  144  docker ps
+  145  ssh -p 2004 root@localhost
+  146  ssh -p 2005 root@localhost
+  147  cd ..
+  148  ls
+  149  vim inventory 
+  150  vim my_ports_file 
+  151  ansible-playbook -i inventory install-nginx.yml 
+  152  cat my_ports_file 
+  153  vim install-nginx.yml 
+  154  clear
+  155  ansible -i inventory ubuntu1 -m setup | grep ansible_distribution
+  156  ansible -i inventory centos1 -m setup | grep ansible_distribution
+  157  ansible -i inventory centos1 -m setup | grep ansible_os_family
+  158  ansible -i inventory ubuntu1 -m setup | grep ansible_os_family
+  159  vim install-nginx.yml 
+  160  ansible-playbook -i inventory install-nginx.yml 
+  161  vim install-nginx.yml 
+  162  cd ..
+  163  git status
+  164  git add *
+  165  git commit -m "Added Day14 and Day15 lab exercises."
+  166  git push -u origin master
+  167  cd Day15
+  168  ls
+  169  vim install-nginx.yml 
+  170  cd ..
+  171  git add *
+  172  git status
+  173  git commit -m "Updated Day15 lab exercises."
+  174  git push -u origin master
+  175  cd Day15
+  176  ls
+  177  vim install-nginx.yml 
+  178  ansible-playbook -i inventory install-nginx.yml 
+  179  ssh -p 2004 root@localhost
+  180  docker cp centos1:/etc/yum.repos.d/epel.repo .
+  181  ls
+  182  vim epel.repo 
+  183  man yum
+  184  ansible-doc yum
+  185  ls
+  186  vim epel.repo 
+  187  ansible-playbook -i inventory install-nginx.yml 
+  188  vim install-nginx.yml 
+  189  ansible-playbook -i inventory install-nginx.yml 
+  190  clear
+  191  vim install-nginx.yml 
+  192  ls
+  193  vim epel.repo 
+  194  vim install-nginx.yml 
+  195  docker exec -it centos1 bash
+  196  vim install-nginx.yml 
+  197  clear
+  198  cd ..
+  199  ls
+  200  git pull
+  201  git status
+  202  git add *
+  203  git commit -m "Updated Day15 lab exercise."
+  204  git push -u origin master
+  205  ls
+  206  cd Day15
+  207  ls
+  208  vim epel.repo 
+  209  ls
+  210  vim install-nginx.yml 
+  211  docker exec -it centos1 bash
+  212  docker cp centos1:/etc/nginx/conf.d/default.conf .
+  213  ls
+  214  vim default.conf 
+  215  vim install-nginx.yml 
+  216  git status
+  217  git add *
+  218  git commit -m "Updated Day15 lab exercises."
+  219  git push -u origin master
+  220  vim install-nginx.yml 
+  221  ansible-playbook -i inventory install-nginx.yml 
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd Day14
+  226  ls
+  227  cd ..
+  228  ls
+  229  cd Day13
+  230  ls
+  231  cd Ansible/
+  232  ls
+  233  cd ubuntu-ansible/
+  234  ls
+  235  vim Dockerfile 
+  236  cd ..
+  237  ls
+  238  cd ..
+  239  ls
+  240  cd ..
+  241  ls
+  242  vim Day15
+  243  ls
+  244  cd Day15
+  245  ls
+  246  vim ansible.cfg
+  247  ansible-playbook install-nginx.yml 
+  248  vim ansible.cfg 
+  249  ls
+  250  ansible-playbook install-nginx.yml 
+  251  vim install-nginx.yml 
+  252  git add *
+  253  git status
+  254  vim ansible.log 
+  255  git rm --cache ansible.log
+  256  git commit -m "Added ansible.cfg file."
+  257  git push -u origin master
+  258  ls
+  259  vim ansible.log 
+  260  vim ansible.cfg 
+  261  vim install-nginx.yml 
+  262  ls
+  263  ansible-playbook install-nginx.yml 
+  264  ls
+  265  mkdir before-refactoring
+  266  mkdir after-refactoring
+  267  mv * after-refactoring/
+  268  ls
+  269  cd after-refactoring/
+  270  ls
+  271  mv before-refactoring ..
+  272  mv centos-sshd-passwordless ..
+  273  ls
+  274  cd ..
+  275  ls
+  276  cd ..
+  277  ls
+  278  git checkout Day15
+  279  ls
+  280  cd Day15
+  281  ls
+  282  mv *.yml before-refactoring/
+  283  ls
+  284  mv *.cfg before-refactoring/
+  285  ls
+  286  mv default* before-refactoring/
+  287  ls
+  288  mv epel.repo before-refactoring/
+  289  ls
+  290  mv i* before-refactoring/
+  291  ls
+  292  mv my_ports_file before-refactoring/
+  293  ls
+  294  cd after-refactoring/
+  295  ls
+  296  cd ..
+  297  ls
+  298  cd before-refactoring/
+  299  ls
+  300  vim install-nginx.yml 
+  301  cd ..
+  302  ls
+  303  cd after-refactoring/
+  304  ls
+  305  vim configure-nginx-centos.yml 
+  306  cd ..
+  307  ls
+  308  cd after-refactoring/
+  309  ls
+  310  vim install-nginx.yml 
+  311  ls
+  312  ansible-playbook install-nginx.yml 
+  313  ls
+  314  vim install-nginx.yml 
+  315  cd ..
+  316  cd after-refactoring/
+  317  vim install-nginx.yml 
+  318  docker ps
+  319  docker run -d --name centos3 --hostname centos3 -p 2006:22 -p 8006:80 tektutor/ansible-centos
+  320  vim ansible.cfg 
+  321  vim inventory 
+  322  ansible-playbook install-nginx.yml 
+  323  cd ..
+  324  ls
+  325  cd ..
+  326  cd Day16
+  327  ls
+  328  vim provision-docker-containers.yml 
+  329  ls
+  330  vim inventory
+  331  cat inventory 
+  332  ansible-playbook -i inventory aws-ubuntu provision-docker-containers.yml 
+  333  vim provision-docker-containers.yml 
+  334  ls
+  335  vim hosts
+  336  ls
+  337  ansible-playbook -i hosts provision-docker-containers.yml 
+  338  vim provision-docker-containers.yml 
+  339  ansible-playbook provision-docker-containers.yml 
+  340  vim provision-docker-containers.yml 
+  341  ls -l /root
+  342  pwd
+  343  ansible-playbook provision-docker-containers.yml 
+  344  ls
+  345  rm -rf ubuntu-ansible/
+  346  ansible-playbook provision-docker-containers.yml 
+  347  vim provision-docker-containers.yml 
+  348  ansible-playbook provision-docker-containers.yml 
+  349  ls -l /root
+  350  ls -l /root/ubuntu-ansible/
+  351  ansible-doc docker-image
+  352  ansible-doc docker_image
+  353  ls
+  354  vim provision-docker-containers.yml 
+  355  docker images
+  356  clear
+  357  ls
+  358  ansible-playbook provision-docker-containers.yml 
+  359  ls
+  360  vim provision-docker-containers.yml 
+  361  ansible-playbook provision-docker-containers.yml 
+  362  vim provision-docker-containers.yml 
+  363  ansible-playbook provision-docker-containers.yml 
+  364  docker images
+  365  systemctl status docker
+  366  docker images
+  367  export DOCKER_HOST=tcp://34.202.233.177:4243
+  368  docker images
+  369  vim provision-docker-containers.yml 
+  370  ls
+  371  vim inventory 
+  372  ls
+  373  vim hosts 
+  374  rm hosts 
+  375  ls
+  376  vim provision-docker-containers.yml 
+  377  ansible-playbook provision-docker-containers.yml -vvvv 
+  378  vim /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+  379  vim /root/.ansible/tmp/ansible-local-55198AEj0b9/tmpadqWY7
+  380  vim provision-docker-containers.yml 
+  381  ls
+  382  vim install-vim.yml 
+  383  docker ps
+  384  vim inventory 
+  385  ansible-playbook -i inventory install-vim.yml 
+  386  ssh -p 2001 root@localhost
+  387  export DOCKER_HOST=tcp://localhost:4243
+  388  docker images
+  389  docker ps
+  390  docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu 
+  391  docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu 
+  392  docker run -d --name ubuntu3 --hostname ubuntu3 -p 2003:22 -p 8003:80 tektutor/ansible-ubuntu 
+  393  ansible-playbook -i inventory install-vim.yml -vvvv
+  394  vim inventory 
+  395  ansible-doc -l | grep kubernetes
+  396  vim provision-docker-containers.yml 
+  397  ls
+  398  rm -rf ubuntu-ansible/
+  399  ls
+  400  cd ..
+  401  ls
+  402  git add *
+  403  git add * --all
+  404  git status
+  405  history > Day16/command_history.txt
+  406  git add *
+  407  git status
+  408  git commit -m "Added command history with Day16 lab exercises."
+  409  git push -u origin master
+  410  cd Day16
+  411  ls
+  412  vim provision-docker-containers.yml 
+  413  exit
+  414  ls
+  415  cd /home/jegan/devops-us-may-2020/
+  416  ls
+  417  cd Day16
+  418  ls
+  419  vim inventory 
+  420  ls
+  421  vim /etc/ansible/ansible.cfg 
+  422  ls
+  423  vim install-vim.yml 
+  424  ansible-playbook -i inventory install-vim.yml 
+  425  vim install-vim.yml 
+  426  ansible-playbook -i inventory install-vim.yml 
+  427  vim install-vim.yml +9
+  428  ansible-playbook -i inventory install-vim.yml 
+  429  vim install-vim.yml +9
+  430  ansible-playbook -i inventory install-vim.yml 
+  431  vim install-vim.yml +9
+  432  vim install-vim.yml 
+  433  ansible-playbook -i inventory install-vim.yml 
+  434  vim install-vim.yml +12
+  435  ansible-playbook -i inventory install-vim.yml 
+  436  vim install-vim.yml +12
+  437  ansible-playbook -i inventory install-vim.yml 
+  438  vim install-vim.yml +12
+  439  ansible-playbook -i inventory install-vim.yml 
+  440  vim install-vim.yml +12
+  441  ansible-playbook -i inventory install-vim.yml 
+  442  vim install-vim.yml +12
+  443  ansible-playbook -i inventory install-vim.yml 
+  444  vim install-vim.yml +12
+  445  vim install-vim.yml 
+  446  ls
+  447  docker ps
+  448  docker rm -f $(docker ps -aq)
+  449  ls
+  450  vim provision-docker-containers.yml
+  451  ansible-doc docker_container
+  452  clear
+  453  ls
+  454  ansible-doc file
+  455  ls
+  456  vim provision-docker-containers.yml 
+  457  vim provision-docker-containers.yml 
+  458  systemctl status dockeer
+  459  systemctl status docker
+  460  vim /usr/lib/systemd/system/docker.service
+  461  systemctl restart docker
+  462  systemctl daemon-reload
+  463  systemctl restart docker
+  464  docker images
+  465  export DOCKER_HOST=tcp://34.207.121.73:4243
+  466  export DOCKER_HOST=tcp://34.202.233.177:4243
+  467  docker images
+  468  vim provision-docker-containers.yml 
+  469  ansible-doc 
+  470  ansible-doc -l
+  471  docker imagesan
+  472  kiiiansibl
+  473  clear
+  474  icansib
+  475  daddfasdfdsf
+  476  iiii
+  477  ii
+  478  clear
+  479  exiexi
+  480  exit
+  481  ansible-doc -l | grep ssh-key
+  482  ansible-doc -l | grep sshkey
+  483  ls
+  484  exit
+  485  ls
+  486  cd /home/jegan/devops-us-may-2020/
+  487  ls
+  488  cd Day16
+  489  ls
+  490  vim provision-docker-containers.yml 
+  491  systemctl status docker
+  492  clear
+  493  ls
+  494  docker ps
+  495  docker ps -a
+  496  vim provision-docker-containers.yml 
+  497  ls
+  498  docker images
+  499  ls
+  500  vim ansible.cfg
+  501  ls
+  502  ansible-playbook provision-docker-containers.yml 
+  503  docker ps
+  504  vim provision-docker-containers.yml 
+  505  ansible-playbook provision-docker-containers.yml 
+  506  vim provision-docker-containers.yml 
+  507  ansible-playbook provision-docker-containers.yml 
+  508  docker ps
+  509  ls
+  510  ansible all -m ping
+  511  echo "" > /root/.ssh/known_hosts 
+  512  ansible all -m ping
+  513  vim ansible.cfg 
+  514  ansible all -m ping
+  515  vim inventory 
+  516  ls
+  517  vim inventory 
+  518  ansible all -m ping
+  519  vim inventory 
+  520  ssh -p 2001 root@localhost
+  521  ls
+  522  cd AnsibleRecommendedDirectoryStructure/
+  523  ls
+  524  vim hosts
+  525  cd host_vars/
+  526  ls
+  527  cd ..
+  528  ls
+  529  cd ..
+  530  ls
+  531  vim inventory 
+  532  docker ps
+  533  vim inventory 
+  534  set -o vi
+  535  ansible all -m ping
+  536  vim inventory 
+  537  ansible all -m ping
+  538  vim inventory 
+  539  ansible all -m ping
+  540  clear
+  541  ls
+  542  vim provision-docker-containers.yml 
+  543  ls
+  544  cd ..
+  545  ls
+  546  mkdir Day17
+  547  cd Day17
+  548  ls
+  549  cd ..
+  550  ls
+  551  cd Day16
+  552  ls
+  553  vim provision-docker-containers.yml 
+  554  ansible-playbook provision-docker-containers.yml 
+  555  vim provision-docker-containers.yml 
+  556  ansible-playbook provision-docker-containers.yml 
+  557  vim provision-docker-containers.yml 
+  558  ansible-playbook provision-docker-containers.yml 
+  559  vim provision-docker-containers.yml 
+  560  ansible-playbook provision-docker-containers.yml 
+  561  docker ps
+  562  ansible all -m ping
+  563  cd ..
+  564  ls
+  565  git status
+  566  git add *
+  567  git status
+  568  git add .gitignore
+  569  git status
+  570  git commit -m "Updated provision docker containers playbook."
+  571  git push -u origin master
+  572  git pull
+  573  cd Day17
+  574  ls
+  575  clear
+  576  ls
+  577  cd ..
+  578  ls
+  579  cd Day16
+  580  ls
+  581  vim provision-docker-containers.yml 
+  582  cd ..
+  583  ls
+  584  cd Day17
+  585  ls
+  586  ansible-vault
+  587  ansible-vault contacts
+  588  ansible-vault create contacts.yml
+  589  ls
+  590  cat contacts.yml 
+  591  vim contacts-playbook.yml
+  592  ls
+  593  vim vault-playbook.yml
+  594  ansible-playbook vault-playbook.yml 
+  595  vim vault-playbook.yml 
+  596  ls
+  597  ansible-playbook vault-playbook.yml --ask-vault-pass
+  598  vim vault-playbook.yml 
+  599  ansible-playbook vault-playbook.yml --ask-vault-pass
+  600  vim vault-playbook.yml 
+  601  ansible-vault edit contacts.yml 
+  602  cat contacts.yml 
+  603  ansible-vault decrypt contacts.yml 
+  604  cat contacts.yml 
+  605  ansible-vault encrypt contacts.yml 
+  606  cat contacts.yml 
+  607  ls
+  608  vim .my-secret-password
+  609  vim ansible.cfg
+  610  ansible-playbook vault-playbook.yml
+  611  ls
+  612  vim ansible.cfg 
+  613  ls
+  614  ansible-vault decrypt contacts.yml 
+  615  cat contacts.yml 
+  616  ansible-vault encrypt contacts.yml 
+  617  ls
+  618  cat contacts.yml 
+  619  cd ..
+  620  git add *
+  621  git status
+  622  git commit -m "Added Ansible vault lab exercise."
+  623  git push -u origin master
+  624  git pull
+  625  ansible-vault create new-file.txt
+  626  ls
+  627  cd Day17
+  628  ls
+  629  ls -lha
+  630  cat .my-secret-password 
+  631  cat ansible.cfg 
+  632  ls
+  633  ansible-vault decrypt contacts.yml 
+  634  cat contacts.yml 
+  635  vim .my-secret-password 
+  636  ansible-vault encrypt contacts.yml 
+  637  ansible-playbook vault-playbook.yml
+  638  ls
+  639  cd ..
+  640  ls
+  641  cd Day17
+  642  ls
+  643  mkdir vault
+  644  mv * vault
+  645  ls
+  646  mkdir blocks
+  647  cd blocks/
+  648  ls
+  649  vim blocks-demo.yml
+  650  cat /etc/redhat-release 
+  651  ansible-playbook blocks-demo.yml 
+  652  vim blocks-demo.yml
+  653  ls
+  654  cd ..
+  655  ls
+  656  cd ..
+  657  ls
+  658  cd Day17
+  659  cd ..
+  660  cd Day16
+  661  ls
+  662  vim provision-docker-containers.yml 
+  663  cd ..
+  664  ls
+  665  cd Day17
+  666  ls
+  667  mkdir python
+  668  cd python/
+  669  clear
+  670  ls
+  671  python
+  672  ls
+  673  ansible --version
+  674  clear
+  675  ls
+  676  vim hello.py
+  677  vim hello.py 
+  678  python hello.py 
+  679  vim hello.py 
+  680  chmod +x ./hello.py 
+  681  ls
+  682  ./hello.py 
+  683  vim hello.py 
+  684  ./hello.py 
+  685  cat hello.py 
+  686  vim hello.py 
+  687  which python
+  688  ls -l /bin/python
+  689  which python2
+  690  ls -l python2
+  691  ls -l /bin/python2
+  692  ls -l /bin/python2.7
+  693  ls -l /usr/bin
+  694  ls -l /usr/bin | grep python
+  695  ls
+  696  vim hello.py 
+  697  ./hello.py
+  698  vim hello.py 
+  699  ./hello.py
+  700  vim hello.py 
+  701  ./hello.py
+  702  vim hello.py 
+  703  ./hello.py
+  704  vim hello.py 
+  705  ls
+  706  vim hello.py 
+  707  ./hello.py
+  708  vim hello.py 
+  709  ./hello.py
+  710  vim hello.py 
+  711  ./hello.py
+  712  vim hello.py 
+  713  clear
+  714  ./hello.py
+  715  ls
+  716  cat second.pyc 
+  717  clear
+  718  ls
+  719  rm second.pyc
+  720  ls
+  721  clear
+  722  ls
+  723  ./hello.py 
+  724  chmod +x second.py
+  725  ls
+  726  vim second.py
+  727  ./second.py 
+  728  vim hello.py 
+  729  ./hello.py 
+  730  cat second.py
+  731  ./hello.py 
+  732  python second.py
+  733  ls
+  734  rm second.pyc
+  735  ls
+  736  ./hello.py 
+  737  ls
+  738  rm second.pyc
+  739  ls
+  740  ./second.py 
+  741  ls
+  742  vim hello.py 
+  743  ls
+  744  ./hello.py 
+  745  ls
+  746  mkdir test
+  747  ls
+  748  cp hello.py test
+  749  cp second.pyc test
+  750  ls
+  751  cd test
+  752  ls
+  753  ./hello.py 
+  754  ls
+  755  cat hello.py 
+  756  cd ..
+  757  ls
+  758  vim hello.py 
+  759  ./hello.py 
+  760  cat hello.py 
+  761  ls
+  762  vim second.py
+  763  ls
+  764  vim hello.py 
+  765  ./hello.py 
+  766  vim hello.py 
+  767  ls
+  768  vim myclass.py
+  769  ls
+  770  chmod +x myclass.py 
+  771  ./myclass.py 
+  772  vim myclass.py
+  773  ./myclass.py 
+  774  vim myclass.py
+  775  clear
+  776  ./myclass.py 
+  777  vim myclass.py
+  778  ./myclass.py 
+  779  vim myclass.py
+  780  ./myclass.py 
+  781  vim myclass.py
+  782  ./myclass.py 
+  783  vim myclass.py
+  784  ./myclass.py 
+  785  vim myclass.py
+  786  clear
+  787  ls
+  788  cd ..
+  789  ls
+  790  git clone https://github.com/tektutor/ansible-docker-dynamic-inventory.git
+  791  ls
+  792  cd ansible-docker-dynamic-inventory/
+  793  ;ls
+  794  clear
+  795  ls
+  796  vim dynamic_inventory.py 
+  797  clear
+  798  docker ps
+  799  clear
+  800  docker inspect ubuntu001|grep IPA
+  801  docker inspect -f {{.NetworkSettings.IPAddress }} ubuntu001
+  802  docker inspect ubuntu001
+  803  docker inspect -f {{ .NetworkSettings.IPAddress }} ubuntu001
+  804  docker inspect -f "{{ .NetworkSettings.IPAddress }}" ubuntu001
+  805  docker inspect -f "{{ .State.Status }}" ubuntu001
+  806  clear
+  807  ls
+  808  vim dynamic_inventory.py 
+  809  docker port ubuntu001
+  810  docker port ubuntu001 22
+  811  vim dynamic_inventory.py 
+  812  python
+  813  vim dynamic_inventory.py 
+  814  clear
+  815  ls
+  816  docker rm -f $(docker ps -aq)
+  817  docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu 
+  818  docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu 
+  819  clear
+  820  docker ps
+  821  docker run -d --name ubuntu3 --hostname ubuntu3 tektutor/ansible-ubuntu
+  822  docker ps
+  823  docker port ubuntu3
+  824  docker port ubuntu3 22
+  825  vim dynamic_inventory.py 
+  826  docker inspect ubuntu3 | grep IPA
+  827  ssh root@172.17.0.4
+  828  clear
+  829  ls
+  830  vim dynamic_inventory.py 
+  831  ls
+  832  ./dynamic_inventory.py 
+  833  docker ps
+  834  clear
+  835  docker run -d --name ubuntu4 --hostname ubuntu4 tektutor/ansible-ubuntu
+  836  docker ps
+  837  ./dynamic_inventory.py 
+  838  clear
+  839  ls
+  840  ansible -i dynamic_inventory.py all -m ping
+  841  echo "" > /root/.ssh/known_hosts 
+  842  ls
+  843  vim ansible.cfg 
+  844  ansible all -m ping
+  845  vim ansible.cfg 
+  846  clear
+  847  ls
+  848  cd ..
+  849  ls
+  850  cd vault/
+  851  ls
+  852  cp ../ansible-docker-dynamic-inventory/dynamic_inventory.py .
+  853  ls
+  854  cp ../ansible-docker-dynamic-inventory/ansible.cfg .
+  855  ls
+  856  cat ansible.cfg 
+  857  vim vault-playbook.yml 
+  858  docker ps
+  859  ansible-playbook  vault-playbook.yml 
+  860  vim ansible.cfg 
+  861  ls -lha
+  862  vim .my-secret-password
+  863  ls
+  864  cat contacts.yml 
+  865  clear
+  866  ls
+  867  cat ansible.cfg 
+  868  vim ansible.cfg 
+  869  ansible-playbook  vault-playbook.yml 
+  870  ls -lha
+  871  vim ansible.cfg 
+  872  ls
+  873  ansible-vault decrypt contacts.yml --ask-vault-pass
+  874  cat contacts.yml 
+  875  clear
+  876  ls
+  877  ansible-vault encrypt contacts.yml 
+  878  cat ansible.cfg 
+  879  vim ansible.cfg 
+  880  ls -lha
+  881  cat ansible.cfg 
+  882  ansible-vault encrypt contacts.yml 
+  883  vim ansible.cfg 
+  884  ansible-vault encrypt contacts.yml 
+  885  ls -lha
+  886  vim ansible.cfg 
+  887  ansible-vault encrypt contacts.yml 
+  888  ansible-playbook  vault-playbook.yml 
+  889  yes
+  890  clear
+  891  ansible-playbook  vault-playbook.yml 
+  892  docker ps
+  893  docker rm -f ubuntu3 ubuntu4
+  894  ansible-playbook  vault-playbook.yml 
+  895  ls
+  896  vim dynamic_inventory.py 
+  897  ls
+  898  cd ..
+  899  ls
+  900  clear
+  901  ls
+  902  mkdir custom-ansible-module
+  903  cd custom-ansible-module/
+  904  ls
+  905  mkdir library
+  906  cd library/
+  907  ls
+  908  ansible --version
+  909  vim /usr/lib/python2.7/site-packages/ansible/system/ping.py
+  910  vim /usr/lib/python2.7/site-packages/ansible/modules/system/ping.py
+  911  cd -
+  912  ls
+  913  vim library/hello.py
+  914  cd ..
+  915  ls
+  916  cd custom-ansible-module/
+  917  ls
+  918  tree
+  919  vim playbook.yml
+  920  ansible-playbook playbook.yml 
+  921  vim library/hello.py +11
+  922  ansible-playbook playbook.yml 
+  923  vim playbook.yml 
+  924  ansible-playbook playbook.yml 
+  925  vim playbook.yml 
+  926  ansible-playbook playbook.yml 
+  927  vim playbook.yml 
+  928  vim library/hello.py 
+  929  vim /usr/lib/python2.7/site-packages/ansible/modules/system/ping.py
+  930  vim library/hello.py 
+  931  ansible-playbook playbook.yml 
+  932  vim library/hello.py 
+  933  ansible-playbook playbook.yml 
+  934  vim library/hello.py +15
+  935  ansible-playbook playbook.yml 
+  936  vim library/hello.py +22
+  937  ansible-playbook playbook.yml 
+  938  vim playbook.yml 
+  939  ansible-playbook playbook.yml 
+  940  vim library/hello.py 
+  941  ansible-playbook playbook.yml 
+  942  vim library/hello.py 
+  943  ansible-playbook playbook.yml 
+  944  vim library/hello.py 
+  945  ansible-playbook playbook.yml 
+  946  vim library/hello.py 
+  947  ansible-playbook playbook.yml 
+  948  vim /usr/lib/python2.7/site-packages/ansible/modules/system/ping.py
+  949  vim /usr/lib/python2.7/site-packages/ansible/modules/system/copy.py
+  950  vim /usr/lib/python2.7/site-packages/ansible/modules/file/copypy
+  951  vim /usr/lib/python2.7/site-packages/ansible/modules/file/copy.py
+  952  vim /usr/lib/python2.7/site-packages/ansible/modules/
+  953  vim /usr/lib/python2.7/site-packages/ansible/modules
+  954  cd /usr/lib/python2.7/site-packages/ansible/modules
+  955  cd 
+  956  cd system/
+  957  ls
+  958  vim user.py
+  959  cd -
+  960  cd /root
+  961  ls
+  962  cd /home/jegan/devops-us-may-2020/Day17/
+  963  ls
+  964  cd custom-ansible-module/
+  965  ls
+  966  vim library/hello.py 
+  967  ansible-playbook playbook.yml 
+  968  vim library/hello.py +24
+  969  ansible-playbook playbook.yml 
+  970  vim library/hello.py 
+  971  ansible-playbook playbook.yml 
+  972  vim library/hello.py 
+  973  ansible-playbook playbook.yml 
+  974  vim library/hello.py 
+  975  cd /usr/lib/python2.7/site-packages/ansible/modules
+  976  ls
+  977  cd files/
+  978  ls
+  979  vim file.py
+  980  cd -
+  981  cd /home/jegan/devops-us-may-2020/Day17/custom-ansible-module/
+  982  ls
+  983  vim library/hello.py 
+  984  ansible-playbook playbook.yml 
+  985  vim library/hello.py 
+  986  ansible-playbook playbook.yml 
+  987  vim library/hello.py 
+  988  ansible-doc -l | wc -l
+  989  cd ..
+  990  ls
+  991  cd ..
+  992  ls
+  993  git add *
+  994  git add * --all
+  995  git commit -m "Added Day17 lab exercises."
+  996  git push -u origin master
+  997  exit
+  998  docker images
+  999  exit
+ 1000  ls
+ 1001  cd /home/jegan
+ 1002  ls
+ 1003  cd devops-us-may-2020/
+ 1004  ls
+ 1005  mkdir Day18
+ 1006  history > Day17/command_history.txt
