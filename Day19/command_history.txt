@@ -1,0 +1,1000 @@
+    3  cd imagedb/
+    4  ls
+    5  cd content/
+    6  ls
+    7  cd sha256/
+    8  ls
+    9  exit
+   10  vim ~/.bashrc
+   11  clear
+   12  ls
+   13  cd ..
+   14  ls
+   15  exit
+   16  ls
+   17  cd d ..
+   18  cd ..
+   19  ls
+   20  rm -rf devops
+   21  ls
+   22  cd devops-us-may-2020/
+   23  ls
+   24  cd Day12
+   25  ls
+   26  vim network-policy.yml 
+   27  kubectl create -f network-policy --save-config
+   28  kubectl create -f network-policy.yml --save-config
+   29  kubectl apply -f network-policy.yml
+   30  kubectl get networkpolicy -n tektutor
+   31  kubectl delete namespace access-nginx access-nginx-from-different-namespaces
+   32  kubectl delete namespace access-nginx
+   33  kubectl delete networkpolicy access-nginx
+   34  kubectl delete networkpolicy access-nginx-from-different-namespaces
+   35  cleear
+   36  clear
+   37  kubectl get networkpolicy -n tektutor
+   38  kubectl get networkpolicy
+   39  ls
+   40  vim network-policy.yml 
+   41  kubectl describe networkpolicy access-nginx -n tektutor
+   42  clear
+   43  ls
+   44  kubectl get networkpolicy -n tektutor
+   45  kubectl delete networkpolicy/access-nginx
+   46  kubectl delete networkpolicy/access-nginx -n tektutor
+   47  kubectl get networkpolicy -n tektutor
+   48  kubectl apply -f network-policy.yml
+   49  kubectl get networkpolicy -n tektutor
+   50  ls
+   51  vim network-policy.yml 
+   52  kubectl get po -n tektutor
+   53  kubectl edit pod nginx-client-7c8645d699-s844g -n tektutor
+   54  set -o vi
+   55  kubectl exec -it nginx-client-7c8645d699-s844g -n tektutor bash
+   56  kubectl get pods
+   57  kubectl get pods -n kube-system
+   58  kubectl get pods -n kube-system -o wide
+   59  hostname
+   60  init
+   61  set -o vi
+   62  cclear
+   63  ls
+   64  vim network-policy.yml 
+   65  kubectl apply -f network-policy.yml 
+   66  vim network-policy.yml 
+   67  kubectl apply -f network-policy.yml 
+   68  set -o vi
+   69  cd /mnt
+   70  ls
+   71  cd -
+   72  ls
+   73  cd PersistentVolumeAndClaims/
+   74  ls
+   75  vim mysql-deploy.yml 
+   76  clear
+   77  ls
+   78  kubectl apply -f mysql-deploy.yml 
+   79  kubectl get pv
+   80  kubectl get pvc
+   81  clear
+   82  ls
+   83  vim mysql-deploy.yml 
+   84  kubectl get deploy, rs, po 
+   85  kubectl get deploy, rs, po -n wordpress-mysql
+   86  vim mysql-deploy.yml 
+   87  kubectl get deploy, rs, po -n wordpress-mysql
+   88  kubectl 
+   89  kubectl get deploy, rs, po
+   90  vim mysql-deploy.yml 
+   91  kubectl get pods
+   92  kubectl logs pod/wordpress-mysql-57464b4779-2b9v6
+   93  kubectl logs pod wordpress-mysql-57464b4779-2b9v6
+   94  kubectl logs  wordpress-mysql-57464b4779-2b9v6
+   95  kubectl describe pod wordpress-mysql-57464b4779-2b9v6
+   96  kubectl get pods
+   97  kubectl  delete pod wordpress-mysql-57464b4779-2b9v6
+   98  kubectl get pods
+   99  kubectl describe pod wordpress-mysql-57464b4779-2b9v6
+  100  kubectl describe pod wordpress-mysql-57464b4779-g7swj
+  101  kubectl get pvc
+  102  kubectl delete pvc/mysql-pv-claim
+  103  kubectl get pvc
+  104  kubectl describe pod wordpress-mysql-57464b4779-g7swj
+  105  kubectl get pv
+  106  kubectl get pvc
+  107  kubectl apply -f mysql-deploy.yml 
+  108  kubectl get pvc
+  109  kubectl describe pvc mysql-pv-claim
+  110  clear
+  111  ls
+  112  clear
+  113  ls
+  114  kubectl delete -f mysql-deploy.yml 
+  115  kubectl apply -f mysql-deploy.yml 
+  116  kubectl get pvc
+  117  kubectl describe pvc mysql-pv-claim
+  118  mkdir /mnt/data
+  119  kubectl get pvc
+  120  kubectl get pv
+  121  cd /mnt/data
+  122  ls
+  123  cd ..
+  124  ls
+  125  kubectl get pvc
+  126  kubectl get pods
+  127  kubectl get pod wordpress-mysql-57464b4779-vt8vc
+  128  kubectl describe pod wordpress-mysql-57464b4779-vt8vc
+  129  clear
+  130  cd -
+  131  cd /root
+  132  ls
+  133  cd ..
+  134  ls
+  135  cd devops-us-may-2020/Day12/PersistentVolumeAndClaims/
+  136  vim mysql-deploy.yml 
+  137  kubectl apply -f mysql-deploy.yml 
+  138  kubectl get pvc
+  139  kubectl delete pvc mysql-pv-claim
+  140  kubectl get pvc
+  141  kubectl get pods
+  142  kubectl get pods -w
+  143  kubectl delete pod wordpress-mysql-57464b4779-vt8vc
+  144  kubectl get pods -w
+  145  kubectl get get pvcc
+  146  kubectl get get pvc
+  147  kubectl get pvc
+  148  kubectl get pv
+  149  kubectl get pvc
+  150  kubectl delete -f mysql-deploy.yml 
+  151  clear
+  152  kubectl apply -f mysql-deploy.yml 
+  153  kubectl get pvc
+  154  kubectl get pods
+  155  kubectl get pods -w
+  156  exit
+  157  docker --version
+  158  docker images
+  159  docker ps
+  160  docker pull hello-world
+  161  docker images
+  162  clear
+  163  docker run hello-world
+  164  docker ps
+  165  docker ps -a
+  166  clear
+  167  docker run -it ubuntu:16.04 /bin/bash
+  168  kubectl get pods
+  169  kubectl describe pod/client-5bf54f856-qvdrw 
+  170  ls
+  171  vim network-policy.yml 
+  172  kubectl apply -f network-policy.yml 
+  173  ls
+  174  vim  network-policy.yml 
+  175  kubectl apply -f network-policy.yml 
+  176  vim  network-policy.yml 
+  177  kubectl apply -f network-policy.yml 
+  178  vim  network-policy.yml 
+  179  kubectl apply -f network-policy.yml 
+  180  vim  network-policy.yml 
+  181  ls
+  182  clear
+  183  ls
+  184  vim nginx-deploy.yml 
+  185  ls
+  186  kubectl get deploy
+  187  kubectl create deployment client2 --image=nginx:1.18
+  188  kubectl get pods
+  189  kubectl exec -it client2-84fc69d496-r6bz8 bash
+  190  vim  network-policy.yml 
+  191  kubectl apply -f network-policy.yml 
+  192  kubectl exec -it client2-84fc69d496-r6bz8 bash
+  193  kubectl get pods
+  194  kubectl get pods -n tektutor
+  195  kubectl get  pods
+  196  kubectl get deploy
+  197  kubectl get  pods -
+  198  kubectl get  pods -v
+  199  kubectl get  pods
+  200  kubectl describe pod/client2-84fc69d496-r6bz8
+  201  kubectl edit deploy/client2
+  202  kubectl  delete deploy/client2
+  203  kubectl create deployment client2 --image=nginx:1.18 -n tektutor
+  204  kubectl get deploy -n tektutor
+  205  kubectl get pods -n tektutor
+  206  kubectl exec -it client2-84fc69d496-4zrh5 bash
+  207  kubectl exec -it client2-84fc69d496-4zrh5 bash -n tektutor
+  208  ls
+  209  cp network-policy.yml network-policy-label-selector.yml 
+  210  cp network-policy-label-selector.yml network-policy-namespace-selector.yml 
+  211  vim network-policy-namespace-selector.yml 
+  212  kubectl create namespace tektutor-client
+  213  kubectl delete deploy/client2
+  214  kubectl delete deploy/client2 -n tektutor
+  215  set -o vi
+  216  kubectl create deployment client2 --image=nginx:1.18 -n tektutor-client
+  217  kubectl get pods
+  218  kubectl get pods -n tektutor-client
+  219  ls
+  220  vim network-policy-namespace-selector.yml 
+  221  kubeclt apply -f network-policy-namespace-selector.yml 
+  222  kubectl apply -f network-policy-namespace-selector.yml 
+  223  vim network-policy-namespace-selector.yml 
+  224  kubectl apply -f network-policy-namespace-selector.yml 
+  225  vim network-policy-namespace-selector.yml 
+  226  kubectl apply -f network-policy-namespace-selector.yml 
+  227  vim network-policy-namespace-selector.yml 
+  228  kubectl apply -f network-policy-namespace-selector.yml 
+  229  vim network-policy-namespace-selector.yml 
+  230  kubectl apply -f network-policy-label-selector.yml 
+  231  kubectl apply -f network-policy-namespace-selector.yml 
+  232  vim network-policy-namespace-selector.yml 
+  233  kubectl apply -f network-policy-namespace-selector.yml 
+  234  vim network-policy-namespace-selector.yml 
+  235  kubectl apply -f network-policy-namespace-selector.yml 
+  236  vim network-policy-namespace-selector.yml 
+  237  kubectl apply -f network-policy-namespace-selector.yml 
+  238  vim network-policy-namespace-selector.yml 
+  239  kubectl apply -f network-policy-namespace-selector.yml 
+  240  vim network-policy-namespace-selector.yml 
+  241  kubectl apply -f network-policy-namespace-selector.yml 
+  242  vim network-policy-namespace-selector.yml 
+  243  kubectl apply -f network-policy-namespace-selector.yml 
+  244  vim network-policy-namespace-selector.yml 
+  245  kubectl apply -f network-policy-namespace-selector.yml 
+  246  vim network-policy-namespace-selector.yml 
+  247  kubectl apply -f network-policy-namespace-selector.yml 
+  248  vim network-policy-namespace-selector.yml 
+  249  kubectl apply -f network-policy-namespace-selector.yml 
+  250  vim network-policy-namespace-selector.yml 
+  251  kubectl apply -f network-policy-namespace-selector.yml 
+  252  vim network-policy-namespace-selector.yml 
+  253  kubectl apply -f network-policy-namespace-selector.yml 
+  254  vim network-policy-namespace-selector.yml 
+  255  kubectl apply -f network-policy-namespace-selector.yml 
+  256  vim network-policy-namespace-selector.yml 
+  257  kubectl apply -f network-policy-namespace-selector.yml 
+  258  vim network-policy-namespace-selector.yml 
+  259  kubectl apply -f network-policy-namespace-selector.yml 
+  260  kubectl get pods -n nginx-client
+  261  kubectl get po  -n tektutor-client
+  262  vim network-policy-namespace-selector.yml 
+  263  kubectl get po  -n tektutor-client
+  264  ls
+  265  kubectl get deploy -n tektutor-client
+  266  kubectl describe deploy client2 -n tektutor-client
+  267  vim network-policy-namespace-selector.yml 
+  268  kubectl describe deploy client2 -n tektutor-client
+  269  kubectl apply -f network-policy-namespace-selector.yml 
+  270  vim network-policy-namespace-selector.yml 
+  271  kubectl apply -f network-policy-namespace-selector.yml 
+  272  vim network-policy-namespace-selector.yml 
+  273  kubectl apply -f network-policy-namespace-selector.yml 
+  274  vim network-policy-namespace-selector.yml 
+  275  kubectl apply -f network-policy-namespace-selector.yml 
+  276  vim network-policy-namespace-selector.yml 
+  277  kubectl apply -f network-policy-namespace-selector.yml 
+  278  vim network-policy-namespace-selector.yml 
+  279  kubectl apply -f network-policy-namespace-selector.yml 
+  280  vim network-policy-namespace-selector.yml 
+  281  kubectl apply -f network-policy-namespace-selector.yml 
+  282  vim network-policy-namespace-selector.yml 
+  283  kubectl apply -f network-policy-namespace-selector.yml 
+  284  vim network-policy-namespace-selector.yml 
+  285  kubectl apply -f network-policy-namespace-selector.yml 
+  286  vim network-policy-namespace-selector.yml 
+  287  kubectl apply -f network-policy-namespace-selector.yml 
+  288  vim network-policy-namespace-selector.yml 
+  289  kubectl apply -f network-policy-namespace-selector.yml 
+  290  vim network-policy-namespace-selector.yml 
+  291  kubectl apply -f network-policy-namespace-selector.yml 
+  292  vim network-policy-namespace-selector.yml 
+  293  kubectl apply -f network-policy-namespace-selector.yml 
+  294  vim network-policy-namespace-selector.yml 
+  295  kubectl apply -f network-policy-namespace-selector.yml 
+  296  vim network-policy-namespace-selector.yml 
+  297  kubectl apply -f network-policy-namespace-selector.yml 
+  298  vim network-policy-namespace-selector.yml 
+  299  kubectl apply -f network-policy-namespace-selector.yml 
+  300  vim network-policy-namespace-selector.yml 
+  301  kubectl apply -f network-policy-namespace-selector.yml 
+  302  vim network-policy-namespace-selector.yml 
+  303  kubectl apply -f network-policy-namespace-selector.yml 
+  304  vim network-policy-namespace-selector.yml 
+  305  kubectl apply -f network-policy-namespace-selector.yml 
+  306  vim network-policy-namespace-selector.yml 
+  307  kubectl apply -f network-policy-namespace-selector.yml 
+  308  vim network-policy-namespace-selector.yml 
+  309  kubectl apply -f network-policy-namespace-selector.yml 
+  310  vim network-policy-namespace-selector.yml 
+  311  kubectl apply -f network-policy-namespace-selector.yml 
+  312  vim network-policy-namespace-selector.yml 
+  313  kubectl apply -f network-policy-namespace-selector.yml 
+  314  vim network-policy-namespace-selector.yml 
+  315  ls
+  316  clear
+  317  ls
+  318  pwd
+  319  cd ..
+  320  ls
+  321  git clone https://github.com/tektutor/devops-us-may-2020.git
+  322  yum install -y git
+  323  git clone https://github.com/tektutor/devops-us-may-2020.git
+  324  ls
+  325  cd devops
+  326  ls
+  327  cd ..
+  328  ls
+  329  cd /root
+  330  ls
+  331  cd -
+  332  cd devops-us-may-2020/
+  333  mkdir Day12
+  334  ls
+  335  cp  /root/*.yml Day12
+  336  cd Day12
+  337  ls
+  338  vim nginx-deploy.yml 
+  339  kubectl get pods
+  340  kubectl get pods -l app=nginx
+  341  kubectl get pods -l app=client
+  342  kubectl get rs
+  343  kubectl get rs -l app=nginx
+  344  vim nginx-deploy.yml 
+  345  ls
+  346  cd ..
+  347  ls
+  348  git status
+  349  git config --global user.name "Jeganathan Swaminathan"
+  350  git config --global user.emial "mail2jegan@gmail.com"
+  351  git add *
+  352  git status
+  353  git commit -m "Added Day12 lab exercises."
+  354  git config --global user.email "mail2jegan@gmail.com"
+  355  set -o vi
+  356  git commit -m "Added Day12 lab exercises."
+  357  git push -u origin master
+  358  ls
+  359  cd Day12
+  360  ls
+  361  clear
+  362  ls
+  363  kubectl get pods
+  364  kubectl get namespaces
+  365  kubectl get deploy,rs,pod -n tektutor
+  366  kubectl delete namespace tektutor
+  367  kubectl get deploy,rs,pod -n tektutor
+  368  ls
+  369  vim nginx-deploy.yml 
+  370  kubectl get svc
+  371  kubectl get svc -n tektutor
+  372  kubectl create -f nginx-deploy.yml 
+  373  kubectl get deploy -n tektutor
+  374  kubectl get deploy,rs,po,svc -n tektutor
+  375  kubectl get nodes -o  wide
+  376  clear
+  377  ls
+  378  curl http://172.16.124.220:32000
+  379  clear
+  380  kubectl create deployment nginx-client --image=nginx:1.18 -n tektutor
+  381  kubectl kubectl get deploy -n tektutor
+  382  kubectl get deploy -n tektutor
+  383  kubectl get po -n tektutor
+  384  clear
+  385  ls
+  386  kubectl get po -n tektutor
+  387  ifconfig
+  388  clear
+  389  ifconfig ens33
+  390  kubectl get po -n tektutor
+  391  kubectl exec -it nginx-client-7c8645d699-s844g bash
+  392  kubectl exec -it nginx-client-7c8645d699-s844g bash -n tektutor
+  393  ls
+  394  vim network-policy.yml 
+  395  kubectl get nodes -o wide
+  396  kubectl get svc -n tektutor
+  397  kubectl get nodes -o wide
+  398  kubectl exec -it nginx-client-7c8645d699-s844g bash -n tektutor
+  399  kubectl get pods
+  400  kubectl edit pod client-5bf54f856-qvdrw -n tektutor
+  401  kubectl delete pod client-5bf54f856-qvdrw nginx-755c56db9f-x29hf
+  402  clear
+  403  ls
+  404  kubectl get pods -n tektutor
+  405  kubectl get pods
+  406  kubectl get deploy
+  407  kubectl delete deploy client nginx
+  408  kubectl get deploy,rs,po,svc
+  409  kubectl get pods -n tektutor
+  410  kubectl edit pod/nginx-client-7c8645d699-s844g -n tektutor
+  411  kubectl exec -it nginx-client-7c8645d699-s844g bash -n tektutor
+  412  kubectl get pods
+  413  kubectl get pods -n kube-system
+  414  kubectl get pods -n all-namespaces
+  415  kubectl get pods --all-namespaces
+  416  clear
+  417  kubectl apply   --filename https://raw.githubusercontent.com/giantswarm/prometheus/master/manifests-all.yaml
+  418  kubectl get pods
+  419  kubectl get pods -n kube-system
+  420  kubectl get pods -n monitoring
+  421  kubectl get pods -n kube-system
+  422  kubectl get pods -n monitoring
+  423  kubectl describe pod prometheus-node-exporter-4zmj4 -n monitoring
+  424  clear
+  425  kubectl get pods -n monitoring
+  426  kubectl describe pod grafana-core-6c865bd6c-gnmh8 -n monitoring
+  427  kubectl get pods -n monitoring
+  428  /forward
+  429  set -o vi
+  430  kubectl port-forward --namespace monitoring service/grafana 3000:3000
+  431  clear
+  432  s
+  433  ls
+  434  mkdir PersistentVolumeAndClaims
+  435  cd PersistentVolumeAndClaims/
+  436  ls
+  437  vim mysql-deploy.yml
+  438  base64
+  439  admin
+  440  echo admin|base64
+  441  echo mysecretpassword|base64
+  442  sha256
+  443  sha1
+  444  base64 admin@123
+  445  echo admin@123|base64
+  446  vim mysql-deploy.yml 
+  447  echo "admin123" > password.txt
+  448  yum install sha1
+  449  yum install sha-1
+  450  yum install  epel-release
+  451  yum install sha-1
+  452  yum install shasum
+  453  sha1sum
+  454  ls
+  455  sha1sum password.txt 
+  456  echo 5c47fb596e292e6fefc116eb509e9a393891402a | base64
+  457  ssh-keygen
+  458  cat /root/.ssh/id_rsa.pub 
+  459  ls
+  460  vim mysql-deploy.yml 
+  461  exit
+  462  systemctl status kubelet
+  463  systemctl restart kubelet
+  464  kubectl get nodes
+  465  vim /root/.bashrc 
+  466  kubectl get nodes
+  467  ifconfig ens33
+  468  kubectl get nodes
+  469  systemctl status kubelet
+  470  vim /etc/kubernetes/kubelet.conf 
+  471  ls
+  472  systemctl restart kubelet
+  473  kubectl get nodes
+  474  systemctl status kubelet
+  475  kubectl get nodes
+  476  systemctl status kubelet
+  477  vim /etc/kubernetes/kubelet.conf 
+  478  vim /etc/kubernetes/admin.conf 
+  479  vim /etc/kubernetes/controller-manager.conf 
+  480  vim /etc/kubernetes/scheduler.conf 
+  481  vim /etc/kubernetes/manifests/etcd.yaml 
+  482  vim /etc/kubernetes/manifests/kube-controller-manager.yaml 
+  483  vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+  484  vim /etc/kubernetes/manifests/kube-controller-manager.yaml 
+  485  vim /etc/kubernetes/manifests/kube-scheduler.yaml 
+  486  kubectl get nodes
+  487  systemctl restart kubelet
+  488  kubectl get nodes
+  489  systemctl status kubelet
+  490  systemctl restart kubelet
+  491  systemctl status kubelet
+  492  vim /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf 
+  493  vim /var/lib/kubelet/config.yaml 
+  494  systemctl restart kubelet
+  495  systemctl status kubelet
+  496  exit
+  497  systemctl status kubelet
+  498  systemctl status kubelet -l
+  499  systemctl restart kubelet
+  500  systemctl status kubelet -l
+  501  systemctl restart kubelet
+  502  systemctl status kubelet -l
+  503  vim /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf 
+  504  ifconfig ens33
+  505  cd /etc/kubernetes/
+  506  ls
+  507  vim admin.conf 
+  508  ls
+  509  vim controller-manager.conf 
+  510  ls
+  511  vim kubelet.conf 
+  512  l
+  513  ls
+  514  vim scheduler.conf 
+  515  ls
+  516  cd manifests/
+  517  ls
+  518  vim etcd.yaml 
+  519  vim kube-apiserver.yaml 
+  520  ls
+  521  vim kube-controller-manager.yaml 
+  522  clear
+  523  ls
+  524  cd ..
+  525  ls
+  526  ifconfig ens33
+  527  clear
+  528  ls
+  529  kubectl get pods
+  530  kubectl get nodes
+  531  ls
+  532  pwd
+  533  vim kubelet.conf 
+  534  ls
+  535  vim admin.conf 
+  536  cd manifests/
+  537  ls
+  538  vim etcd.yaml 
+  539  ls
+  540  vim kube-apiserver.yaml 
+  541  ls
+  542  vim kube-controller-manager.yaml 
+  543  ls
+  544  vim kube-controller-manager.yaml 
+  545  ls
+  546  vim kube-scheduler.yaml 
+  547  systemctl status kubelet
+  548  systemctl restart kubelet
+  549  systemctl status kubelet
+  550  systemctl status kubelet -l
+  551  vim usr/lib/systemd/system/kubelet.service.d
+  552  vim /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf 
+  553  ls
+  554  cd ..
+  555  ls
+  556  kubectl get nodes
+  557  ifconfig ens33
+  558  exit
+  559  clear
+  560  ls
+  561  cd /home/jegan/
+  562  ls
+  563  cd /root
+  564  ls
+  565  cd /home/jegan
+  566  ls
+  567  clear
+  568  ls
+  569  docker images
+  570  exit
+  571  yum install python-pip -y
+  572  pip install aws-cli
+  573  pip install --upgrade pip
+  574  pip install aws-cli
+  575  pip install awscli
+  576  ls
+  577  clear
+  578  ls
+  579  cd /home/jegan
+  580  ls
+  581  git clone https://github.com/tektutor/devops-us-may-2020.git
+  582  ls
+  583  cd devops-us-may-2020/
+  584  ls
+  585  clear
+  586  ls
+  587  cd ..
+  588  ls
+  589  aws-cli
+  590  ls
+  591  aws
+  592  aws configure
+  593  aws configure list
+  594  clear
+  595  ls
+  596  clear
+  597  ls
+  598  aws s3 ls --profile tektutor
+  599  aws configure --profile tektutor
+  600  set -o vi
+  601  aws configure
+  602  cleear
+  603  clear
+  604  ls
+  605  mkdir terraform
+  606  cd terraform/
+  607  ls
+  608  vim download_docker_image.tf
+  609  ls
+  610  terraform validate
+  611  docker --version
+  612  terraform init
+  613  terraform validate
+  614  docker images
+  615  clear
+  616  docker images
+  617  terraform apply
+  618  docker images
+  619  docker rmi hello-world:latest 
+  620  docker ps
+  621  docker ps -a
+  622  clear
+  623  ls
+  624  docker rmi hello-world:latest 
+  625  clear
+  626  docker images
+  627  vim download_docker_image.tf
+  628  terraform apply
+  629  docker images
+  630  terraform apply
+  631  terraform destroy
+  632  docker rm -f 965
+  633  terraform destroy
+  634  clear
+  635  docker images
+  636  terraform apply
+  637  docker images
+  638  terraform destroy
+  639  clear
+  640  ls
+  641  mkdir pull-docker-image
+  642  ls
+  643  mv * pull-docker-image/
+  644  ls
+  645  mkdir create-containers
+  646  cd create-containers/
+  647  ls
+  648  vim create-containers.tf
+  649  ls
+  650  terraform apply
+  651  terraform init
+  652  terraform validate
+  653  vim create-containers.tf +16
+  654  terraform validate
+  655  terraform apply
+  656  vim create-containers.tf +16
+  657  terraform apply
+  658  docker ps 
+  659  docker ps -a
+  660  docker rm ubuntu1 ubuntu2
+  661  terraform apply
+  662  docker ps
+  663  vim create-containers.tf
+  664  ls
+  665  cd ..
+  666  ls
+  667  git checkout https://github.com/tektutor/terraform-hyd-march-2020
+  668  git archive --remote https://github.com/tektutor/terraform-hyd-march-2020.git Day2/ec2-instance-lab/
+  669  ls
+  670  git archive --remote=https://github.com/tektutor/terraform-hyd-march-2020.git Day2/ec2-instance-lab/
+  671  git archive --remote=https://github.com/tektutor/terraform-hyd-march-2020.git Day2/ec2-instance-lab
+  672  git clone --depth 1 https://github.com/tektutor/terraform-hyd-march-2020.git ec2-instance
+  673  cd ec2-instance/
+  674  ls
+  675  git filter-branch --prune-empty --subdirectory-filter Day2/ec2-instance-lab HEAD
+  676  ls
+  677  terraform init
+  678  terraform apply
+  679  terraform destroy
+  680  clear
+  681  ls
+  682  cd ..
+  683  cd Downloads/
+  684  ls
+  685  unzip terraform_0.12.26_linux_amd64.zip 
+  686  ls
+  687  pwd
+  688  ls -l
+  689  mv terraform /usr/bin
+  690  ls
+  691  rm terraform
+  692  ls
+  693  cd ..
+  694  terraform
+  695  ls
+  696  cd dev
+  697  cd devops-us-may-2020/
+  698  ls
+  699  mkdir Day19
+  700  cd Day19
+  701  mkdir terraform
+  702  cd terraform/
+  703  ls
+  704  pwd
+  705  clear
+  706  cd /home/jegan/Downloads/
+  707  ls
+  708  cd -
+  709  ls
+  710  vim pull-docker-image.tf
+  711  ls
+  712  terraform init
+  713  ls
+  714  ls -lha
+  715  cd .terraform/
+  716  ls
+  717  cd plugins/
+  718  ls
+  719  cd linux_amd64/
+  720  ls
+  721  vim lock.json 
+  722  cd ..
+  723  ls
+  724  terraform plan
+  725  terraform validate
+  726  ls
+  727  vim pull-docker-image.tf 
+  728  clear
+  729  terraform apply
+  730  docker images | grep hello-world
+  731  terraform destroy
+  732  docker images | grep hello-world
+  733  ls
+  734  vim pull-docker-image.tf 
+  735  ls
+  736  vim terraform.tfstate
+  737  clear
+  738  terraform
+  739  terraform state
+  740  terraform state list
+  741  terraform apply
+  742  terraform state list
+  743  ls
+  744  vim terraform.tfstate
+  745  terraform destroy
+  746  vim terraform.tfstate
+  747  terraform state list
+  748  ls
+  749  cat terraform.tfstate.backup 
+  750  clear
+  751  ls
+  752  terraform
+  753  clear
+  754  ls
+  755  cat terraform.tfstate
+  756  mv terraform.tfstate.backup terraform.tfstate
+  757  ls
+  758  terraform state list
+  759  docker images
+  760  docker images | grep hello-world
+  761  ls
+  762  terraform state list
+  763  ls
+  764  terraform destroy
+  765  clear
+  766  ls
+  767  terraform
+  768  clear
+  769  terraform apply
+  770  terraform state list
+  771  docker images | grep hello-world
+  772  ls
+  773  vim pull-docker-image.tf 
+  774  terraform apply
+  775  terraform state list
+  776  docker images | grep ubuntu
+  777  docker images | grep hello
+  778  terraform destroy
+  779  docker images | grep hello
+  780  docker images | grep ubuntu
+  781  docker ps -a
+  782  clear
+  783  ls
+  784  vim pull-docker-image.tf 
+  785  ls
+  786  ls -lha
+  787  cdd .terraform/
+  788  ls
+  789  cd .terraform/
+  790  ls
+  791  cd plugins/
+  792  ls
+  793  cd linux_amd64/
+  794  ls
+  795  cd ..
+  796  cd terraform/
+  797  ls
+  798  vim pull-docker-image.tf 
+  799  i
+  800  terraform state list
+  801  ls
+  802  vim create-docker-container.tf
+  803  ls
+  804  rm create-docker-container.tf 
+  805  ls
+  806  mkdir lab1
+  807  mv * lab1
+  808  ls
+  809  mkdir lab2
+  810  ls
+  811  cd lab2
+  812  ls
+  813  vim create-docker-containers.tf
+  814  tail
+  815  ps
+  816  ps -ef
+  817  ps -ef | tail
+  818  man tail
+  819  clear
+  820  ls
+  821  vim create-docker-containers.tf 
+  822  ls
+  823  terraform init
+  824  vim create-docker-containers.tf +16
+  825  terraform init
+  826  ls
+  827  terraform init
+  828  ls
+  829  ls -lha
+  830  terraform apply
+  831  docker ps
+  832  docker rm -f ubuntu1 ubuntu2
+  833  clear
+  834  docker ps
+  835  vim create-docker-containers.tf 
+  836  docker images | grep centos
+  837  docker images | grep ubuntu
+  838  docker ps
+  839  vim create-docker-containers.tf 
+  840  docker image inspect centos:6.7
+  841  docker --version
+  842  terraform state list
+  843  docker ps
+  844  vim create-docker-containers.tf 
+  845  clear
+  846  ls
+  847  docker ps
+  848  docker images
+  849  clear
+  850  cd ,.
+  851  cd ..
+  852  ls
+  853  cd ..
+  854  ;ls
+  855  cd ..
+  856  ls
+  857  cd Day2
+  858  ls
+  859  cd ..
+  860  cd Day3
+  861  ls
+  862  cd ..
+  863  cd Day4
+  864  ls
+  865  cd ubuntu-ansible/
+  866  ls
+  867  cd ..
+  868  ls
+  869  cd ..
+  870  cd Day5
+  871  ls
+  872  clear
+  873  cd ..
+  874  git https://github.com/tektutor/ubuntu-ansible.git
+  875  git clone https://github.com/tektutor/ubuntu-ansible.git
+  876  cd ubuntu-ansible/
+  877  ls
+  878  ssh-keygen
+  879  cp /root/.ssh/id_rsa.pub authorized_keys
+  880  ls
+  881  vim Dockerfile 
+  882  docker build -t tektutor/ansible-ubuntu .
+  883  docker images
+  884  cd ..
+  885  git clone https://github.com/tektutor/centos-sshd-passwordless.git
+  886  cd centos-sshd-passwordless/
+  887  ls
+  888  cp /root/.ssh/id-rsa.pub authorized_keys
+  889  cp /root/.ssh/id_rsa.pub authorized_keys
+  890  ls
+  891  vim Dockerfile 
+  892  docker build -t tektutor/ansible-centos .
+  893  cd ..
+  894  docker images
+  895  docker images | grep tektutor
+  896  clear
+  897  docker images | grep tektutor
+  898  docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu
+  899  docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu
+  900  docker run -d --name centos1 --hostname centos1 -p 2003:22 -p 8003:80 tektutor/ansible-centos
+  901  docker run -d --name centos2 --hostname centos2 -p 2004:22 -p 8004:80 tektutor/ansible-centos
+  902  docker ps
+  903  clear
+  904  ls
+  905  cd devops-us-may-2020/
+  906  ls
+  907  cd Day19
+  908  ls
+  909  cd terraform/
+  910  ls
+  911  mkdir lab3
+  912  cd lab
+  913  cd lab3
+  914  ls
+  915  vim create-containers.tf
+  916  systemctl status docker
+  917  vim create-containers.tf
+  918  vim /usr/lib/systemd/system/docker.service
+  919  clear
+  920  systemctl stop docker
+  921  systemctl status docker
+  922  systemctl daemon-reload
+  923  systemctl stop docker
+  924  systemctl status docker
+  925  clear
+  926  docker ps
+  927  exit
+  928  systemctl start docker
+  929  systemctl status docker
+  930  docker images
+  931  export DOCKER_HOST=tcp://localhost:4243
+  932  docker ps
+  933  exit
+  934  vim /usr/lib/systemd/system/docker.service
+  935  systemctl daemon-reload
+  936  start
+  937  systemctl start docker
+  938  systemctl status docker
+  939  docker images
+  940  cldar
+  941  clear
+  942  ls
+  943  vim /usr/lib/systemd/system/docker.service
+  944  docker iamges
+  945  docker images
+  946  clear
+  947  systemctl status docker
+  948  ls
+  949  cd /home/jegan/
+  950  ls
+  951  cd devops-us-may-2020/
+  952  ls
+  953  cd Day19
+  954  ls
+  955  cd terraform/
+  956  ls
+  957  cd lab3
+  958  ls
+  959  vim create-containers.tf 
+  960  clear
+  961  ls
+  962  vim create-containers.tf 
+  963  docker images | grep tektutor
+  964  terraform init
+  965  vim create-containers.tf 
+  966  terraform init
+  967  terraform apply
+  968  vim create-containers.tf 
+  969  terraform apply
+  970  vim create-containers.tf 
+  971  terraform apply
+  972  docker rm  -f ubuntu1 ubuntu2 centos1 centos2
+  973  terraform apply
+  974  docker ps
+  975  terraform state list
+  976  vim create-containers.tf 
+  977  ifconfig ens33
+  978  vim create-containers.tf 
+  979  ls
+  980  terraform apply 
+  981  docker ps
+  982  vim create-containers.tf 
+  983  terraform apply 
+  984  docker ps
+  985  vim create-containers.tf 
+  986  cd ..
+  987  ls
+  988  exit
+  989  docker run -d --name hack1 --hostname hack1 -p 2005:22 -v /:/local tektutor/ansible-ubuntu
+  990  docker ps
+  991  docker exec -it hack1 bash
+  992  ls
+  993  exit
+  994  ls
+  995  cd /home/jegan/
+  996  ls
+  997  cd devops-us-may-2020/
+  998  ls
+  999  git status
+ 1000  git add *
+ 1001  git status
+ 1002  history > Day19/command_history.txt
