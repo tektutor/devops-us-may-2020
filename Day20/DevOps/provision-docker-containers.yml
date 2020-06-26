@@ -1,0 +1,62 @@
+- name: This playbook will provision docker containers
+  hosts: localhost
+  tasks:
+
+    - name: copy public key
+      shell: cp /root/.ssh/id_rsa.pub authorized_keys
+
+    - name: Install python package installer
+      shell: yum install -y python-pip
+
+    - name: Install docker-py python module
+      shell: pip install docker-py
+
+    - name: Remove all existing containers
+      shell: docker rm -f $(docker ps -aq)
+      ignore_errors: yes
+
+    - name: Remove existing ubuntu image
+      shell: docker rmi tektutor/ansible-ubuntu
+      ignore_errors: yes
+
+    - name: Build ubuntu ansible image
+      docker_image:
+          docker_host: tcp://localhost:4243
+          name: "tektutor/ansible-ubuntu"
+          state: build
+          path: .
+          dockerfile: UbuntuDockerfile 
+   
+    - name: Provision ubuntu containers
+      docker_container:
+          docker_host: tcp://localhost:4243
+          image: "tektutor/ansible-ubuntu"
+          name: "ubuntu{{item}}"
+          state: started
+          ports:
+            - "2{{item}}:22"
+            - "8{{item}}:80"
+      with_sequence: start=1 end=3 format=%03d
+
+    - name: Remove existing centos image
+      shell: docker rmi tektutor/ansible-centos
+      ignore_errors: yes
+
+    - name: Build centos ansible image
+      docker_image:
+          docker_host: tcp://localhost:4243
+          name: "tektutor/ansible-centos"
+          state: build
+          path: .
+          dockerfile: CentOSDockerfile 
+   
+    - name: Provision centos containers
+      docker_container:
+          docker_host: tcp://localhost:4243
+          image: "tektutor/ansible-centos"
+          name: "centos{{item}}"
+          state: started
+          ports:
+            - "3{{item}}:22"
+            - "9{{item}}:80"
+      with_sequence: start=1 end=3 format=%03d

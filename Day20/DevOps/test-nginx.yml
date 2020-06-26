@@ -1,0 +1,6 @@
+- name: Curl nginx web page on Ubuntu
+  shell: "curl http://localhost:{{item}}"
+  register: output
+  with_sequence: start="{{start_port}}" end="{{end_port}}"
+
+- debug: var=output

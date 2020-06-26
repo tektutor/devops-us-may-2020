@@ -1,0 +1,2 @@
+- name: Configure nginx web root folder in CentOS 
+  copy: src=default.conf dest=/etc/nginx/conf.d/default.conf backup=yes

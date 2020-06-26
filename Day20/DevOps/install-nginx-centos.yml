@@ -1,0 +1,8 @@
+- name: Fix metalink issue and disable gpg check in CentOS
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo 
+
+- name: Install Extra Packages for Enterprise Linux(EPEL) in CentOS 
+  yum: name=epel-release state=latest 
+
+- name: Install nginx in CentOS 
+  yum: name=nginx state=latest  

@@ -43,4 +43,4 @@
           ports:
             - "2{{item}}:22"
             - "8{{item}}:80"
-      with_sequence: start=1 end=15 format=%03d
+      with_sequence: start=1 end=3 format=%03d
