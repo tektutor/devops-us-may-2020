@@ -10,12 +10,3 @@
     - include: "configure-nginx-{{ansible_distribution|lower}}.yml"
 
     - include: common-nginx-tasks.yml
-
-- name: This play will test nginx installation
-  hosts: localhost
-  vars_files:
-     - my_ports_file
-  tasks:
-     - include: test-nginx.yml
-     - name : Invoke ping playbook
-       shell: ansible-playbook ping.yml
