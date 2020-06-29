@@ -5,6 +5,9 @@
     - name: copy public key
       shell: cp /root/.ssh/id_rsa.pub authorized_keys
 
+    - name: Install Extra Packages for Enterprise Linux
+      shell: yum install -y epel-release
+
     - name: Install python package installer
       shell: yum install -y python-pip
 
